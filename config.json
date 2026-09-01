@@ -1,0 +1,46 @@
+{
+  "trading": {
+    "position_size_usd": 50,
+    "max_open_positions": 3,
+    "max_slippage_bps": 500,
+    "take_profit_pct": 60,
+    "stop_loss_pct": 25,
+    "trailing_stop_enabled": true,
+    "trailing_stop_activate_pct": 30,
+    "trailing_stop_distance_pct": 15,
+    "partial_take_profit": [
+      {
+        "at_pct": 40,
+        "sell_pct": 50
+      },
+      {
+        "at_pct": 100,
+        "sell_pct": 50
+      }
+    ],
+    "max_daily_loss_usd": 50
+  },
+  "entry_filters": {
+    "min_entry_score": 6.0,
+    "min_liquidity_usd": 2000,
+    "max_liquidity_usd": 80000,
+    "min_buy_sell_ratio_h1": 1.1,
+    "max_price_impact_pct": 8
+  },
+  "onchain_exit_signals": {
+    "enabled": true,
+    "whale_dump_threshold_pct": 15,
+    "whale_check_top_n_holders": 10,
+    "whale_check_window_minutes": 10,
+    "liquidity_pull_threshold_pct": 20,
+    "liquidity_check_window_minutes": 5,
+    "sell_pressure_ratio_trigger": 0.35,
+    "fast_dump_price_drop_pct": 12,
+    "fast_dump_window_seconds": 180
+  },
+  "system": {
+    "poll_interval_minutes": 15,
+    "monitor_interval_seconds": 20,
+    "narrative_recheck_every_n_scans": 1
+  }
+}

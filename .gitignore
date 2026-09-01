@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+positions.json
+ledger.json
+seen_terms.json
+*.log
+# never commit the burner wallet
+*.key
+*wallet*.json
