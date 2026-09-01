@@ -173,6 +173,33 @@ class TestPollWatchlist(unittest.TestCase):
         self.assertEqual(len(r1), 1)
         self.assertEqual(len(r2), 0, "second poll should not re-detect same sig")
 
+    def test_seen_signatures_pruned_by_age(self):
+        """Regression: _seen_signatures must be trimmed so it can't grow
+        without bound over a 24/7 run (a memory leak). Old sigs are dropped
+        from the seen-set and may be re-fetched."""
+        wallet = {"address": "W1", "label": "L1"}
+        # Seed the seen-set with a very old signature that will NOT reappear
+        # in the RPC response this poll (so we can observe it being pruned).
+        old_sig = "OLD_SIG_1"
+        smart_money._seen_signatures.add(old_sig)
+        smart_money._seen_sig_ts[old_sig] = time.time() - smart_money._SEEN_SIG_MAX_AGE_SECONDS - 100
+        new_sig = "NEW_SIG_1"
+
+        def rpc(method, params):
+            if method == "getSignaturesForAddress":
+                # fresh signature, distinct from the old one we seeded
+                return [{"signature": new_sig, "blockTime": int(time.time())}]
+            return None
+        with patch.object(smart_money, "_rpc", side_effect=rpc):
+            smart_money.poll_watchlist(watchlist=[wallet])
+
+        # The old sig should have been pruned (it's old AND didn't reappear).
+        self.assertNotIn(old_sig, smart_money._seen_signatures,
+                         "old signature should be pruned from the seen-set")
+        self.assertNotIn(old_sig, smart_money._seen_sig_ts)
+        # The fresh sig should have been tracked (and will be pruned later).
+        self.assertIn(new_sig, smart_money._seen_signatures)
+
 
 if __name__ == "__main__":
     unittest.main()

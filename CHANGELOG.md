@@ -4,6 +4,22 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Fixed — bugfix pass 2026-09-02 (cleanup + hardening bugs)
+- **`open_position` silent-no-op of new entry signals (important)**: `gap_finder_bot`
+  passes the candidate dict without a `mint` key and the mint as a separate arg.
+  `compute_entry_score()` and `passes_entry()` gate the smart-money convergence
+  bonus and the holder/rug screen on `mint in candidate`, so those two signals
+  from the entry-side hardening pass **never fired on the real entry path**.
+  `open_position()` now injects the resolved `token_mint` into the candidate
+  before scoring, so both signals actually run. Covered by a regression test.
+- **`smart_money.py` memory leak**: `_seen_signatures` was never trimmed, so it
+  grew without bound over a 24/7 run. It is now pruned to a rolling window
+  (older than the convergence window), tracked per-signature timestamp.
+- **`holder_analyzer.py` memory leak**: `_screen_cache` never evicted entries
+  (TTL only blocked stale *reads*), so it grew for every mint ever screened.
+  Added a hard size cap with oldest-entry eviction.
+- Removed obsolete `filetambahan/` staging folder (integration already applied).
+
 ### Added — entry-side hardening pass 2026-09-02
 - **Holder distribution / rug screen** (`holder_analyzer.py`): pre-entry
   counterpart to `onchain_analyzer.py` (which is exit-only). Screens top

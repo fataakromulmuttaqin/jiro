@@ -42,11 +42,16 @@ import rpc_client
 DEFAULT_WATCHLIST_PATH = os.environ.get("SMART_MONEY_WATCHLIST", "watchlist.json")
 RECENT_SIGS_PER_WALLET = 10          # how far back to look each poll cycle
 _seen_signatures: set = set()        # avoid double-counting the same buy tx
+_seen_sig_ts: Dict[str, float] = {}  # sig -> when we first saw it (for pruning)
 _recent_buys: List[Dict[str, Any]] = []   # rolling log: {wallet, label, mint, ts, sig}
-_RECENT_BUYS_MAX_AGE_SECONDS = 60 * 30
+_RECENT_BUYS_MAX_AGE_SECONDS = 60 * 30    # rolling log is cut off at this age
+# Signatures seen are pruned to this window too, so the seen-set can't grow
+# without bound over a 24/7 run (a memory leak on the old code path). Anything
+# older than this is fine to re-fetch — it's outside the convergence window.
+_SEEN_SIG_MAX_AGE_SECONDS = 60 * 40
 
 
-def _rpc(method: str, params: list) -> Optional[Dict[str, Any]]:
+def _rpc(method: str, params: list) -> Any:
     return rpc_client.rpc_call(method, params)
 
 
@@ -85,6 +90,15 @@ def poll_watchlist(watchlist: Optional[List[Dict[str, str]]] = None) -> List[Dic
     """Call once per monitor cycle. Fetches each watched wallet's recent
     signatures, parses NEW ones for token buys, and appends to the rolling
     log. Returns the list of newly-detected buys this call (may be empty)."""
+    # prune the seen-signature set BEFORE the loop so it can't grow unbounded
+    # over a 24/7 run — anything older than the convergence window is no longer
+    # needed (it'd be outside any convergence check anyway).
+    cutoff_sig = time.time() - _SEEN_SIG_MAX_AGE_SECONDS
+    for sig, ts in list(_seen_sig_ts.items()):
+        if ts < cutoff_sig:
+            _seen_signatures.discard(sig)
+            del _seen_sig_ts[sig]
+
     watchlist = watchlist if watchlist is not None else load_watchlist()
     new_buys = []
     now = time.time()
@@ -95,7 +109,9 @@ def poll_watchlist(watchlist: Optional[List[Dict[str, str]]] = None) -> List[Dic
             sig = s.get("signature")
             if not sig or sig in _seen_signatures:
                 continue
+            seen_ts = s.get("blockTime") or now
             _seen_signatures.add(sig)
+            _seen_sig_ts[sig] = seen_ts
             tx = _rpc("getTransaction", [sig, {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 0}])
             if not tx:
                 continue
@@ -104,7 +120,7 @@ def poll_watchlist(watchlist: Optional[List[Dict[str, str]]] = None) -> List[Dic
                     "wallet": w["address"],
                     "label": w.get("label", ""),
                     "mint": mint,
-                    "ts": s.get("blockTime") or now,
+                    "ts": seen_ts,
                     "signature": sig,
                 }
                 _recent_buys.append(entry)

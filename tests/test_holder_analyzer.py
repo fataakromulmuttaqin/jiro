@@ -181,6 +181,32 @@ class TestCaching(unittest.TestCase):
             self.assertEqual(n1, n2, "second call should hit cache, not RPC")
         holder_analyzer.reset_cache()
 
+    def test_cache_evicts_old_entries_when_over_cap(self):
+        """Regression: the screen cache must not grow unbounded over a 24/7
+        run. Once past _SCREEN_CACHE_MAX_SIZE the oldest entries are evicted."""
+        holder_analyzer.reset_cache()
+        cfg = {"top_n_holders": 1, "require_mint_authority_renounced": True,
+               "require_freeze_authority_renounced": True}
+        def stub(m, p):
+            if m == "getTokenSupply":
+                return _stub_total_supply()
+            if m == "getAccountInfo" and p[0] == "MINT":
+                return _stub_authorities(True, True)
+            return {"value": []}
+        orig_max = holder_analyzer._SCREEN_CACHE_MAX_SIZE
+        holder_analyzer._SCREEN_CACHE_MAX_SIZE = 3
+        try:
+            with patch.object(holder_analyzer, "_rpc", side_effect=stub):
+                for i in range(6):
+                    holder_analyzer.screen_token(f"MINT_{i}", cfg, use_cache=True)
+            self.assertLessEqual(
+                len(holder_analyzer._screen_cache),
+                holder_analyzer._SCREEN_CACHE_MAX_SIZE,
+                "cache should be bounded by _SCREEN_CACHE_MAX_SIZE")
+        finally:
+            holder_analyzer._SCREEN_CACHE_MAX_SIZE = orig_max
+            holder_analyzer.reset_cache()
+
 
 if __name__ == "__main__":
     unittest.main()

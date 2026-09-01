@@ -62,6 +62,11 @@ FRESH_WALLET_TX_THRESHOLD = 5       # fewer than this many total sigs seen => "f
 
 _screen_cache: Dict[str, Dict[str, Any]] = {}   # mint -> {ts, result}
 _SCREEN_CACHE_TTL_SECONDS = 60 * 20
+# Hard cap on the number of cached mints. TTL expiry above only stops *reads*
+# from returning stale data; without this the dict itself grows for every mint
+# ever screened, leaking memory on a 24/7 run. When the cap is hit we evict the
+# oldest TTL-expired entries (falling back to whichever is oldest).
+_SCREEN_CACHE_MAX_SIZE = 500
 
 
 # --------------------------------------------------------------------------
@@ -320,6 +325,23 @@ def screen_token(mint: str, cfg_holders: Dict[str, Any], use_cache: bool = True)
         "holders_sampled": len(holders),
     }
     _screen_cache[mint] = {"ts": time.time(), "result": result}
+
+    # bound the cache size so a long-running process doesn't leak memory accreting
+    # entries for every mint it ever screens. Evict expired entries first; if the
+    # cache is still over the cap (e.g. burst of fresh screens), drop the oldest.
+    if len(_screen_cache) > _SCREEN_CACHE_MAX_SIZE:
+        now = time.time()
+        expired = [
+            m for m, c in _screen_cache.items()
+            if (now - c["ts"]) >= _SCREEN_CACHE_TTL_SECONDS
+        ]
+        for m in expired:
+            _screen_cache.pop(m, None)
+        # if still over cap (all recent), evict earliest-ts entries until within
+        while len(_screen_cache) > _SCREEN_CACHE_MAX_SIZE and _screen_cache:
+            oldest_mint = min(_screen_cache, key=lambda m: _screen_cache[m]["ts"])
+            _screen_cache.pop(oldest_mint, None)
+
     return result
 
 

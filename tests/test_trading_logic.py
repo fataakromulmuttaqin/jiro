@@ -326,3 +326,36 @@ def test_max_open_positions_cap(monkeypatch, tmp_path):
         dex_pair=_flat_pair(),
     )
     assert pos is None
+
+
+def test_open_position_injects_mint_into_candidate(monkeypatch, tmp_path):
+    """Regression fix: gap_finder_bot passes the candidate dict WITHOUT a
+    `mint` key and the mint separately. compute_entry_score() and
+    passes_entry() gate the smart-money convergence bonus and the holder/rug
+    screen on `mint in candidate`, so before this fix those two signals never
+    fired on the real entry path. open_position must inject the resolved mint
+    into the candidate so the hardening signals actually run."""
+    monkeypatch.setattr(trading, "POSITIONS_FILE", str(tmp_path / "positions.json"))
+    monkeypatch.setattr(trading, "LEDGER_FILE", str(tmp_path / "ledger.json"))
+    cand = _candidate()          # no "mint" key, like gap_finder_bot's `g`
+    assert "mint" not in cand
+
+    # Force sellability + price resolution to succeed so the flow gets past the
+    # early gates and hits the mint injection + scoring.
+    monkeypatch.setattr(trading, "sellability_check", lambda *a, **k: True)
+    monkeypatch.setattr(trading, "get_token_price_usd", lambda *a, **k: 1.0)
+    monkeypatch.setattr(trading, "get_sol_price_usd", lambda *a, **k: 150.0)
+    monkeypatch.setattr(trading, "get_quote",
+                        lambda *a, **k: {"outAmount": "1000000", "inAmount": "1000"})
+    monkeypatch.setattr(trading, "execute_swap", lambda *a, **k: "fake_sig")
+    # scoring gated on mint: turn off expensive per-mint screen so it passes
+    trading.CFG["holder_filters"]["enabled"] = False
+    trading.CFG["smart_money"]["enabled"] = False
+    monkeypatch.setattr(trading, "passes_entry", lambda c, d: (c.get("mint") is not None) or c is None)
+
+    pos = trading.open_position(
+        wallet=None, term="newterm", token_mint="newmint",
+        candidate=cand, dex_pair=_flat_pair(),
+    )
+    assert cand.get("mint") == "newmint", \
+        "open_position must inject the resolved mint into the candidate"

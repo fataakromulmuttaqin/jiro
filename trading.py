@@ -437,6 +437,15 @@ def open_position(wallet: Optional[Wallet], term: str, token_mint: str, pair_url
     open_count = sum(1 for p in positions if p["status"] == "open")
     max_positions = CFG["trading"]["max_open_positions"]
 
+    # Ensure the candidate carries the resolved mint so the entry-time
+    # hardening signals (smart-money convergence bonus in
+    # compute_entry_score(), and the holder/rug screen in passes_entry()) can
+    # actually fire. Callers (gap_finder_bot) pass the mint as a separate arg
+    # and don't always embed it in the candidate dict — if we don't set it
+    # here, both new entry signals silently no-op on the real entry path.
+    if candidate is not None and not candidate.get("mint"):
+        candidate["mint"] = token_mint
+
     if open_count >= max_positions:
         print(f"[skip] max open positions ({max_positions}) reached, skipping {term}")
         return None
