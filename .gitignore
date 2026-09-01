@@ -7,6 +7,8 @@ positions.json
 ledger.json
 seen_terms.json
 *.log
+# smart-money watchlist (real wallet addresses — never commit)
+watchlist.json
 # never commit the burner wallet
 *.key
 *wallet*.json

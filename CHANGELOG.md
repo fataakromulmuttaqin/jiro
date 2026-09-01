@@ -4,6 +4,39 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — entry-side hardening pass 2026-09-02
+- **Holder distribution / rug screen** (`holder_analyzer.py`): pre-entry
+  counterpart to `onchain_analyzer.py` (which is exit-only). Screens top
+  holders, mint & freeze authority, dev-wallet hold (pump.fun-origin only),
+  fresh-wallet %, and bundler-cluster % (wallets sharing the same SOL
+  funding source). 20-minute in-memory cache. Hard-rejects tokens failing
+  the configured thresholds; folds residual `risk_score` into
+  `entry_score` (0–3 point penalty).
+- **Smart-money convergence signal** (`smart_money.py`): watchlist-based
+  tracker. You curate `watchlist.json` (see `watchlist.example.json`)
+  with known-good wallets. Every scan cycle the bot fetches each watched
+  wallet's recent transactions and detects token buys. When 2+ watched
+  wallets buy the same mint within the configured window, the entry
+  score gets a configurable bonus (default +1.5). Free-RPC-only — no
+  Nansen/Cielo dependency. `watchlist.json` is gitignored.
+- **New `config.json` sections**: `holder_filters` and `smart_money`,
+  both `enabled: true` by default but each individual feature can be
+  tuned or disabled. See README "Tuning everything".
+- **Wiring**:
+  - `trading.compute_entry_score()` adds smart-money convergence bonus
+    (soft signal — raises score if hit).
+  - `trading.passes_entry()` runs holder screen after narrative +
+    on-chain hard-filters pass; rejects outright on hard violations,
+    folds risk into score on soft warnings.
+  - `gap_finder_bot.run_once()` calls `smart_money.poll_watchlist()`
+    once per scan cycle (before candidate evaluation) so convergence
+    checks are cheap in-memory lookups.
+- **Test suite**: added 21 unit tests across `tests/test_holder_analyzer.py`
+  (authority rejection, top10 concentration, risk-score clamping,
+  cache hit) and `tests/test_smart_money.py` (watchlist loading,
+  buy extraction from txs, convergence detection, deduplication).
+  Full suite: 66 tests passing.
+
 ### Added — hardening pass 2026-09-01
 - **RPC failover** (`rpc_client.py`): single-client wrapper with primary +
   fallback provider rotation, per-provider health tracking, automatic

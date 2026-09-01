@@ -55,6 +55,8 @@ import onchain_analyzer
 import narrative
 import rpc_client
 import safety
+import holder_analyzer
+import smart_money
 
 # ----------------------------------------------------------------------------
 # SECRETS / INFRA (env vars only)
@@ -308,6 +310,26 @@ def compute_entry_score(candidate: Dict[str, Any], dex_pair: Optional[Dict[str, 
                 score += 1.0
                 reasons.append(f"est. price impact {impact_pct:.1f}%")
 
+    # --- smart-money convergence bonus ---
+    # Reads from smart_money._recent_buys which is kept warm by
+    # gap_finder_bot.run_once() polling the watchlist each cycle. Cheap.
+    sm_cfg = CFG.get("smart_money", {})
+    if sm_cfg.get("enabled", True) and "mint" in (candidate or {}):
+        try:
+            conv = smart_money.check_convergence(
+                candidate["mint"],
+                min_wallets=sm_cfg.get("min_wallets_for_convergence", 2),
+                window_seconds=sm_cfg.get("convergence_window_seconds", 900),
+            )
+            if conv["converged"]:
+                bonus = float(sm_cfg.get("convergence_score_bonus", 1.5))
+                score += bonus
+                labels = ", ".join(w["label"] or w["address"][:8] for w in conv["wallets"])
+                reasons.append(f"smart-money convergence ({conv['wallet_count']} wallets: {labels})")
+        except Exception as e:
+            # never let smart-money lookup crash the entry pipeline
+            print(f"[warn] smart_money.check_convergence failed: {e}", file=sys.stderr)
+
     return {"score": round(score, 2), "reasons": reasons, "hard_fail": hard_fail}
 
 
@@ -316,6 +338,22 @@ def passes_entry(candidate: Dict[str, Any], dex_pair: Optional[Dict[str, Any]]) 
     if result["hard_fail"]:
         print(f"[entry-reject] {candidate.get('term')}: {'; '.join(result['hard_fail'])}")
         return False
+    # --- holder distribution / rug hard-filter (after narrative + on-chain pass) ---
+    hf_cfg = CFG.get("holder_filters", {})
+    if hf_cfg.get("enabled", True) and "mint" in (candidate or {}):
+        try:
+            holder_screen = holder_analyzer.screen_token(candidate["mint"], hf_cfg)
+            if holder_screen["should_reject"]:
+                print(f"[entry-reject] {candidate.get('term')} (holder): "
+                      f"{'; '.join(holder_screen['reject_reasons'])}")
+                return False
+            # fold risk into the score: 0 risk = no penalty, 10 risk = -3
+            result["score"] = round(result["score"] - holder_screen["risk_score"] * 0.3, 2)
+        except Exception as e:
+            # RPC failures on holder screen: warn but don't auto-block.
+            # Better to occasionally enter on a "no-screen" cycle than to
+            # never enter because the RPC is flaky.
+            print(f"[warn] holder_analyzer.screen_token failed: {e}", file=sys.stderr)
     if result["score"] < CFG["entry_filters"]["min_entry_score"]:
         print(f"[entry-reject] {candidate.get('term')}: score {result['score']} below "
               f"min {CFG['entry_filters']['min_entry_score']}")

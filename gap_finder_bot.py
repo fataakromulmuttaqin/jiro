@@ -45,6 +45,7 @@ import config as cfgmod
 import narrative
 import trading
 import notifier
+import smart_money
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -168,6 +169,18 @@ def _extract_top_pair_and_mint(dex_result: Dict[str, Any]) -> (Optional[Dict[str
 # ----------------------------------------------------------------------------
 
 def run_once(scan_count: int) -> None:
+    # --- keep smart-money watchlist warm BEFORE scanning candidates ---
+    # Cheap (~N watched wallets × getSignaturesForAddress), and means
+    # compute_entry_score() can do an in-memory convergence check instead
+    # of re-fetching anything per candidate.
+    try:
+        new_buys = smart_money.poll_watchlist()
+        if new_buys:
+            summary = "; ".join(f"{b['label'] or b['wallet'][:8]}→{b['mint'][:8]}" for b in new_buys)
+            print(f"  [smart-money] {len(new_buys)} new buy(s) detected: {summary}")
+    except Exception as e:
+        print(f"[warn] smart_money.poll_watchlist failed: {e}", file=sys.stderr)
+
     print(f"[{dt.datetime.now().isoformat()}] asking Grok for off-crypto viral candidates...")
     try:
         candidates = narrative.scan_for_candidates()

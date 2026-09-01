@@ -8,12 +8,23 @@ dump detection / narrative-decay detection.
 ## Files
 - `config.py` — loads/creates `config.json`, the single place to tune every
   trading number (entry size, TP/SL %, trailing stop, partial TP ladder,
-  on-chain thresholds, timing).
+  on-chain thresholds, holder filters, smart-money thresholds, timing).
 - `narrative.py` — Grok calls: scan X for new viral off-crypto narratives,
   and re-check narrative health (accelerating/peaking/declining/dead) for
   positions already open.
 - `onchain_analyzer.py` — polls Solana RPC + Dexscreener to detect whale
   dumps, liquidity pulls, sell-pressure flips, and fast price-velocity dumps.
+- `holder_analyzer.py` — ENTRY-time holder distribution / rug screen.
+  Checks top10 %, dev-wallet hold (pump.fun-origin only), fresh-wallet %,
+  bundler-cluster % (shared SOL funder), and mint/freeze authority. Hard
+  rejects tokens failing the configured thresholds; folds residual risk
+  into `entry_score`. 20-minute in-memory cache.
+- `smart_money.py` — ENTRY-time watchlist tracker. You curate
+  `watchlist.json` with known-good wallets; every scan cycle the bot
+  fetches each one's recent transactions and detects token buys. When
+  2+ watched wallets buy the same mint within the configured window,
+  the entry score gets a bonus. Free RPC only — no Nansen/Cielo
+  dependency. Watchlist is gitignored.
 - `trading.py` — Jupiter swap execution, entry scoring, position tracking,
   trailing stop, partial take-profit, on-chain + narrative exit signals,
   daily-loss kill switch.
