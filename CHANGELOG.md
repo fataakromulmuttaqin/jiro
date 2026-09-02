@@ -4,6 +4,21 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Changed — rich, informative gap alerts 2026-09-02
+- **`format_alert()` rewritten**: the Telegram gap alert is no longer a flat
+  template. It now renders (HTML parse_mode) a structured card:
+  - Header + the narrative term
+  - **Naratif** block: description, category, 24h post volume, an estimated
+    narrative strength score (0-10), cross-community/organic flags, CT-notice
+    level.
+  - **Token di pump.fun** block (when matched): symbol/name, MC, launch age,
+    narrative match score, a divergence read ("🔥 very early / 📈 early
+    window / ⚠️ gap menyempit"), mint, and creator.
+  - Clickable pump.fun link + explicit NEXT action (holder + smart-money +
+    entry-score run automatically) and manual verify pointers (gmgn/dexscreener).
+- This also removes the leftover Markdown `*`/`_` syntax that was rendering
+  literally after the notifier moved to parse_mode=HTML.
+
 ### Changed — narrative → pump.fun launch matching (replaces Dexscreener search) 2026-09-02
 - **`launch_finder.py` (new)**: after Grok scans X for a viral narrative, find the
   matching token by scanning **freshly-launched pump.fun coins** (bonding-curve

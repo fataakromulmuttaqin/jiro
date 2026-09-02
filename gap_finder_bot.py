@@ -95,31 +95,78 @@ def send_telegram(text: str) -> None:
     notifier.send(text)
 
 
+def _gc_emoji(b: bool) -> str:
+    return "✅" if b else "❌"
+
+
 def format_alert(c: Dict[str, Any]) -> str:
+    """Build a rich, human-readable gap alert (Telegram, HTML parse_mode).
+
+    Sections: header + narrative read → gap analysis → matched token →
+    on-chain sizing → action. Uses <b>/<code> (HTML) since the notifier now
+    defaults to parse_mode=HTML (Markdown 400s on a lone '$' in prices)."""
     launch = c["launch"]
+    term = c.get("term", "")
     age_min = None
     if launch.get("created_timestamp"):
         age_min = max(0, int((time.time() - launch["created_timestamp"] / 1000) / 60))
+
+    # narrative strength estimate (0-10-ish, mirror of compute_entry_score)
+    vol = {"hundreds": 3, "thousands": 6, "tens of thousands": 9}.get(
+        str(c.get("est_posts_1_24h") or ""), 2)
+    n_score = vol * 0.4 + (1.2 if c.get("cross_community") else 0) + \
+              (1.2 if c.get("organic") else 0) + \
+              (1.0 if str(c.get("crypto_notice_level")) == "none" else
+               0.5 if str(c.get("crypto_notice_level")) == "early_whispers" else 0)
+
+    mc = float(launch.get("market_cap_usd") or 0)
+
+    # divergence: is the token tiny vs the narrative heat? (the edge we want)
+    div = ""
+    if mc > 0:
+        if mc < 10_000:
+            div = "🔥 very early — MC jauh di bawah naratif yang ramai"
+        elif mc < 50_000:
+            div = "📈 early window — masih ada ruang sebelum ramai"
+        else:
+            div = "⚠️ MC mulai menengah — gap menyempit"
+
     lines = [
-        f"🕳️ *GAP CANDIDATE*: `{c.get('term')}`",
-        f"_{c.get('description','')}_",
-        f"category: {c.get('category')} | est posts (1-24h): {c.get('est_posts_1_24h')}",
-        f"cross-community: {c.get('cross_community')} | organic: {c.get('organic')} | "
-        f"CT notice: {c.get('crypto_notice_level')}",
+        f"🕳️ <b>GAP  DETECTED</b> — “{term}”",
+        f"━━━━━━━━━━━━━━━━━━━━",
+        "",
+        f"<b>Naratif</b>",
+        f"  {c.get('description','') or '—'}",
+        f"  kategori: <code>{c.get('category')}</code>",
+        f"  obrolan 24j: <b>{c.get('est_posts_1_24h')}</b>  ·  skor naratif: <b>{n_score:.1f}/10</b>",
+        f"  {_gc_emoji(bool(c.get('cross_community')))} cross-community  ·  {_gc_emoji(bool(c.get('organic')))} organic",
+        f"  CT notice: <code>{c.get('crypto_notice_level')}</code>",
+        "",
     ]
+
     if launch["found"]:
-        lines.append(
-            f"🆕 *TOKEN FOUND on pump.fun*: {launch.get('symbol')} "
-            f"({launch.get('name')})\n"
-            f"mint: `{launch['mint']}`\n"
-            f"market cap: ${launch.get('market_cap_usd', 0):,.0f}"
-            + (f" | age: ~{age_min} min" if age_min is not None else "")
-            + f" | match: {launch.get('match_score')}"
-        )
-        lines.append(f"👉 {launch['pair_url']}")
+        sym = launch.get("symbol")
+        lines += [
+            f"🆕 <b>Token di pump.fun</b>",
+            f"  <code>{sym}</code> — {launch.get('name') or term}",
+            f"  MC: <b>${mc:,.0f}</b>  ·  umur: <b>~{age_min} min</b>",
+            f"  match naratif: <b>{launch.get('match_score')}</b>",
+            f"  {div}",
+            f"  mint: <code>{launch['mint']}</code>",
+            f"  creator: <code>{launch.get('creator') or '?'}</code>",
+            "",
+            f"📌 <b>Next</b>: holder screen + smart-money & entry score dijalankan "
+            f"otomatis sebelum buka posisi (dry-run saat ini).",
+            f"🖱️ <a href=\"{launch['pair_url']}\">buka di pump.fun</a>",
+            f"🔍 verify juga: gmgn.ai / dexscreener",
+        ]
     else:
-        lines.append("⏳ no matching fresh token launched yet — watching.")
-    lines.append("👉 verify manually on pump.fun / gmgn.ai before acting")
+        lines += [
+            f"⏳ <b>Belum ada token fresh yang cocok</b> untuk “{term}”.",
+            f"Jiro tetap pantau — begitu naratif ini pecah jadi launch pump.fun "
+            f"yang match (MC rendah), alert baru keluar lagi di siklus berikutnya.",
+        ]
+
     return "\n".join(lines)
 
 
