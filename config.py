@@ -67,6 +67,15 @@ DEFAULT_CONFIG: Dict[str, Any] = {
         ,"min_name_similarity": 0.72 # 0-1 fuzzy-match threshold vs narrative term
     },
 
+    "ml_filter": {
+        # ML/ANN pump-probability filter (from '151 Trading Strategies' §18.2).
+        # Adds a mild ±score bonus to entry based on the ANN's predicted pump
+        # probability. Strictly optional/additive: if the model or numpy is
+        # missing, entries proceed exactly as without ML (never blocks).
+        "enabled": True,
+        "score_weight": 1.0
+    },
+
     "onchain_exit_signals": {
         "enabled": True,
         "whale_dump_threshold_pct": 15,     # top holders' combined balance drop

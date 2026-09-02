@@ -125,6 +125,25 @@ def _enrich_launch(launch: Dict[str, Any]) -> Dict[str, Any]:
         print(f"[warn] smart_money convergence failed for {mint}: {e}", file=__import__("sys").stderr)
         launch["smart_money"] = {"wallets": 0, "converged": False}
 
+    # 4) ML/ANN pump-probability filter (from '151 Trading Strategies' §18.2)
+    # Builds a live feature vector from signals already gathered and asks the
+    # trained ANN how likely this launt is to pump. Optional: if no model or
+    # the vector fails, launch['ml_prob'] stays None and downstream treats it
+    # as 'no ML signal' (strictly additive, never blocks by itself).
+    try:
+        import ml_filter
+        extra_ft = {
+            "smart_money_count": (launch.get("smart_money") or {}).get("wallets", 0),
+            "holder_risk_score": (launch.get("holder") or {}).get("risk_score", 0),
+            "swap_count_h1": (launch.get("activity") or {}).get("swap_count_h1", 0),
+        }
+        fv = ml_filter.build_feature_vector(coin, extra_ft)  # live features (with MC)
+        launch["ml_prob"] = ml_filter.predict_pump(fv)
+    except Exception as e:
+        print(f"[warn] ML filter failed for {mint}: {e}", file=__import__("sys").stderr)
+        launch["ml_prob"] = None
+    launch["ml_available"] = launch.get("ml_prob") is not None
+
     return launch
 
 
@@ -148,6 +167,9 @@ def evaluate_gap(candidate: Dict[str, Any], coins: Optional[List[Dict[str, Any]]
     out = {**candidate, "launch": launch, "is_gap_candidate": is_gap}
     if launch.get("mint"):
         out["_launch_coin"] = launch.get("_coin") or {}
+    # pass ML probability through to entry scoring (additive filter)
+    if launch.get("ml_available"):
+        out["_ml_prob"] = launch.get("ml_prob")
     return out
 
 

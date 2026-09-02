@@ -358,6 +358,22 @@ def passes_entry(candidate: Dict[str, Any], dex_pair: Optional[Dict[str, Any]]) 
         print(f"[entry-reject] {candidate.get('term')}: score {result['score']} below "
               f"min {CFG['entry_filters']['min_entry_score']}")
         return False
+
+    # --- ML/ANN pump-probability filter (additive bonus, from §18.2) ---
+    # If the gap evaluator attached an ml_prob, fold it in as a ±score signal:
+    # higher model confidence => slight bonus, low confidence & available =>
+    # slight penalty. Strictly additive — never blocks an otherwise-passing
+    # entry; only nudges the score that's already above the floor.
+    ml_cfg = CFG.get("ml_filter", {})
+    if ml_cfg.get("enabled", True):
+        ml_p = (candidate or {}).get("_ml_prob")
+        if ml_p is not None:
+            w = float(ml_cfg.get("score_weight", 1.0))
+            # map [0,1] prob to bonus [-0.5, +0.5] around a 0.4 neutral point
+            bonus = (float(ml_p) - 0.4) * w
+            result["score"] = round(result["score"] + bonus, 2)
+            result["reasons"].append(f"ML pump-prob {ml_p:.2f}")
+
     print(f"[entry-score] {candidate.get('term')}: {result['score']}/10 — {', '.join(result['reasons'])}")
     return True
 

@@ -4,13 +4,15 @@ No network; pure logic tests."""
 
 import sys
 import os
+import time
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import launch_finder as lf
 
-# A fake fresh coin matching "pilly"
+# A fake fresh coin matching "pilly". created_timestamp is relative to now so
+# the age-window tests don't drift out of range as the clock advances.
 PILLY_COIN = {
     "mint": "PillyPumpMint12345678901234567890123456789012",
     "symbol": "PILLY",
@@ -18,7 +20,7 @@ PILLY_COIN = {
     "description": "the alon dev deployed a dog",
     "usd_market_cap": 2797,
     "market_cap_usd": 2797,
-    "created_timestamp": 1788310526000,  # recent (this test sets age via cfg)
+    "created_timestamp": int(time.time() * 1000) - 3600_000,  # ~1h ago
     "complete": False,
     "real_sol_reserves": 4000000000,
     "total_supply": 1000000000000000,

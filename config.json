@@ -32,6 +32,10 @@
     "max_market_cap_usd": 100000,
     "min_name_similarity": 0.72
   },
+  "ml_filter": {
+    "enabled": true,
+    "score_weight": 1.0
+  },
   "onchain_exit_signals": {
     "enabled": true,
     "whale_dump_threshold_pct": 15,

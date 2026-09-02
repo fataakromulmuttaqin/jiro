@@ -4,6 +4,34 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — ML/ANN pump-probability filter 2026-09-02
+- **`ml_filter.py` (new)**: ANN entry filter inspired by '151 Trading Strategies'
+  §18.2 (Kakushadze & Serur). Builds a labeled set from OLD pump.fun launches
+  (ASC sort), trains an MLP to predict "will this launch keep/pump", and
+  exposes `predict_pump()`:
+  - Prefers scikit-learn `MLPClassifier`; falls back to a **pure-numpy MLP** if
+    sklearn/numpy is unavailable (env-degraded safe no-op, never crashes the bot).
+  - Features (10): log-MC, log-age, complete, reply count, log-supply, pool SOL
+    value, smart-money count, holder risk score, swap/hour, has-creator. All
+    normalized to ~0..1 so no single feature saturates the net (fixed an initial
+    bug where the ~1e6 supply field made the ANN predict 1.0 on everything).
+  - **Bounded oversampling** for the minority class (cap 9x) to handle extreme
+    label imbalance without the model memorizing one class.
+  - **Model persistence:** `models/ml_filter.joblib` (sklearn) or `.npz`
+    (numpy) + `ml_filter_fit.json` metadata.
+  - `retrain_from_ledger()` scaffold for blending Jiro's own real trade
+    outcomes (ledger.json) as the sharpest labels over time.
+- **`gap_finder_bot._enrich_launch()`**: computes a live feature vector from
+  signals already gathered (MC, holder screen, smart-money, activity swap
+  count) and attaches `launch["ml_prob"]`; propagated to the candidate as
+  `_ml_prob`.
+- **`trading.passes_entry()`**: applies the ML probability as an **additive**
+  ±score bonus (config `ml_filter.score_weight`), never a hard block.
+- **`config.py`**: new `ml_filter` section (`enabled`/`score_weight`).
+- install docs + optional deps noted in README.
+- **Fix**: launch-finder tests used a hardcoded `created_timestamp` that drifted
+  out of the age window as the clock advanced — now computed relative to `now`.
+
 ### Added — volume per timeframe (1m/5m/10m/15m/30m/1h) 2026-09-02
 - **`launch_finder.compute_activity_metrics()`** now buckets on-chain mint
   signatures into cumulative per-timeframe windows and returns:

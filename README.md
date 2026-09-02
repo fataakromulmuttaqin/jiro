@@ -34,6 +34,8 @@ dump detection / narrative-decay detection.
 ## Install
 ```bash
 pip install requests solders base58 --break-system-packages
+# optional: ML/ANN pump-probability filter (ml_filter.py) needs numpy + sklearn
+#   pip install numpy scikit-learn joblib --break-system-packages
 ```
 
 ## Setup (research/alerts only — safe default, no wallet needed)
