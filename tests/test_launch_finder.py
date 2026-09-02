@@ -84,5 +84,34 @@ class TestToDexPair(unittest.TestCase):
         self.assertIsNotNone(dp["raw_base"])
 
 
+class TestComputeActivityMetrics(unittest.TestCase):
+    def test_zero_rpc_returns_positive_volume(self):
+        # Even with no on-chain signatures (fresh launch), the estimator must
+        # return a positive volume bound, not a hard 0 a user reads as "dead".
+        from unittest.mock import patch
+        with patch("rpc_client.rpc_call", return_value=[]):
+            # PILLY has real_sol_reserves & recent created_timestamp
+            m = lf.compute_activity_metrics(PILLY_COIN)
+        self.assertIn("swap_count", m)
+        self.assertIn("volume_usd_est", m)
+        self.assertGreater(m["volume_usd_est"], 0, "estimator should give a bound")
+        self.assertEqual(m["swap_count"], 0)
+
+    def test_counts_h1_signatures(self):
+        from unittest.mock import patch
+        import time
+        now = int(time.time())
+        old = now - 7200
+        # two recent (<1h), one old (>1h)
+        sigs = [
+            {"blockTime": now - 100},   # 100s ago -> in window
+            {"blockTime": now - 50},    # in window
+            {"blockTime": old},          # out of window
+        ]
+        with patch("rpc_client.rpc_call", return_value=sigs):
+            m = lf.compute_activity_metrics(PILLY_COIN)
+        self.assertEqual(m["swap_count_h1"], 2)
+
+
 if __name__ == "__main__":
     unittest.main()

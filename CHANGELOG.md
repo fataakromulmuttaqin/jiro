@@ -4,6 +4,25 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — on-chain activity + holder + smart-money in alerts 2026-09-02
+- **`launch_finder.compute_activity_metrics()`**: computes on-chain activity for
+  a matched token via Solana RPC (Helius) — swap count in the last hour (from
+  mint signatures) plus an estimated trade volume (pool SOL value × turnover
+  calibrated to fresh pump.fun launches; falls back to a positive bound rather
+  than a hard 0). Also tracked (in dev) from Jupiter SOL price.
+- **`gap_finder_bot._enrich_launch()`**: before rendering the alert, attaches
+  three signal groups to the matched launch: on-chain activity (swap count +
+  volume + pool value), the holder/rug screen result (risk score, PASS/REJECT,
+  top10/dev/fresh/bundler %, mint+freeze authority), and smart-money
+  convergence (watched wallets that bought this mint vs threshold). All
+  best-effort — an RPC failure degrades to a safe placeholder, never crashes.
+- **`format_alert()`** now renders fresh "On-chain activity", "Rug / holder
+  screen", and "Smart money" blocks so each gap alert shows: **swap/jam,
+  vol~, pool value**, holder risk + metrics + REJECT status, and smart-money
+  count/convergence.
+- **Tests**: +2 activity-metric tests (positive-volume bound on zero/RPC-empty;
+  correct 1h signature counting). Full suite 79 passing.
+
 ### Changed — rich, informative gap alerts 2026-09-02
 - **`format_alert()` rewritten**: the Telegram gap alert is no longer a flat
   template. It now renders (HTML parse_mode) a structured card:

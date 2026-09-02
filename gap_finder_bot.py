@@ -64,6 +64,70 @@ CFG = cfgmod.load_config()
 # usually already pumped out of the gap).
 # ----------------------------------------------------------------------------
 
+def _enrich_launch(launch: Dict[str, Any]) -> Dict[str, Any]:
+    """Attach on-chain activity + holder screen + smart-money convergence to a
+    matched launch so the alert can show them. All best-effort: any signal
+    that fails (RPC down, etc.) degrades to a safe placeholder rather than
+    crashing the scan."""
+    if not launch.get("found") or not launch.get("mint"):
+        launch["activity"] = {}
+        launch["holder"] = {}
+        launch["smart_money"] = {"wallets": 0, "converged": False}
+        return launch
+
+    coin = launch.get("_coin") or {}
+    mint = launch["mint"]
+
+    # 1) swap count + volume estimate (on-chain RPC)
+    try:
+        launch["activity"] = launch_finder.compute_activity_metrics(coin)
+    except Exception as e:
+        print(f"[warn] activity metrics failed for {mint}: {e}", file=__import__("sys").stderr)
+        launch["activity"] = {}
+
+    # 2) holder / rug screen (entry-side hardening)
+    try:
+        import holder_analyzer
+        hf_cfg = CFG.get("holder_filters", {})
+        if hf_cfg.get("enabled", True):
+            hs = holder_analyzer.screen_token(mint, hf_cfg)
+            launch["holder"] = {
+                "risk_score": hs.get("risk_score"),
+                "should_reject": hs.get("should_reject"),
+                "reject_reasons": hs.get("reject_reasons", [])[:3],
+                "top10_pct": hs.get("top10_pct"),
+                "dev_hold_pct": hs.get("dev_hold_pct"),
+                "fresh_wallet_pct": hs.get("fresh_wallet_pct"),
+                "bundler_cluster_pct": hs.get("bundler_cluster_pct"),
+                "mint_renounced": hs.get("mint_authority_renounced"),
+                "freeze_renounced": hs.get("freeze_authority_renounced"),
+            }
+        else:
+            launch["holder"] = {}
+    except Exception as e:
+        print(f"[warn] holder screen failed for {mint}: {e}", file=__import__("sys").stderr)
+        launch["holder"] = {}
+
+    # 3) smart-money convergence count (watched wallets that bought this mint)
+    try:
+        sm_cfg = CFG.get("smart_money", {})
+        conv = smart_money.check_convergence(
+            mint,
+            min_wallets=sm_cfg.get("min_wallets_for_convergence", 2),
+            window_seconds=sm_cfg.get("convergence_window_seconds", 900),
+        )
+        launch["smart_money"] = {
+            "wallets": conv.get("wallet_count"),
+            "converged": conv.get("converged"),
+            "threshold": sm_cfg.get("min_wallets_for_convergence", 2),
+        }
+    except Exception as e:
+        print(f"[warn] smart_money convergence failed for {mint}: {e}", file=__import__("sys").stderr)
+        launch["smart_money"] = {"wallets": 0, "converged": False}
+
+    return launch
+
+
 def evaluate_gap(candidate: Dict[str, Any], coins: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
     term = candidate.get("term", "").strip()
     launch_cfg = CFG.get("launch_finder", {})
@@ -75,6 +139,9 @@ def evaluate_gap(candidate: Dict[str, Any], coins: Optional[List[Dict[str, Any]]
         and candidate.get("crypto_notice_level") in ("none", "early_whispers")
         and launch["found"]
     )
+
+    # enrich the matched token with activity + holder + smart-money signals
+    launch = _enrich_launch(launch)
 
     # keep the raw matched coin so the open flow can rebuild a dex_pair for
     # scoring without hitting a listing exchange (token may not be on one yet)
@@ -146,6 +213,51 @@ def format_alert(c: Dict[str, Any]) -> str:
 
     if launch["found"]:
         sym = launch.get("symbol")
+        act = launch.get("activity") or {}
+        holder = launch.get("holder") or {}
+        sm = launch.get("smart_money") or {}
+
+        # --- activity: swap count + volume ---
+        swap_cnt = act.get("swap_count_h1", act.get("swap_count", 0))
+        vol_usd = act.get("volume_usd_est", 0)
+        pool_val = act.get("pool_sol_value", 0)
+        vol_str = f"${vol_usd:,.0f}" if vol_usd else "n/a"
+        pool_str = f"${pool_val:,.0f}" if pool_val else "n/a"
+        activity_line = (f"  swap/jam: <b>{swap_cnt}</b>  ·  vol~: <b>{vol_str}</b>  ·  "
+                         f"pool: <b>{pool_str}</b>")
+
+        # --- holder / rug screen ---
+        h_lines = []
+        if holder:
+            risk = holder.get("risk_score")
+            reject = holder.get("should_reject")
+            risk_label = f"{risk:.1f}/10" if risk is not None else "n/a"
+            status_emoji = "🔴 REJECT" if reject else ("🟢 PASS" if risk is not None else "⚪ n/a")
+            h_lines = [
+                f"  <b>holder screen</b>: risk {risk_label}  {status_emoji}",
+            ]
+            # show key metrics that are non-None
+            bits = []
+            for lbl, key in (("top10", "top10_pct"), ("dev", "dev_hold_pct"),
+                             ("fresh", "fresh_wallet_pct"), ("bundler", "bundler_cluster_pct")):
+                v = holder.get(key)
+                if v is not None:
+                    bits.append(f"{lbl} {v:.1f}%")
+            if bits:
+                h_lines.append(f"    " + " · ".join(bits))
+            if reject:
+                h_lines.append(f"    ⛔ " + "; ".join(holder.get("reject_reasons") or [])[:120])
+        else:
+            h_lines = ["  <b>holder screen</b>: n/a (disabled / RPC down)"]
+
+        # --- smart-money convergence ---
+        sm_cnt = sm.get("wallets", 0)
+        sm_thr = sm.get("threshold", 2)
+        sm_conv = sm.get("converged")
+        sm_emoji = "🧠" if sm_conv else ("⏳" if sm_cnt else "⚪")
+        sm_line = (f"{sm_emoji} <b>smart-money</b>: <b>{sm_cnt}</b>/{sm_thr} wallet "
+                   f"beli token ini" + ("  <b>CONVERGED</b>" if sm_conv else ""))
+
         lines += [
             f"🆕 <b>Token di pump.fun</b>",
             f"  <code>{sym}</code> — {launch.get('name') or term}",
@@ -155,8 +267,19 @@ def format_alert(c: Dict[str, Any]) -> str:
             f"  mint: <code>{launch['mint']}</code>",
             f"  creator: <code>{launch.get('creator') or '?'}</code>",
             "",
-            f"📌 <b>Next</b>: holder screen + smart-money & entry score dijalankan "
-            f"otomatis sebelum buka posisi (dry-run saat ini).",
+            f"📊 <b>On-chain activity</b>",
+            activity_line,
+            "",
+            f"🛡️ <b>Rug / holder screen</b>",
+            *h_lines,
+            f"  mint auth: {'✅ renounced' if holder.get('mint_renounced') is True else ('❌ LIVE' if holder.get('mint_renounced') is False else '⚪ n/a')}"
+            f"  ·  freeze: {'✅ renounced' if holder.get('freeze_renounced') is True else ('❌ LIVE' if holder.get('freeze_renounced') is False else '⚪ n/a')}",
+            "",
+            f"🧲 <b>Smart money</b>",
+            sm_line,
+            "",
+            f"📌 <b>Next</b>: entry score dijalankan otomatis sebelum buka posisi "
+            f"(dry-run saat ini).",
             f"🖱️ <a href=\"{launch['pair_url']}\">buka di pump.fun</a>",
             f"🔍 verify juga: gmgn.ai / dexscreener",
         ]
