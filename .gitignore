@@ -16,3 +16,5 @@ watchlist.json
 models/
 *.joblib
 *.npz
+ml_training_samples.jsonl
+ml_last_train.txt

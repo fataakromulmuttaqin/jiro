@@ -116,10 +116,11 @@ def build_feature_vector(coin: dict, extra: dict | None = None,
         float(extra.get("swap_count_h1") or 0),                 # 8 swap/h (small)
         1.0 if coin.get("creator") else 0.0,                    # 9 has creator
     ]
-    # normalize to ~0..1 range: divide log fields & small counts by sensible
+    # normalize to ~0..1..1 range: divide log fields & small counts by sensible
     # ceilings so NO single feature dominates (fixes MLP saturation when one
-    # column is ~1e6 and all others <10).
-    scale = np.array([1.0, 4.0, 1.0, 200.0, 16.0, 1e5, 20.0, 10.0, 1000.0, 1.0],
+    # column is ~1e6 and all others <10). log-MC over 8 keeps MC in [0,~0.87]
+    # even at /1e8+ caps, so historical & live vectors stay comparable.
+    scale = np.array([8.0, 4.0, 1.0, 200.0, 16.0, 1e5, 20.0, 10.0, 1000.0, 1.0],
                      dtype=float)
     return (np.asarray(fv, dtype=float) / scale).astype(np.float32)
 

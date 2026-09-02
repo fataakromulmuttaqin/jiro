@@ -505,6 +505,24 @@ def open_position(wallet: Optional[Wallet], term: str, token_mint: str, pair_url
     sl_pct = CFG["trading"]["stop_loss_pct"]
     tokens_bought = int(quote["outAmount"])
 
+    # Build a persisted ML feature row for this trade so the model can retrain
+    # from real outcomes later (ledger only logs pnl; the ANN needs the same
+    # feature vector it was scored with). Best-effort: if ml_filter is missing
+    # or the vector fail, store None and skip ML retraining for this trade.
+    _ml_fv = None
+    try:
+        import ml_filter
+        _coin = (candidate.get("_launch_coin") if candidate else None) or {}
+        _ext = {
+            "smart_money_count": ((candidate or {}).get("launch") or {}).get("smart_money", {}).get("wallets", 0),
+            "holder_risk_score": ((candidate or {}).get("launch") or {}).get("holder", {}).get("risk_score", 0),
+            "swap_count_h1": ((candidate or {}).get("launch") or {}).get("activity", {}).get("swap_count_h1", 0),
+        }
+        if _coin:
+            _ml_fv = ml_filter.build_feature_vector(_coin, _ext).tolist()
+    except Exception as e:
+        print(f"[warn] ml feature build failed for {term}: {e}", file=sys.stderr)
+
     position = {
         "id": str(uuid.uuid4()),
         "term": term,
@@ -523,6 +541,7 @@ def open_position(wallet: Optional[Wallet], term: str, token_mint: str, pair_url
         "peak_price_usd": entry_price,
         "partial_tp_hits": [],                    # list of at_pct levels already sold
         "opened_at": dt.datetime.utcnow().isoformat(),
+        "ml_feature": _ml_fv,                     # feature row for ML retraining
         "narrative_status": "accelerating",
         "status": "open",
         "buy_tx": sig,
@@ -557,15 +576,37 @@ def _sell_raw_amount(wallet: Optional[Wallet], position: Dict[str, Any], amount_
 
 def _record_ledger(position: Dict[str, Any], reason: str, pnl_usd: float, pnl_pct: float) -> None:
     ledger = load_ledger()
-    ledger.append({
+    entry = {
         "term": position["term"],
         "mint": position["mint"],
         "reason": reason,
         "pnl_usd": pnl_usd,
         "pnl_pct": pnl_pct,
         "closed_at": dt.datetime.utcnow().isoformat(),
-    })
+    }
+    ledger.append(entry)
     save_ledger(ledger)
+
+    # Persist an ML retraining sample (feature row + win label) to a JSONL file
+    # the retrain cron reads. Kept separate from ledger so a schema change to
+    # the ledger never breaks the ML pipeline. Label: profitable close = win.
+    ml_fv = position.get("ml_feature")
+    if isinstance(ml_fv, list) and len(ml_fv) >= 10:
+        _append_ml_sample(ml_fv, 1.0 if pnl_usd > 0 else 0.0)
+
+
+_ML_SAMPLES_FILE = os.path.join(_HERE, "models", "ml_training_samples.jsonl")
+
+
+def _append_ml_sample(feature: list, label: float) -> None:
+    """Append (feature, label) to the JSONL training file. Creates models/ dir
+    on demand. Never raises — a logging failure must not break a trade close."""
+    try:
+        os.makedirs(os.path.dirname(_ML_SAMPLES_FILE), exist_ok=True)
+        with open(_ML_SAMPLES_FILE, "a") as f:
+            f.write(json.dumps({"features": feature, "label": label}) + "\n")
+    except Exception as e:
+        print(f"[warn] could not append ML sample: {e}", file=sys.stderr)
 
 
 def close_position_full(wallet: Optional[Wallet], position: Dict[str, Any], reason: str, current_price: float,

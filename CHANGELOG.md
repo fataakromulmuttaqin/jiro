@@ -4,6 +4,24 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — automatic ML retrain on trade close + cron 2026-09-02
+- **`trading.open_position`**: persists the ML feature vector on each position
+  so it survives to close (needed for retraining).
+- **`trading._record_ledger`**: on every trade close, appends a labeled training
+  sample (`features` + win/loss from pnl) to `models/ml_training_samples.jsonl`
+  — the source of truth for ML retraining, kept separate from the ledger.
+- **`retrain_ml.py`**: combines real-trade samples with historical pump.fun
+  proxy samples and calls `ml_filter.train()`. Cheap skip when no new samples
+  (checks last-train stamp before fetching historic data), `--force` to retrain
+  anyway, `EXIT=0` on success. Safe when no samples.
+- **Hermes cron** `Jiro ML retrain` (every 30m): runs `retrain_ml.py`, Telegram
+  update to chat 633709469 when an actual retrain fires, failure alert otherwise.
+- **`ml_filter` feature scaling**: log-MC now divided by 8 so live & historical
+  feature vectors stay comparable and bounded (MC up to 1e8+ maps to ~0.87).
+- **Tests**: +7 `tests/test_ml_filter.py` (feature vector bounds, leak-drop,
+  no-numpy fallback, numpy-MLP discrimination, predict_pump edge cases,
+  retrain skip logic). Full suite now 87 passing.
+
 ### Added — ML/ANN pump-probability filter 2026-09-02
 - **`ml_filter.py` (new)**: ANN entry filter inspired by '151 Trading Strategies'
   §18.2 (Kakushadze & Serur). Builds a labeled set from OLD pump.fun launches
