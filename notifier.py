@@ -35,9 +35,13 @@ def is_configured() -> bool:
     return bool(_BOT_TOKEN) and bool(_CHAT_ID)
 
 
-def send(text: str, parse_mode: str = "Markdown", disable_preview: bool = True) -> bool:
+def send(text: str, parse_mode: str = "HTML", disable_preview: bool = True) -> bool:
     """Send a message to the configured chat. Returns True on success,
-    False on any failure (network, auth, rate limit). Never raises."""
+    False on any failure (network, auth, rate limit). Never raises.
+
+    Uses HTML parse_mode by default (much more tolerant of $, _, *, backticks,
+    parens in memecoin tickers than Telegram's Markdown, which frequently 400s
+    on unpaired delimiters like a lone `$` in a price string)."""
     if not is_configured():
         return False
     url = f"https://api.telegram.org/bot{_BOT_TOKEN}/sendMessage"

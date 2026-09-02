@@ -57,6 +57,16 @@ DEFAULT_CONFIG: Dict[str, Any] = {
         "max_price_impact_pct": 8        # est. impact of your own buy size
     },
 
+    "launch_finder": {
+        # how we find the token for a viral narrative: scan FRESH pump.fun
+        # launches (bonding-curve only, i.e. not yet on a listing DEX) and
+        # fuzzy-match the narrative term against symbol/name. Tokens already
+        # on a listing exchange have usually pumped out of the gap.
+        "max_age_hours": 6,          # only launches younger than this
+        "max_market_cap_usd": 100000 # above this MC = probably already pumped
+        ,"min_name_similarity": 0.72 # 0-1 fuzzy-match threshold vs narrative term
+    },
+
     "onchain_exit_signals": {
         "enabled": True,
         "whale_dump_threshold_pct": 15,     # top holders' combined balance drop

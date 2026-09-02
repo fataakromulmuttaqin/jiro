@@ -47,12 +47,10 @@ import trading
 import notifier
 import smart_money
 import bot_controller
+import launch_finder
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
-
-DEXSCREENER_SEARCH_URL = "https://api.dexscreener.com/latest/dex/search"
-DEXSCREENER_PAIR_URL = "https://api.dexscreener.com/latest/dex/pairs/solana"
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(_HERE, "seen_terms.json")
@@ -61,47 +59,29 @@ CFG = cfgmod.load_config()
 
 
 # ----------------------------------------------------------------------------
-# ON-CHAIN GAP CHECK
+# LAUNCH CHECK — find the freshly-launched token matching a narrative term
+# (pump.fun / gmgn, NOT dexscreener — a token already on Dexscreener has
+# usually already pumped out of the gap).
 # ----------------------------------------------------------------------------
 
-def check_dexscreener(term: str) -> Dict[str, Any]:
-    try:
-        r = requests.get(DEXSCREENER_SEARCH_URL, params={"q": term}, timeout=15)
-        r.raise_for_status()
-        pairs = r.json().get("pairs") or []
-    except Exception as e:
-        return {"found": False, "error": str(e), "matches": 0, "max_liquidity_usd": 0,
-                "max_volume_24h_usd": 0, "raw_pairs": []}
-
-    if not pairs:
-        return {"found": False, "matches": 0, "max_liquidity_usd": 0, "max_volume_24h_usd": 0, "raw_pairs": []}
-
-    max_liq = max((p.get("liquidity", {}).get("usd") or 0) for p in pairs)
-    max_vol = max((p.get("volume", {}).get("h24") or 0) for p in pairs)
-    top_pair = max(pairs, key=lambda p: (p.get("liquidity", {}).get("usd") or 0))
-    return {
-        "found": True,
-        "matches": len(pairs),
-        "max_liquidity_usd": round(max_liq, 2),
-        "max_volume_24h_usd": round(max_vol, 2),
-        "top_pair_url": top_pair.get("url"),
-        "raw_pairs": pairs,
-    }
-
-
-def evaluate_gap(candidate: Dict[str, Any]) -> Dict[str, Any]:
+def evaluate_gap(candidate: Dict[str, Any], coins: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
     term = candidate.get("term", "").strip()
-    dex = check_dexscreener(term)
+    launch_cfg = CFG.get("launch_finder", {})
+    launch = launch_finder.search_launch_for_term(term, launch_cfg, coins=coins)
 
     is_gap = (
         candidate.get("cross_community") is True
         and candidate.get("organic") is True
         and candidate.get("crypto_notice_level") in ("none", "early_whispers")
-        and dex["matches"] <= 2
-        and dex.get("max_liquidity_usd", 0) < CFG["entry_filters"]["max_liquidity_usd"]
+        and launch["found"]
     )
 
-    return {**candidate, "dexscreener": dex, "is_gap_candidate": is_gap}
+    # keep the raw matched coin so the open flow can rebuild a dex_pair for
+    # scoring without hitting a listing exchange (token may not be on one yet)
+    out = {**candidate, "launch": launch, "is_gap_candidate": is_gap}
+    if launch.get("mint"):
+        out["_launch_coin"] = launch.get("_coin") or {}
+    return out
 
 
 # ----------------------------------------------------------------------------
@@ -116,19 +96,30 @@ def send_telegram(text: str) -> None:
 
 
 def format_alert(c: Dict[str, Any]) -> str:
-    dex = c["dexscreener"]
+    launch = c["launch"]
+    age_min = None
+    if launch.get("created_timestamp"):
+        age_min = max(0, int((time.time() - launch["created_timestamp"] / 1000) / 60))
     lines = [
         f"🕳️ *GAP CANDIDATE*: `{c.get('term')}`",
         f"_{c.get('description','')}_",
         f"category: {c.get('category')} | est posts (1-24h): {c.get('est_posts_1_24h')}",
         f"cross-community: {c.get('cross_community')} | organic: {c.get('organic')} | "
         f"CT notice: {c.get('crypto_notice_level')}",
-        f"Dexscreener: matches={dex.get('matches')} max_liq=${dex.get('max_liquidity_usd')} "
-        f"max_vol24h=${dex.get('max_volume_24h_usd')}",
     ]
-    if dex.get("top_pair_url"):
-        lines.append(f"existing weak pair (if any): {dex['top_pair_url']}")
-    lines.append(f"👉 verify manually on pump.fun / gmgn.ai / dexscreener before acting")
+    if launch["found"]:
+        lines.append(
+            f"🆕 *TOKEN FOUND on pump.fun*: {launch.get('symbol')} "
+            f"({launch.get('name')})\n"
+            f"mint: `{launch['mint']}`\n"
+            f"market cap: ${launch.get('market_cap_usd', 0):,.0f}"
+            + (f" | age: ~{age_min} min" if age_min is not None else "")
+            + f" | match: {launch.get('match_score')}"
+        )
+        lines.append(f"👉 {launch['pair_url']}")
+    else:
+        lines.append("⏳ no matching fresh token launched yet — watching.")
+    lines.append("👉 verify manually on pump.fun / gmgn.ai before acting")
     return "\n".join(lines)
 
 
@@ -149,20 +140,6 @@ def load_seen() -> set:
 def save_seen(seen: set) -> None:
     with open(STATE_FILE, "w") as f:
         json.dump(sorted(seen), f)
-
-
-# ----------------------------------------------------------------------------
-# MINT RESOLUTION (dexscreener search doesn't give raw pair objects to callers
-# outside evaluate_gap, so pull the mint straight from the cached raw_pairs)
-# ----------------------------------------------------------------------------
-
-def _extract_top_pair_and_mint(dex_result: Dict[str, Any]) -> (Optional[Dict[str, Any]], Optional[str]):
-    raw_pairs = dex_result.get("raw_pairs") or []
-    if not raw_pairs:
-        return None, None
-    top_pair = max(raw_pairs, key=lambda p: (p.get("liquidity", {}).get("usd") or 0))
-    base = top_pair.get("baseToken", {})
-    return top_pair, base.get("address")
 
 
 # ----------------------------------------------------------------------------
@@ -191,13 +168,18 @@ def run_once(scan_count: int) -> None:
 
     print(f"  -> {len(candidates)} candidate(s) from Grok")
 
+    # Fetch fresh launches ONCE per cycle (all candidates share the same
+    # recent-launch window — avoids N separate API calls).
+    coins = launch_finder.fetch_recent_launches()
+    print(f"  [launch-finder] {len(coins)} fresh launch(es) in window")
+
     seen = load_seen()
     new_gaps = []
     for c in candidates:
         term = c.get("term", "").strip()
         if not term or term.lower() in seen:
             continue
-        result = evaluate_gap(c)
+        result = evaluate_gap(c, coins=coins)
         seen.add(term.lower())
         if result["is_gap_candidate"]:
             new_gaps.append(result)
@@ -208,17 +190,17 @@ def run_once(scan_count: int) -> None:
         wallet = trading.Wallet(trading.SOLANA_PRIVATE_KEY)
 
     if not new_gaps:
-        print("  -> no new gap candidates this cycle")
+        print("  -> no gap candidates with a matching fresh token this cycle")
     else:
         for g in new_gaps:
             alert = format_alert(g)
             print("\n" + alert + "\n" + "-" * 60)
             send_telegram(alert)
 
-            dex = g["dexscreener"]
-            top_pair, mint = _extract_top_pair_and_mint(dex)
+            launch = g["launch"]
+            mint = launch.get("mint")
             if not mint:
-                print("  (no existing token yet — nothing to buy, watch for launch)")
+                print("  (no fresh token found — nothing to buy, watch for launch)")
                 continue
 
             if not trading.AUTO_TRADE_ENABLED:
@@ -227,9 +209,9 @@ def run_once(scan_count: int) -> None:
 
             pos = trading.open_position(
                 wallet, g["term"], mint,
-                pair_url=dex.get("top_pair_url", ""),
+                pair_url=launch.get("pair_url", ""),
                 description=g.get("description", ""),
-                dex_pair=top_pair,
+                dex_pair=launch_finder.to_dex_pair(g.get("_launch_coin") or {}),
                 candidate=g,
             )
             if pos:

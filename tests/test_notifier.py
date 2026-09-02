@@ -56,7 +56,7 @@ def test_send_posts_correct_payload(monkeypatch):
         assert url_arg == "https://api.telegram.org/botABC123/sendMessage"
         assert payload["chat_id"] == "999"
         assert payload["text"] == "gap alert: $FOO"
-        assert payload["parse_mode"] == "Markdown"
+        assert payload["parse_mode"] == "HTML"
         assert payload["disable_web_page_preview"] is True
 
 

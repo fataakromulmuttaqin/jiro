@@ -27,6 +27,11 @@
     "min_buy_sell_ratio_h1": 1.1,
     "max_price_impact_pct": 8
   },
+  "launch_finder": {
+    "max_age_hours": 6,
+    "max_market_cap_usd": 100000,
+    "min_name_similarity": 0.72
+  },
   "onchain_exit_signals": {
     "enabled": true,
     "whale_dump_threshold_pct": 15,

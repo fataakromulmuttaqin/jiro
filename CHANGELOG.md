@@ -4,6 +4,32 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Changed — narrative → pump.fun launch matching (replaces Dexscreener search) 2026-09-02
+- **`launch_finder.py` (new)**: after Grok scans X for a viral narrative, find the
+  matching token by scanning **freshly-launched pump.fun coins** (bonding-curve
+  only, `complete=False`, low market cap, `created_timestamp` within a window)
+  and fuzzy-matching the narrative term against symbol/name. This replaces the
+  old `check_dexscreener(term)` lookup — the reasoning being a token already on
+  a listing exchange (Dexscreener) has usually already pumped out of the gap.
+- **`gap_finder_bot.py`**: removed the Dexscreener search path and `top_pair`/
+  mint-resolution helpers. `evaluate_gap()` now returns a `launch` dict; the
+  scan cycle fetches fresh launches once per cycle and passes them to all
+  candidates. Alerts show the pump.fun token, mint, market cap, age and match
+  score.
+- **`trading` scoring without a listing exchange**: for pump.fun bonding-curve
+  tokens (not on a DEX yet), the open flow builds a lightweight `dex_pair` proxy
+  from pump.fun on-chain fields (`launch_finder.to_dex_pair`) so
+  `compute_entry_score()`/`passes_entry()` work without Dexscreener data.
+- **`config.json` / `config.py`**: new `launch_finder` section with
+  `max_age_hours`, `max_market_cap_usd`, `min_name_similarity` (tunable live
+  via `/config set`).
+- Entry-side hardening (holder screen, smart-money convergence) continues to
+  run as before, now feeding off the pump.fun launch instead of a Dexscreener
+  pair.
+- **Tests**: `tests/test_launch_finder.py` — 8 tests for matching thresholds,
+  migrated/old/low-MC skips, best-match selection, and the dex_pair proxy.
+  Full suite now 77 passing.
+
 ### Added — Telegram remote control + local deployment 2026-09-02
 - **`bot_controller.py`** — run the bot and drive it from Telegram (`/status`,
   `/start`, `/stop`, `/config`, `/config get PATH`, `/config set PATH VALUE`,
