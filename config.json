@@ -27,22 +27,6 @@
     "min_buy_sell_ratio_h1": 1.1,
     "max_price_impact_pct": 8
   },
-  "holder_filters": {
-    "enabled": true,
-    "top_n_holders": 15,
-    "top10_holder_max_pct": 40,
-    "dev_hold_max_pct": 10,
-    "fresh_wallet_max_pct": 40,
-    "bundler_cluster_max_pct": 20,
-    "require_mint_authority_renounced": true,
-    "require_freeze_authority_renounced": true
-  },
-  "smart_money": {
-    "enabled": true,
-    "min_wallets_for_convergence": 2,
-    "convergence_window_seconds": 900,
-    "convergence_score_bonus": 1.5
-  },
   "onchain_exit_signals": {
     "enabled": true,
     "whale_dump_threshold_pct": 15,
@@ -58,5 +42,21 @@
     "poll_interval_minutes": 15,
     "monitor_interval_seconds": 20,
     "narrative_recheck_every_n_scans": 1
+  },
+  "holder_filters": {
+    "enabled": true,
+    "top_n_holders": 15,
+    "top10_holder_max_pct": 40,
+    "dev_hold_max_pct": 10,
+    "fresh_wallet_max_pct": 40,
+    "bundler_cluster_max_pct": 20,
+    "require_mint_authority_renounced": true,
+    "require_freeze_authority_renounced": true
+  },
+  "smart_money": {
+    "enabled": true,
+    "min_wallets_for_convergence": 2,
+    "convergence_window_seconds": 900,
+    "convergence_score_bonus": 1.5
   }
 }

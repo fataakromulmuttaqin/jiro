@@ -46,6 +46,7 @@ import narrative
 import trading
 import notifier
 import smart_money
+import bot_controller
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -257,6 +258,10 @@ def main():
         run_once(scan_count=1)
         return
 
+    # Remote control (Telegram) — lets us /stop, /start, /status, /config set
+    # without SSH. Safe no-op if token/chat not configured.
+    bot_controller.start_control_thread()
+
     poll_minutes = cfgmod.load_config()["system"]["poll_interval_minutes"]
     print(f"Looping: scan every {poll_minutes} min" +
           (f", monitor every {cfgmod.load_config()['system']['monitor_interval_seconds']}s" if args.with_monitor else "") +
@@ -267,6 +272,13 @@ def main():
     last_scan_at = 0.0
 
     while True:
+        # /stop check — clean shutdown at the next cycle boundary.
+        if bot_controller.should_stop():
+            print("[bot_control] stop requested — shutting down cleanly.")
+            if notifier.is_configured():
+                notifier.send("🛑 Jiro stopped (via Telegram command).")
+            break
+
         cfg_now = cfgmod.load_config()  # pick up live config.json edits each tick
         poll_seconds = cfg_now["system"]["poll_interval_minutes"] * 60
         monitor_seconds = cfg_now["system"]["monitor_interval_seconds"]

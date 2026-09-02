@@ -4,6 +4,22 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — Telegram remote control + local deployment 2026-09-02
+- **`bot_controller.py`** — run the bot and drive it from Telegram (`/status`,
+  `/start`, `/stop`, `/config`, `/config get PATH`, `/config set PATH VALUE`,
+  `/help`). Only the authorized `TELEGRAM_CHAT_ID` is honored. Runs in a daemon
+  thread; config edits go through config.py so the loop reloads them next tick.
+- **`run_bot.py`** — launcher that loads `.env` *before* any module import
+  (the modules read env at import time), normalizes a base64-stored
+  `SOLANA_PRIVATE_KEY` to base58, and supports `--stop`. This is the local
+  deployment entry point.
+- **`gap_finder_bot.main()`** — checks `bot_controller.should_stop()` at each
+  loop boundary for a clean `/stop`, and starts the Telegram control thread.
+- **Grok narrative fix**: xAI deprecated `search_parameters` on
+  `/v1/chat/completions` (returns 410 Gone). `narrative.py` now prefers the
+  Responses API with a `web_search` tool (live X search) and falls back to the
+  legacy chat-completions surface (no search) so the bot degrades gracefully.
+
 ### Fixed — bugfix pass 2026-09-02 (cleanup + hardening bugs)
 - **`open_position` silent-no-op of new entry signals (important)**: `gap_finder_bot`
   passes the candidate dict without a `mint` key and the mint as a separate arg.

@@ -9,6 +9,7 @@ plus a few new edge cases.
 import os
 import json
 import pytest
+import datetime as dt
 
 # IMPORTANT: import order matters. safety is reloaded by tests/safety tests
 # and can clobber env. We set our own right before importing trading.
@@ -290,7 +291,9 @@ def test_kill_switch_trips_on_daily_loss(monkeypatch, tmp_path):
     trading.save_ledger([{
         "term": "x", "mint": "y", "reason": "stop_loss",
         "pnl_usd": -60, "pnl_pct": -25,
-        "closed_at": "2026-09-01T00:00:00",  # recent
+        # recent (within the last 24h) — computed relative to now so the test
+        # doesn't drift out of the window as the system clock advances
+        "closed_at": (dt.datetime.utcnow() - dt.timedelta(hours=1)).isoformat(),
     }])
 
     assert trading.kill_switch_tripped() is True
