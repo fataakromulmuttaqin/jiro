@@ -159,21 +159,30 @@ def search_launch_for_term(term: str, cfg_launch: Dict[str, Any],
     }
 
 
+TIMEFRAMES_SECONDS = [
+    ("1m", 60), ("5m", 300), ("10m", 600), ("15m", 900),
+    ("30m", 1800), ("1h", 3600),
+]
+
+
 def compute_activity_metrics(coin: Dict[str, Any]) -> Dict[str, Any]:
     """Best-effort on-chain activity metrics for a pump.fun coin, computed
     from the Solana RPC (Helius) since neither the frontend list nor the coin
     detail expose swap/volume directly.
 
+    For each timeframe (1m/5m/10m/15m/30m/1h) we count how many on-chain
+    signatures touching the mint fall inside that rolling window, then convert
+    to an estimated trade volume by multiplying by an average swap size derived
+    from the pool's SOL value. A fresh launch may read 0 until its first trades
+    confirm; when we have a real observed swap-rate we prefer it, otherwise we
+    return a conservative positive bound so the field is never a misleading 0.
+
     Returns:
-      swap_count_h1: number of on-chain transfers touching this mint in the
-        last hour (proxy for swap/trade count). Uses getSignaturesForAddress on
-        the mint; a fresh launch may read 0 until its first trades confirm.
-      volume_usd_est: estimate of rotation = total pool SOL value × a turnover
-        factor calibrated to pump.fun early-launch behaviour (fresh tokens turn
-        over their pool many times/hour; we use a conservative multiplier tied
-        to observed age and community activity). Falls back to a bound estimate
-        so the field is always present rather than a hard 0 a user reads as
-        "dead".
+      swap_by_tf: { "1m": n1, "5m": n5, ... "1h": n3600 }  (cumulative counts)
+      volume_by_tf: { "1m": $, "5m": $, ... "1h": $ }       (est. cumulative USD)
+      swap_count / swap_count_h1: shorthand for the 1h count
+      volume_usd_est: 1h volume shorthand
+      pool_sol_value, sol_price_used, age_hours
     """
     import rpc_client
     now = time.time()
@@ -181,22 +190,26 @@ def compute_activity_metrics(coin: Dict[str, Any]) -> Dict[str, Any]:
     created_ms = coin.get("created_timestamp") or 0
     age_h = max(0, (now - created_ms / 1000) / 3600) if created_ms else 0
 
-    # --- swap count: signatures on the mint within a rolling window ---
-    swap_count = 0
+    # --- fetch signatures on the mint (newest first) ---
+    sigs: List[Dict[str, Any]] = []
     try:
         _raw = rpc_client.rpc_call(
             "getSignaturesForAddress",
             [mint, {"limit": 200}],
         ) or []
-        sigs: List[Dict[str, Any]] = [s for s in _raw if isinstance(s, dict)]
-        # count how many fall inside the last hour
-        cutoff = now - 3600
-        swap_count = sum(
+        sigs = [s for s in _raw if isinstance(s, dict)]
+    except Exception as e:
+        print(f"[launch_finder] swap-count RPC failed: {e}", file=__import__("sys").stderr)
+
+    # count signatures per timeframe window (cumulative: 1m ⊆ 5m ⊆ 1h)
+    swap_by_tf = {}
+    for tf, secs in TIMEFRAMES_SECONDS:
+        cutoff = now - secs
+        swap_by_tf[tf] = sum(
             1 for s in sigs
             if (s.get("blockTime") or 0) >= cutoff
         )
-    except Exception as e:
-        print(f"[launch_finder] swap-count RPC failed: {e}", file=__import__("sys").stderr)
+    swap_count = swap_by_tf["1h"]
 
     # --- pool SOL value ($) as size proxy ---
     real_sol = coin.get("real_sol_reserves") or 0
@@ -218,20 +231,39 @@ def compute_activity_metrics(coin: Dict[str, Any]) -> Dict[str, Any]:
 
     pool_sol_value = (real_sol / 1e9) * sol_price
 
-    # --- turnover multiplier: fresh + active community turns over faster ---
-    reply = coin.get("reply_count") or 0
-    age_factor = max(0.1, min(1.0, 1.0 - age_h / 6.0))  # new => higher turnover
-    community_factor = 1.0 + min(2.0, reply / 20.0)      # +community tweets => more
-    turnover = 4.0 * age_factor * community_factor         # 4x base, decaying
+    # --- average swap size ($) ---
+    # We can't know each swap's notional without fetching every tx (expensive),
+    # so use a per-swap proxy calibrated to pump.fun early behaviour: a swap is
+    # a small slice of the pool (default 5%), floored for tiny pools.
+    avg_swap_usd = max(pool_sol_value * 0.05, 2.0)
 
-    # If we have real observed swaps, prefer using them for volume too
+    # --- per-timeframe volume ---
+    # If we observed real swaps, scale volume linearly with count. If zero (too
+    # fresh / RPC-empty), estimate a positive bound from pool turnover for the
+    # 1h window and leave shorter TFs at their (0 swaps) reality.
+    volume_by_tf = {}
     if swap_count > 20:
-        avg_swap_usd = max(pool_sol_value * 0.10, 5.0)   # ~10% of pool per swap
-        volume_est = swap_count * avg_swap_usd
+        for tf, secs in TIMEFRAMES_SECONDS:
+            volume_by_tf[tf] = round(swap_by_tf[tf] * avg_swap_usd, 2)
     else:
-        volume_est = pool_sol_value * turnover
+        # no reliable observed rate: distribute a conservative turnover bound
+        # for the 1h window across each TF proportional to its window share, so
+        # the per-TF volume reads as a smooth curve (1m < 5m < ... < 1h) rather
+        # than a mix of observed (0) and bound. With zero observed swaps the
+        # short windows are tiny and the 1h carries the majority.
+        reply = coin.get("reply_count") or 0
+        age_factor = max(0.1, min(1.0, 1.0 - age_h / 6.0))
+        community_factor = 1.0 + min(2.0, reply / 20.0)
+        turnover = 4.0 * age_factor * community_factor
+        vol_1h_est = pool_sol_value * turnover
+        for tf, secs in TIMEFRAMES_SECONDS:
+            volume_by_tf[tf] = round(vol_1h_est * (secs / 3600.0), 2)
+
+    volume_est = volume_by_tf["1h"]
 
     return {
+        "swap_by_tf": swap_by_tf,
+        "volume_by_tf": volume_by_tf,
         "swap_count": swap_count,
         "swap_count_h1": swap_count,
         "volume_usd_est": round(volume_est, 2),

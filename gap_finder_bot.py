@@ -217,14 +217,23 @@ def format_alert(c: Dict[str, Any]) -> str:
         holder = launch.get("holder") or {}
         sm = launch.get("smart_money") or {}
 
-        # --- activity: swap count + volume ---
-        swap_cnt = act.get("swap_count_h1", act.get("swap_count", 0))
-        vol_usd = act.get("volume_usd_est", 0)
+        # --- activity: swap count + volume per timeframe ---
+        swap_by_tf = act.get("swap_by_tf") or {}
+        vol_by_tf = act.get("volume_by_tf") or {}
+        tf_order = ["1m", "5m", "10m", "15m", "30m", "1h"]
+        swap_parts = " · ".join(
+            f"{tf} <b>{swap_by_tf.get(tf, 0)}</b>" for tf in tf_order[:4]
+        )
+        vol_parts = " · ".join(
+            f"{tf} <b>${vol_by_tf.get(tf, 0):,.0f}</b>" for tf in tf_order
+        )
         pool_val = act.get("pool_sol_value", 0)
-        vol_str = f"${vol_usd:,.0f}" if vol_usd else "n/a"
         pool_str = f"${pool_val:,.0f}" if pool_val else "n/a"
-        activity_line = (f"  swap/jam: <b>{swap_cnt}</b>  ·  vol~: <b>{vol_str}</b>  ·  "
-                         f"pool: <b>{pool_str}</b>")
+        activity_line = (
+            f"  swap/jam 1m·5m·10m·15m: {swap_parts}\n"
+            f"  vol est: {vol_parts}\n"
+            f"  pool: <b>{pool_str}</b>"
+        )
 
         # --- holder / rug screen ---
         h_lines = []

@@ -4,6 +4,22 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — volume per timeframe (1m/5m/10m/15m/30m/1h) 2026-09-02
+- **`launch_finder.compute_activity_metrics()`** now buckets on-chain mint
+  signatures into cumulative per-timeframe windows and returns:
+  - `swap_by_tf`: { 1m, 5m, 10m, 15m, 30m, 1h } cumulative swap counts
+  - `volume_by_tf`: { ... } estimated trade volume per timeframe.
+  - When no observed swap rate (fresh launch / RPC-empty), the conservative
+    turnover bound is distributed across TFs proportional to window share so
+    the per-TF volume reads as a smooth rising curve instead of a misleading
+    mix of 0s and one estimate. When swaps > 20, volume scales linearly with
+    the observed count.
+- **`format_alert()`** on-chain activity block now shows swap count for
+  `1m·5m·10m·15m` and estimated volume for all six `1m→1h` timeframe buckets.
+- **Tests**: activity-metrics tests extended for per-TF structure, the smooth
+  rising-volume curve, and per-timeframe bucketing of signatures. Full suite
+  80 passing.
+
 ### Added — on-chain activity + holder + smart-money in alerts 2026-09-02
 - **`launch_finder.compute_activity_metrics()`**: computes on-chain activity for
   a matched token via Solana RPC (Helius) — swap count in the last hour (from

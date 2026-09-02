@@ -85,6 +85,8 @@ class TestToDexPair(unittest.TestCase):
 
 
 class TestComputeActivityMetrics(unittest.TestCase):
+    TF_KEYS = ["1m", "5m", "10m", "15m", "30m", "1h"]
+
     def test_zero_rpc_returns_positive_volume(self):
         # Even with no on-chain signatures (fresh launch), the estimator must
         # return a positive volume bound, not a hard 0 a user reads as "dead".
@@ -92,10 +94,13 @@ class TestComputeActivityMetrics(unittest.TestCase):
         with patch("rpc_client.rpc_call", return_value=[]):
             # PILLY has real_sol_reserves & recent created_timestamp
             m = lf.compute_activity_metrics(PILLY_COIN)
-        self.assertIn("swap_count", m)
-        self.assertIn("volume_usd_est", m)
-        self.assertGreater(m["volume_usd_est"], 0, "estimator should give a bound")
+        self.assertIn("swap_by_tf", m)
+        self.assertIn("volume_by_tf", m)
         self.assertEqual(m["swap_count"], 0)
+        self.assertGreater(m["volume_usd_est"], 0, "estimator should give a bound")
+        # per-TF volume should be a smooth rising curve (1m < 5m < ... < 1h)
+        vols = [m["volume_by_tf"][k] for k in self.TF_KEYS]
+        self.assertEqual(vols, sorted(vols), "per-TF vol should increase with window")
 
     def test_counts_h1_signatures(self):
         from unittest.mock import patch
@@ -111,6 +116,29 @@ class TestComputeActivityMetrics(unittest.TestCase):
         with patch("rpc_client.rpc_call", return_value=sigs):
             m = lf.compute_activity_metrics(PILLY_COIN)
         self.assertEqual(m["swap_count_h1"], 2)
+        self.assertIn("swap_by_tf", m)
+        self.assertIn("volume_by_tf", m)
+
+    def test_swap_bucketed_per_timeframe(self):
+        from unittest.mock import patch
+        import time
+        now = int(time.time())
+        # one sig inside 1m, one inside 5m but outside 1m, one inside 30m
+        # but outside 15m => cumulative buckets
+        sigs = [
+            {"blockTime": now - 30},     # 1m + 5m + 10m + 15m + 30m + 1h
+            {"blockTime": now - 250},    # not in 1m, yes in 5m+
+            {"blockTime": now - 2000},   # 2000s: in 30m(1800)? no (2000>1800), yes in 1h
+        ]
+        with patch("rpc_client.rpc_call", return_value=sigs):
+            m = lf.compute_activity_metrics(PILLY_COIN)
+        sb = m["swap_by_tf"]
+        self.assertEqual(sb["1m"], 1)     # only the 30s sig
+        self.assertEqual(sb["5m"], 2)     # 30s + 250s
+        self.assertEqual(sb["10m"], 2)
+        self.assertEqual(sb["15m"], 2)
+        self.assertEqual(sb["30m"], 2)    # 2000s outside 30m window
+        self.assertEqual(sb["1h"], 3)     # all three
 
 
 if __name__ == "__main__":
