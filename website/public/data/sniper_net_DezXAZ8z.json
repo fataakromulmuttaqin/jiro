@@ -1,0 +1,305 @@
+{
+  "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+  "ts": 1788375024,
+  "top_holders": [
+    {
+      "wallet": "WALLET_DezXAZ_0003504",
+      "label": "Whale-1",
+      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "tx_count": 13,
+      "mint_tx_count": 2,
+      "first_buy_ts": 1787852283,
+      "last_action_ts": 1788351948,
+      "buys_sol": 9.226,
+      "sells_sol": 8.453,
+      "realized_pnl_sol": 2.2628,
+      "roi_pct": 45.26,
+      "still_holds_pct": 48.9,
+      "current_balance_ui": 559.34,
+      "win": true,
+      "behavior_tags": [
+        "WINNER"
+      ],
+      "behavior_reason": "held 3d",
+      "holder_pct": 98.8
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0012290",
+      "label": "Whale-2",
+      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "tx_count": 4,
+      "mint_tx_count": 4,
+      "first_buy_ts": 1788345288,
+      "last_action_ts": 1788351640,
+      "buys_sol": 7.775,
+      "sells_sol": 1.406,
+      "realized_pnl_sol": -0.3139,
+      "roi_pct": -6.28,
+      "still_holds_pct": 47.5,
+      "current_balance_ui": 2749.02,
+      "win": false,
+      "behavior_tags": [
+        "WINNER"
+      ],
+      "behavior_reason": "sold after 600s",
+      "holder_pct": 45.64
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0024470",
+      "label": "Whale-3",
+      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "tx_count": 19,
+      "mint_tx_count": 2,
+      "first_buy_ts": 1788091004,
+      "last_action_ts": 1788369166,
+      "buys_sol": 9.954,
+      "sells_sol": 7.636,
+      "realized_pnl_sol": 0.962,
+      "roi_pct": 19.24,
+      "still_holds_pct": 43.8,
+      "current_balance_ui": 2587.88,
+      "win": true,
+      "behavior_tags": [
+        "SNIPER"
+      ],
+      "behavior_reason": "bought 5.234 SOL",
+      "holder_pct": 32.21
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0034770",
+      "label": "Whale-4",
+      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "tx_count": 20,
+      "mint_tx_count": 2,
+      "first_buy_ts": 1788410322,
+      "last_action_ts": 1788412157,
+      "buys_sol": 7.224,
+      "sells_sol": 1.426,
+      "realized_pnl_sol": 0.3666,
+      "roi_pct": 7.33,
+      "still_holds_pct": 6.7,
+      "current_balance_ui": 157.06,
+      "win": true,
+      "behavior_tags": [
+        "WINNER"
+      ],
+      "behavior_reason": "single tx entry",
+      "holder_pct": 22.43
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0048953",
+      "label": "Whale-5",
+      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "tx_count": 8,
+      "mint_tx_count": 5,
+      "first_buy_ts": 1788279123,
+      "last_action_ts": 1788346615,
+      "buys_sol": 5.974,
+      "sells_sol": 2.758,
+      "realized_pnl_sol": -0.0507,
+      "roi_pct": -1.01,
+      "still_holds_pct": 47.3,
+      "current_balance_ui": 2035.3,
+      "win": false,
+      "behavior_tags": [
+        "SNIPER"
+      ],
+      "behavior_reason": "single tx entry",
+      "holder_pct": 16.71
+    }
+  ],
+  "funders": {
+    "FUNDER_DezXAZ_MASTER": [
+      "WALLET_DezXAZ_0003504",
+      "WALLET_DezXAZ_0012290"
+    ]
+  },
+  "funder_details": {},
+  "cabal": {
+    "ts": 1788421462,
+    "clusters": [
+      {
+        "cluster_id": 0,
+        "type": "CABAL",
+        "cabal_score": 0.75,
+        "shared_funder": "FUNDER_DezXAZ_MASTER",
+        "shared_funder_name": "SampleCartel",
+        "wallets": [
+          {
+            "wallet": "WALLET_DezXAZ_0003504",
+            "label": "Whale-1",
+            "pnl_sol": 2.2628,
+            "win": true,
+            "first_buy_ts": 1787852283
+          },
+          {
+            "wallet": "WALLET_DezXAZ_0012290",
+            "label": "Whale-2",
+            "pnl_sol": -0.3139,
+            "win": false,
+            "first_buy_ts": 1788345288
+          }
+        ],
+        "reason": "shared funder; co-funding within 300s; all winners"
+      },
+      {
+        "cluster_id": 1,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_DezXAZ_0024470",
+            "label": "Whale-3",
+            "pnl_sol": 0.962,
+            "win": true,
+            "first_buy_ts": 1788091004
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 2,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_DezXAZ_0034770",
+            "label": "Whale-4",
+            "pnl_sol": 0.3666,
+            "win": true,
+            "first_buy_ts": 1788410322
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 3,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_DezXAZ_0048953",
+            "label": "Whale-5",
+            "pnl_sol": -0.0507,
+            "win": false,
+            "first_buy_ts": 1788279123
+          }
+        ],
+        "reason": "no signal"
+      }
+    ],
+    "summary": {
+      "n_cabal": 2,
+      "n_suspect": 0,
+      "n_solo": 3,
+      "n_wallets": 5,
+      "n_clusters": 4
+    }
+  },
+  "behavior": [
+    {
+      "wallet": "WALLET_DezXAZ_0003504",
+      "label": "Whale-1",
+      "tag": "WINNER",
+      "tag_reason": "held 3d",
+      "metrics": {
+        "held_seconds": 222137,
+        "still_holds_pct": 48.9,
+        "roi_pct": 45.26,
+        "first_buy_ts": 1787852283,
+        "last_action_ts": 1788351948
+      }
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0012290",
+      "label": "Whale-2",
+      "tag": "WINNER",
+      "tag_reason": "sold after 600s",
+      "metrics": {
+        "held_seconds": 215595,
+        "still_holds_pct": 47.5,
+        "roi_pct": -6.28,
+        "first_buy_ts": 1788345288,
+        "last_action_ts": 1788351640
+      }
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0024470",
+      "label": "Whale-3",
+      "tag": "SNIPER",
+      "tag_reason": "bought 5.234 SOL",
+      "metrics": {
+        "held_seconds": 244915,
+        "still_holds_pct": 43.8,
+        "roi_pct": 19.24,
+        "first_buy_ts": 1788091004,
+        "last_action_ts": 1788369166
+      }
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0034770",
+      "label": "Whale-4",
+      "tag": "WINNER",
+      "tag_reason": "single tx entry",
+      "metrics": {
+        "held_seconds": 382305,
+        "still_holds_pct": 6.7,
+        "roi_pct": 7.33,
+        "first_buy_ts": 1788410322,
+        "last_action_ts": 1788412157
+      }
+    },
+    {
+      "wallet": "WALLET_DezXAZ_0048953",
+      "label": "Whale-5",
+      "tag": "SNIPER",
+      "tag_reason": "single tx entry",
+      "metrics": {
+        "held_seconds": 28461,
+        "still_holds_pct": 47.3,
+        "roi_pct": -1.01,
+        "first_buy_ts": 1788279123,
+        "last_action_ts": 1788346615
+      }
+    }
+  ],
+  "watchlist_diff": {
+    "ts": 1788421462,
+    "added": [
+      {
+        "address": "WALLET_DezXAZ_0003504",
+        "label": "Whale-1",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_DezXAZ_0024470",
+        "label": "Whale-3",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_DezXAZ_0034770",
+        "label": "Whale-4",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      }
+    ],
+    "pruned": [],
+    "final_size": 3,
+    "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+  },
+  "summary": {
+    "n_holders": 5,
+    "n_winners": 3,
+    "n_losers": 2,
+    "total_pnl_sol": 3.227,
+    "shared_funder_count": 1
+  }
+}

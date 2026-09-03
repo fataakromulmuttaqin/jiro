@@ -1,0 +1,322 @@
+{
+  "mint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+  "ts": 1788346794,
+  "top_holders": [
+    {
+      "wallet": "WALLET_7GCihg_0002612",
+      "label": "Whale-1",
+      "mint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+      "tx_count": 3,
+      "mint_tx_count": 4,
+      "first_buy_ts": 1788062078,
+      "last_action_ts": 1788407140,
+      "buys_sol": 2.862,
+      "sells_sol": 5.021,
+      "realized_pnl_sol": 2.7136,
+      "roi_pct": 54.27,
+      "still_holds_pct": 44.9,
+      "current_balance_ui": 2109.41,
+      "win": true,
+      "behavior_tags": [
+        "WINNER"
+      ],
+      "behavior_reason": "pnl -1.2 SOL",
+      "holder_pct": 98.75
+    },
+    {
+      "wallet": "WALLET_7GCihg_0018260",
+      "label": "Whale-2",
+      "mint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+      "tx_count": 19,
+      "mint_tx_count": 1,
+      "first_buy_ts": 1788364817,
+      "last_action_ts": 1788335985,
+      "buys_sol": 9.993,
+      "sells_sol": 12.905,
+      "realized_pnl_sol": 4.4629,
+      "roi_pct": 89.26,
+      "still_holds_pct": 96.9,
+      "current_balance_ui": 4631.83,
+      "win": true,
+      "behavior_tags": [
+        "WHALE"
+      ],
+      "behavior_reason": "bought 5.234 SOL",
+      "holder_pct": 47.97
+    },
+    {
+      "wallet": "WALLET_7GCihg_0027570",
+      "label": "Whale-3",
+      "mint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+      "tx_count": 3,
+      "mint_tx_count": 2,
+      "first_buy_ts": 1788020480,
+      "last_action_ts": 1788421180,
+      "buys_sol": 9.86,
+      "sells_sol": 4.389,
+      "realized_pnl_sol": 1.3695,
+      "roi_pct": 27.39,
+      "still_holds_pct": 78.4,
+      "current_balance_ui": 2275.04,
+      "win": true,
+      "behavior_tags": [
+        "LOSER"
+      ],
+      "behavior_reason": "still holds 95%",
+      "holder_pct": 28.55
+    },
+    {
+      "wallet": "WALLET_7GCihg_0038973",
+      "label": "Whale-4",
+      "mint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+      "tx_count": 6,
+      "mint_tx_count": 2,
+      "first_buy_ts": 1788106742,
+      "last_action_ts": 1788392928,
+      "buys_sol": 9.703,
+      "sells_sol": 10.97,
+      "realized_pnl_sol": 4.968,
+      "roi_pct": 99.36,
+      "still_holds_pct": 54.2,
+      "current_balance_ui": 3739.88,
+      "win": true,
+      "behavior_tags": [
+        "SNIPER"
+      ],
+      "behavior_reason": "single tx entry",
+      "holder_pct": 22.08
+    },
+    {
+      "wallet": "WALLET_7GCihg_0049701",
+      "label": "Whale-5",
+      "mint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+      "tx_count": 7,
+      "mint_tx_count": 1,
+      "first_buy_ts": 1787885366,
+      "last_action_ts": 1788410962,
+      "buys_sol": 8.588,
+      "sells_sol": 2.671,
+      "realized_pnl_sol": 1.52,
+      "roi_pct": 30.4,
+      "still_holds_pct": 6.8,
+      "current_balance_ui": 4309.1,
+      "win": true,
+      "behavior_tags": [
+        "LOSER"
+      ],
+      "behavior_reason": "single tx entry",
+      "holder_pct": 15.29
+    }
+  ],
+  "funders": {},
+  "funder_details": {},
+  "cabal": {
+    "ts": 1788421462,
+    "clusters": [
+      {
+        "cluster_id": 0,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_7GCihg_0002612",
+            "label": "Whale-1",
+            "pnl_sol": 2.7136,
+            "win": true,
+            "first_buy_ts": 1788062078
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 1,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_7GCihg_0018260",
+            "label": "Whale-2",
+            "pnl_sol": 4.4629,
+            "win": true,
+            "first_buy_ts": 1788364817
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 2,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_7GCihg_0027570",
+            "label": "Whale-3",
+            "pnl_sol": 1.3695,
+            "win": true,
+            "first_buy_ts": 1788020480
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 3,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_7GCihg_0038973",
+            "label": "Whale-4",
+            "pnl_sol": 4.968,
+            "win": true,
+            "first_buy_ts": 1788106742
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 4,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_7GCihg_0049701",
+            "label": "Whale-5",
+            "pnl_sol": 1.52,
+            "win": true,
+            "first_buy_ts": 1787885366
+          }
+        ],
+        "reason": "no signal"
+      }
+    ],
+    "summary": {
+      "n_cabal": 0,
+      "n_suspect": 0,
+      "n_solo": 5,
+      "n_wallets": 5,
+      "n_clusters": 5
+    }
+  },
+  "behavior": [
+    {
+      "wallet": "WALLET_7GCihg_0002612",
+      "label": "Whale-1",
+      "tag": "WINNER",
+      "tag_reason": "pnl -1.2 SOL",
+      "metrics": {
+        "held_seconds": 129147,
+        "still_holds_pct": 44.9,
+        "roi_pct": 54.27,
+        "first_buy_ts": 1788062078,
+        "last_action_ts": 1788407140
+      }
+    },
+    {
+      "wallet": "WALLET_7GCihg_0018260",
+      "label": "Whale-2",
+      "tag": "WHALE",
+      "tag_reason": "bought 5.234 SOL",
+      "metrics": {
+        "held_seconds": 303580,
+        "still_holds_pct": 96.9,
+        "roi_pct": 89.26,
+        "first_buy_ts": 1788364817,
+        "last_action_ts": 1788335985
+      }
+    },
+    {
+      "wallet": "WALLET_7GCihg_0027570",
+      "label": "Whale-3",
+      "tag": "LOSER",
+      "tag_reason": "still holds 95%",
+      "metrics": {
+        "held_seconds": 311759,
+        "still_holds_pct": 78.4,
+        "roi_pct": 27.39,
+        "first_buy_ts": 1788020480,
+        "last_action_ts": 1788421180
+      }
+    },
+    {
+      "wallet": "WALLET_7GCihg_0038973",
+      "label": "Whale-4",
+      "tag": "SNIPER",
+      "tag_reason": "single tx entry",
+      "metrics": {
+        "held_seconds": 20896,
+        "still_holds_pct": 54.2,
+        "roi_pct": 99.36,
+        "first_buy_ts": 1788106742,
+        "last_action_ts": 1788392928
+      }
+    },
+    {
+      "wallet": "WALLET_7GCihg_0049701",
+      "label": "Whale-5",
+      "tag": "LOSER",
+      "tag_reason": "single tx entry",
+      "metrics": {
+        "held_seconds": 324794,
+        "still_holds_pct": 6.8,
+        "roi_pct": 30.4,
+        "first_buy_ts": 1787885366,
+        "last_action_ts": 1788410962
+      }
+    }
+  ],
+  "watchlist_diff": {
+    "ts": 1788421462,
+    "added": [
+      {
+        "address": "WALLET_7GCihg_0002612",
+        "label": "Whale-1",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_7GCihg_0018260",
+        "label": "Whale-2",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_7GCihg_0027570",
+        "label": "Whale-3",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_7GCihg_0038973",
+        "label": "Whale-4",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_7GCihg_0049701",
+        "label": "Whale-5",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      }
+    ],
+    "pruned": [],
+    "final_size": 5,
+    "mint": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr"
+  },
+  "summary": {
+    "n_holders": 5,
+    "n_winners": 5,
+    "n_losers": 0,
+    "total_pnl_sol": 15.034,
+    "shared_funder_count": 0
+  }
+}

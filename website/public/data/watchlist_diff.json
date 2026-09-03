@@ -1,0 +1,30 @@
+[
+  {
+    "ts": 1788335062,
+    "added": [
+      {
+        "address": "WALLET_So11111_0012345",
+        "label": "JSN winner 2026-09-03 +2.345 SOL",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      }
+    ],
+    "pruned": [],
+    "final_size": 1,
+    "mint": "So11111111111111111111111111111111111111112"
+  },
+  {
+    "ts": 1788417862,
+    "added": [
+      {
+        "address": "WALLET_7GCihg_0034567",
+        "label": "JSN winner 2026-09-02 +1.234 SOL",
+        "added_ts": 1788335062,
+        "source": "sniper_net"
+      }
+    ],
+    "pruned": [],
+    "final_size": 3,
+    "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+  }
+]

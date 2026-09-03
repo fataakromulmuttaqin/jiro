@@ -1,0 +1,310 @@
+{
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "ts": 1788354920,
+  "top_holders": [
+    {
+      "wallet": "WALLET_EPjFWd_0003677",
+      "label": "Whale-1",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "tx_count": 16,
+      "mint_tx_count": 4,
+      "first_buy_ts": 1788134802,
+      "last_action_ts": 1788337576,
+      "buys_sol": 7.038,
+      "sells_sol": 5.69,
+      "realized_pnl_sol": 3.1039,
+      "roi_pct": 62.08,
+      "still_holds_pct": 32.4,
+      "current_balance_ui": 3841.57,
+      "win": true,
+      "behavior_tags": [
+        "SNIPER"
+      ],
+      "behavior_reason": "bought 5.234 SOL",
+      "holder_pct": 95.89
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0017572",
+      "label": "Whale-2",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "tx_count": 10,
+      "mint_tx_count": 1,
+      "first_buy_ts": 1788196631,
+      "last_action_ts": 1788347121,
+      "buys_sol": 8.825,
+      "sells_sol": 7.125,
+      "realized_pnl_sol": 3.6353,
+      "roi_pct": 72.71,
+      "still_holds_pct": 65.5,
+      "current_balance_ui": 1978.16,
+      "win": true,
+      "behavior_tags": [
+        "DIAMOND_HAND"
+      ],
+      "behavior_reason": "pnl -1.2 SOL",
+      "holder_pct": 49.29
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0029830",
+      "label": "Whale-3",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "tx_count": 10,
+      "mint_tx_count": 5,
+      "first_buy_ts": 1787968617,
+      "last_action_ts": 1788344978,
+      "buys_sol": 4.294,
+      "sells_sol": 1.561,
+      "realized_pnl_sol": -1.0226,
+      "roi_pct": -20.45,
+      "still_holds_pct": 99.8,
+      "current_balance_ui": 2547.63,
+      "win": false,
+      "behavior_tags": [
+        "SNIPER"
+      ],
+      "behavior_reason": "single tx entry",
+      "holder_pct": 29.03
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0033621",
+      "label": "Whale-4",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "tx_count": 15,
+      "mint_tx_count": 5,
+      "first_buy_ts": 1788351249,
+      "last_action_ts": 1788371030,
+      "buys_sol": 4.125,
+      "sells_sol": 9.033,
+      "realized_pnl_sol": -0.9301,
+      "roi_pct": -18.6,
+      "still_holds_pct": 52.9,
+      "current_balance_ui": 4855.39,
+      "win": false,
+      "behavior_tags": [
+        "SNIPER"
+      ],
+      "behavior_reason": "still holds 95%",
+      "holder_pct": 21.4
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0049797",
+      "label": "Whale-5",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "tx_count": 10,
+      "mint_tx_count": 3,
+      "first_buy_ts": 1788300892,
+      "last_action_ts": 1788382993,
+      "buys_sol": 4.63,
+      "sells_sol": 7.582,
+      "realized_pnl_sol": 2.772,
+      "roi_pct": 55.44,
+      "still_holds_pct": 95.4,
+      "current_balance_ui": 4379.26,
+      "win": true,
+      "behavior_tags": [
+        "WINNER"
+      ],
+      "behavior_reason": "sold after 600s",
+      "holder_pct": 16.19
+    }
+  ],
+  "funders": {},
+  "funder_details": {},
+  "cabal": {
+    "ts": 1788421462,
+    "clusters": [
+      {
+        "cluster_id": 0,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_EPjFWd_0003677",
+            "label": "Whale-1",
+            "pnl_sol": 3.1039,
+            "win": true,
+            "first_buy_ts": 1788134802
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 1,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_EPjFWd_0017572",
+            "label": "Whale-2",
+            "pnl_sol": 3.6353,
+            "win": true,
+            "first_buy_ts": 1788196631
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 2,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_EPjFWd_0029830",
+            "label": "Whale-3",
+            "pnl_sol": -1.0226,
+            "win": false,
+            "first_buy_ts": 1787968617
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 3,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_EPjFWd_0033621",
+            "label": "Whale-4",
+            "pnl_sol": -0.9301,
+            "win": false,
+            "first_buy_ts": 1788351249
+          }
+        ],
+        "reason": "no signal"
+      },
+      {
+        "cluster_id": 4,
+        "type": "SOLO",
+        "cabal_score": 0.1,
+        "shared_funder": null,
+        "shared_funder_name": null,
+        "wallets": [
+          {
+            "wallet": "WALLET_EPjFWd_0049797",
+            "label": "Whale-5",
+            "pnl_sol": 2.772,
+            "win": true,
+            "first_buy_ts": 1788300892
+          }
+        ],
+        "reason": "no signal"
+      }
+    ],
+    "summary": {
+      "n_cabal": 0,
+      "n_suspect": 0,
+      "n_solo": 5,
+      "n_wallets": 5,
+      "n_clusters": 5
+    }
+  },
+  "behavior": [
+    {
+      "wallet": "WALLET_EPjFWd_0003677",
+      "label": "Whale-1",
+      "tag": "SNIPER",
+      "tag_reason": "bought 5.234 SOL",
+      "metrics": {
+        "held_seconds": 55849,
+        "still_holds_pct": 32.4,
+        "roi_pct": 62.08,
+        "first_buy_ts": 1788134802,
+        "last_action_ts": 1788337576
+      }
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0017572",
+      "label": "Whale-2",
+      "tag": "DIAMOND_HAND",
+      "tag_reason": "pnl -1.2 SOL",
+      "metrics": {
+        "held_seconds": 327897,
+        "still_holds_pct": 65.5,
+        "roi_pct": 72.71,
+        "first_buy_ts": 1788196631,
+        "last_action_ts": 1788347121
+      }
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0029830",
+      "label": "Whale-3",
+      "tag": "SNIPER",
+      "tag_reason": "single tx entry",
+      "metrics": {
+        "held_seconds": 156531,
+        "still_holds_pct": 99.8,
+        "roi_pct": -20.45,
+        "first_buy_ts": 1787968617,
+        "last_action_ts": 1788344978
+      }
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0033621",
+      "label": "Whale-4",
+      "tag": "SNIPER",
+      "tag_reason": "still holds 95%",
+      "metrics": {
+        "held_seconds": 335053,
+        "still_holds_pct": 52.9,
+        "roi_pct": -18.6,
+        "first_buy_ts": 1788351249,
+        "last_action_ts": 1788371030
+      }
+    },
+    {
+      "wallet": "WALLET_EPjFWd_0049797",
+      "label": "Whale-5",
+      "tag": "WINNER",
+      "tag_reason": "sold after 600s",
+      "metrics": {
+        "held_seconds": 266221,
+        "still_holds_pct": 95.4,
+        "roi_pct": 55.44,
+        "first_buy_ts": 1788300892,
+        "last_action_ts": 1788382993
+      }
+    }
+  ],
+  "watchlist_diff": {
+    "ts": 1788421462,
+    "added": [
+      {
+        "address": "WALLET_EPjFWd_0003677",
+        "label": "Whale-1",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_EPjFWd_0017572",
+        "label": "Whale-2",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      },
+      {
+        "address": "WALLET_EPjFWd_0049797",
+        "label": "Whale-5",
+        "added_ts": 1788421462,
+        "source": "sniper_net"
+      }
+    ],
+    "pruned": [],
+    "final_size": 3,
+    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+  },
+  "summary": {
+    "n_holders": 5,
+    "n_winners": 3,
+    "n_losers": 2,
+    "total_pnl_sol": 7.559,
+    "shared_funder_count": 0
+  }
+}

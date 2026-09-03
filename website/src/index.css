@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Jiro Sniper Net — cyberpunk palette (matches dashboard-development skill) */
+@theme {
+  --color-bg-primary: #070b14;
+  --color-bg-card: rgba(17, 24, 39, 0.75);
+  --color-cyan: #00f0ff;
+  --color-cyan-dim: rgba(0, 240, 255, 0.15);
+  --color-emerald: #00f5a1;
+  --color-amber: #ffcc33;
+  --color-magenta: #d946ef;
+  --color-red: #f87171;
+  --color-steel: #598392;
+  --color-cream: #eff6e0;
+
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-ui: 'IBM Plex Sans', sans-serif;
+}
+
+html, body {
+  background: var(--color-bg-primary);
+  color: var(--color-cream);
+  font-family: var(--font-ui);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Stat card with gradient accent line */
+.stat-card {
+  background: linear-gradient(135deg, rgba(17,24,39,0.9), rgba(26,35,50,0.9));
+  border: 1px solid rgba(124, 139, 192, 0.12);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
+}
+
+.stat-card:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.tag-pill.cabal {
+  background: rgba(217, 70, 239, 0.2);
+  color: var(--color-magenta);
+  border: 1px solid rgba(217, 70, 239, 0.4);
+}
+.tag-pill.suspect {
+  background: rgba(255, 204, 51, 0.2);
+  color: var(--color-amber);
+  border: 1px solid rgba(255, 204, 51, 0.4);
+}
+.tag-pill.solo {
+  background: rgba(89, 131, 146, 0.2);
+  color: var(--color-steel);
+  border: 1px solid rgba(89, 131, 146, 0.4);
+}
+
+/* Behavior tag colors */
+.beh-bundler   { background: rgba(217, 70, 239, 0.2); color: var(--color-magenta); }
+.beh-sniper    { background: rgba(255, 204, 51, 0.2); color: var(--color-amber); }
+.beh-early_exit{ background: rgba(0, 240, 255, 0.2); color: var(--color-cyan); }
+.beh-diamond   { background: rgba(0, 245, 161, 0.2); color: var(--color-emerald); }
+.beh-whale     { background: rgba(255, 204, 51, 0.2); color: var(--color-amber); }
+.beh-scalper   { background: rgba(89, 131, 146, 0.2); color: var(--color-steel); }
+.beh-swing     { background: rgba(0, 245, 161, 0.2); color: var(--color-emerald); }
+.beh-exit_liq  { background: rgba(248, 113, 113, 0.2); color: var(--color-red); }
+.beh-winner    { background: rgba(0, 245, 161, 0.2); color: var(--color-emerald); }
+.beh-loser     { background: rgba(248, 113, 113, 0.2); color: var(--color-red); }
+.beh-neutral   { background: rgba(89, 131, 146, 0.2); color: var(--color-steel); }
+
+/* Wallet address with monospace + truncation */
+.wallet-addr {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-cream);
+  opacity: 0.85;
+}

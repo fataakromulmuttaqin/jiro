@@ -4,6 +4,81 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — Jiro Sniper Net website (Phase 4) 2026-09-03
+- **`website/`** — Vite + React 19 + TypeScript + Tailwind v4 SPA dashboard
+  for Sniper Net analysis output. Cyberpunk-themed (Orbitron + JetBrains Mono
+  + IBM Plex Sans). Reads static JSON from `public/data/` — zero backend,
+  $0/month.
+- **5 pages + 1 detail route**: Overview, Wallets (cross-mint leaderboard),
+  Cabals (all detected clusters), Watchlist (auto-curated winners),
+  Behavior (archetype distribution + per-wallet tags), and `/mint/:mintShort`
+  for single-mint deep dive.
+- **Components**: `Sidebar` (5-tab nav, system status indicator),
+  `StatCard` (glassmorphism cards with gradient accent line),
+  `WalletChip` (monospace address + Solscan link).
+- **`sync_website_data.py`** — copies pipeline JSON output (`cache/*.json`)
+  into `website/public/data/` and generates `manifest.json`. Should be called
+  after each `run_sniper_net.py` run.
+- **`vercel.json`** — Vercel SPA config with route rewrites + cache
+  headers (`/data/*` 60s + stale-while-revalidate; `/assets/*` immutable).
+- **Sample data**: 4 sample mints (SOL, USDC, BONK, fake) with cabal +
+  non-cabal variants, in `website/public/data/` for build verification.
+- **`vercel-deploy` skill workflow**: `cd website && npm run build &&
+  vercel --prod --yes` from project root.
+
+### Added — Jiro Sniper Net P3: watchlist auto-curation + cron runner 2026-09-03
+- **`watchlist_updater.py`**: reads a `sniper_net_report`, promotes winners
+  (pnl > 0.05 SOL, win=True) into `watchlist.json` with auto-labels like
+  "JSN winner 2026-09-03 +1.234 SOL". Prunes losers (pnl < -0.05 SOL,
+  win=False), but protects: (a) manual labels (`[manual]` prefix),
+  (b) entries younger than `MIN_WATCHLIST_AGE_HOURS` (default 24).
+  Caps watchlist at `WATCHLIST_MAX_ENTRIES` (default 20). Atomic file
+  writes. Logs diff to `cache/watchlist_diff.json` (rolling, last 100).
+- **`run_sniper_net.py`**: end-to-end cron entry point. Chains P1+P2+P3
+  for one or many mints. Emits per-mint + batch JSON. Optional Telegram
+  alert when cabal/suspect clusters detected. CLI: `python3
+  run_sniper_net.py MINT1 [MINT2 ...] [--top-n N] [--no-cache]`.
+- **Tests**: +10 `tests/test_watchlist_updater.py` covering empty watchlist,
+  no-double-add, manual label protection, fresh entry protection, max
+  entries cap, diff log append, mixed promote+prune, label format, corrupt
+  watchlist fallback. All pass. Total tests: 89.
+
+### Added — Jiro Sniper Net P2: cabal detector + behavior miner 2026-09-03
+- **`cabal_detector.py`**: cluster top holders by (a) shared funding
+  source and (b) co-buy timing within 5-min window. Each cluster gets a
+  cabal_score 0-1 and is classified CABAL (>=0.6), SUSPECT_CLUSTER
+  (>=0.3), or SOLO. Optional user-supplied `CABAL_SEED_PATH` (funder_addr
+  -> cabal_name) adds +0.3 to score on known match. Pure analytics, no
+  RPC.
+- **`behavior_miner.py`**: assign one behavior tag per wallet via
+  precedence list: BUNDLER > SNIPER > EARLY_EXIT > DIAMOND_HAND > WHALE
+  > SCALPER > SWING > EXIT_LIQUIDITY > WINNER/LOSER. Each tag carries
+  a human-readable reason for the website UI. Pure analytics on profile
+  data, no RPC.
+- **Tests**: +24 `tests/test_cabal_and_behavior.py` covering cluster
+  dedup, funder scoring, seed matching, co-buy windows, every behavior
+  tag precedence edge case. All pass.
+
+### Added — Jiro Sniper Net P1: wallet PnL profiler + fund-flow tracer 2026-09-03
+- **`wallet_profiler.py`**: reconstruct top-holder PnL for any mint via
+  on-chain tx history (free RPC, no paid Birdeye/Nansen). Walks
+  `getSignaturesForAddress` + `getTransaction`, diffs pre/postTokenBalances
+  for the target mint, sums buys/sells in SOL terms. Returns:
+  `buys_sol`, `sells_sol`, `realized_pnl_sol`, `roi_pct`, `win`,
+  `still_holds_pct`. 7-day disk cache.
+- **`fund_flow.py`**: trace a wallet's inbound SOL transfers to find its
+  funder (the address that sent SOL into it). Walks sigs oldest->newest,
+  matches SOL balance diffs to find the sender of the largest inbound
+  transfer. Returns funder + amount + ts + edges list. 30-day disk cache.
+- **`profile_top_holders.py`**: end-to-end pipeline. Given a mint, fetches
+  top N holders, profiles each, traces each funder, emits a JSON report
+  (`sniper_net_report.json`) for the website.
+- **Tests**: +15 `tests/test_wallet_profiler.py` covering buy/sell diffs,
+  closed-ATA handling, cache hit/miss, force_refresh, batch provider
+  failures. All pass. Pure RPC mocks (no Helius calls in CI).
+- Pipeline RPC cost (Helius free): ~600 credits per mint analysis
+  (5 holders * ~50 sigs + 5 fund traces) — well under 100K/mo.
+
 ### Added — automatic ML retrain on trade close + cron 2026-09-02
 - **`trading.open_position`**: persists the ML feature vector on each position
   so it survives to close (needed for retraining).
