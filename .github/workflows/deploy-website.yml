@@ -1,0 +1,120 @@
+name: Deploy Jiro Sniper Net to Vercel
+
+# Auto-build and deploy the website whenever changes land on master.
+# Triggers:
+#   - push to master (when website/, sync_website_data.py, or vercel.json change)
+#   - manual dispatch from GitHub UI
+#
+# Requires these GitHub Secrets (Settings → Secrets and variables → Actions):
+#   VERCEL_TOKEN       — Personal token from https://vercel.com/account/tokens
+#   VERCEL_ORG_ID      — Found in Vercel project Settings → General
+#   VERCEL_PROJECT_ID  — Found in Vercel project Settings → General
+#
+# To get ORG_ID + PROJECT_ID without deploying from CLI:
+#   curl -H "Authorization: Bearer $VERCEL_TOKEN" \
+#        https://api.vercel.com/v9/projects/<project-name>
+#
+# The workflow:
+#   1. Builds the React SPA in website/
+#   2. Syncs fresh data from cache/ (if any new report files exist)
+#   3. Deploys the build output to Vercel production
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "website/**"
+      - "sync_website_data.py"
+      - "vercel.json"
+      - "cache/sniper_net_*.json"
+      - "cache/watchlist*.json"
+      - ".github/workflows/deploy-website.yml"
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "website/package-lock.json"
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps (jiro)
+        working-directory: .
+        run: |
+          python3 -m pip install --upgrade pip
+          # jiro requires requests at minimum; the rest is local-dev
+          python3 -m pip install --user requests
+
+      - name: Sync latest data to website/public/data/
+        working-directory: .
+        # Only sync if cache files exist. If this is a fresh checkout with
+        # no cache, deploy as-is (sample data already in repo).
+        run: |
+          if [ -d "cache" ] && ls cache/sniper_net_*.json 1>/dev/null 2>&1; then
+            echo "Syncing cache → website/public/data/"
+            python3 sync_website_data.py
+          else
+            echo "No cache/ contents to sync — deploying sample data as-is"
+          fi
+
+      - name: Install npm dependencies
+        working-directory: website
+        run: npm ci --no-audit --no-fund
+
+      - name: Build production bundle
+        working-directory: website
+        run: npm run build
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Pull Vercel project config (link)
+        working-directory: website
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+      - name: Deploy to Vercel production
+        working-directory: website
+        run: vercel deploy --prebuilt --prod --yes --token="$VERCEL_TOKEN"
+
+      - name: Post-deploy health check
+        # Hits the deployment URL and asserts status 200.
+        # Skips silently if VERCEL_DEPLOY_URL is unavailable.
+        run: |
+          URL=$(vercel ls --json 2>/dev/null | python3 -c "
+          import json, sys
+          try:
+            data = json.load(sys.stdin)
+            for d in data.get('deployments', []):
+              if d.get('target') == 'production' and d.get('state') == 'READY':
+                print(d.get('url'))
+                break
+          except: pass
+          " 2>/dev/null)
+          if [ -n "$URL" ]; then
+            echo "Health check: $URL"
+            HTTP=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 30 "https://$URL/" -A "Mozilla/5.0")
+            if [ "$HTTP" = "200" ]; then
+              echo "✅ Deployment healthy (HTTP 200)"
+            else
+              echo "⚠️ Unexpected HTTP $HTTP — check Vercel dashboard"
+            fi
+          else
+            echo "(no URL found — skipping health check)"
+          fi

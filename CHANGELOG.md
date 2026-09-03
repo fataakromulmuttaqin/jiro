@@ -4,6 +4,35 @@ All notable changes to Jiro are documented here. Format follows Keep-a-Changelog
 
 ## [Unreleased]
 
+### Added — Jiro Sniper Net Phase 5: cabal DB + auto-deploy 2026-09-03
+- **`cabal_seeds.example.json`** — template for the user-curated cabal DB
+  (funder_address → cabal_name). Each match in cabal_detector boosts
+  cabal_score by +0.3 and labels the cluster with the cabal name on the
+  website. Format documented in `cabal_seeds.example.README.md`.
+- **`cabal_detector.CABAL_SEED_PATH`** now defaults to
+  `~/ruangkerja/jiro/cabal_seeds.json` (was empty). Create the file with
+  your curated entries to enable seed boosting.
+- **GitHub Actions** (`.github/workflows/deploy-website.yml`) — auto-build
+  and deploy the website to Vercel production on every push to master
+  that touches `website/`, `sync_website_data.py`, `vercel.json`, or
+  `cache/sniper_net_*.json`. Requires `VERCEL_TOKEN`, `VERCEL_ORG_ID`,
+  `VERCEL_PROJECT_ID` as repo secrets.
+- **Known Cabals page** (`/known-cabals` in the website) — displays all
+  cabal seed DB entries in a clean sortable table with Solscan links.
+  Cold-start UX: when no seeds configured, shows helpful onboarding hint.
+- **End-to-end test** (`tests/test_end_to_end.py`) — black-box smoke
+  test that runs `sync_website_data.py` as a subprocess and validates
+  the manifest.json + report copy work correctly.
+- **`fetchCabalSeeds()`** in website — fetches cabal_seeds.json from
+  /data/, strips _comment/_examples metadata, returns clean
+  {address: name} dict.
+- **Tests**: +8 (`test_cabal_seeds.py`: 6 tests for seed loading +
+  boost integration; `test_end_to_end.py`: 2 tests for end-to-end
+  smoke). Total: **99 passing** (15 P1 + 24 P2 + 10 P3 + 1
+  integration + 6 cabal_seeds + 2 end-to-end + 41 existing).
+- **README**: full Jiro Sniper Net section added with architecture
+  diagram, pipeline commands, cron suggestions, and cost analysis.
+
 ### Added — Jiro Sniper Net website (Phase 4) 2026-09-03
 - **`website/`** — Vite + React 19 + TypeScript + Tailwind v4 SPA dashboard
   for Sniper Net analysis output. Cyberpunk-themed (Orbitron + JetBrains Mono

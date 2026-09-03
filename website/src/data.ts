@@ -84,6 +84,28 @@ export function behClass(tag: string): string {
   return `beh-${tag.toLowerCase().replace(/_/g, '_')}`;
 }
 
+/** Fetch the cabal seeds (known funder addresses → cabal names). */
+export async function fetchCabalSeeds(): Promise<Record<string, string>> {
+  try {
+    const r = await fetch(`${BASE}/cabal_seeds.json?t=${Date.now()}`);
+    if (!r.ok) return {};
+    const data = await r.json();
+    if (data && typeof data === 'object') {
+      // strip _comment / _examples keys
+      const cleaned: Record<string, string> = {};
+      for (const [k, v] of Object.entries(data)) {
+        if (!k.startsWith('_') && typeof v === 'string') {
+          cleaned[k] = v;
+        }
+      }
+      return cleaned;
+    }
+    return {};
+  } catch {
+    return {};
+  }
+}
+
 /** Solana explorer URL for a wallet. */
 export function solscanWallet(address: string): string {
   return `https://solscan.io/account/${address}`;

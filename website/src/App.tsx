@@ -3,6 +3,7 @@ import { Sidebar } from './components/Sidebar';
 import { Overview } from './pages/Overview';
 import { Wallets } from './pages/Wallets';
 import { Cabals } from './pages/Cabals';
+import { KnownCabals } from './pages/KnownCabals';
 import { Watchlist } from './pages/Watchlist';
 import { Behavior } from './pages/Behavior';
 import { MintDetail } from './pages/MintDetail';
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Overview />} />
             <Route path="/wallets" element={<Wallets />} />
             <Route path="/cabals" element={<Cabals />} />
+            <Route path="/known-cabals" element={<KnownCabals />} />
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/behavior" element={<Behavior />} />
             <Route path="/mint/:mintShort" element={<MintDetail />} />

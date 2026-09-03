@@ -1,0 +1,10 @@
+{
+  "_comment": "Jiro Sniper Net — cabal seed DB. Add known Funder addresses here to boost cabal detection score by +0.3 for any cluster whose shared_funder matches. Get funder addresses from: 1) pump.fun top-trader tabs on past winners, 2) Frontrun.pro / GMGN 'shared funder' view, 3) KOL chats that share alpha. Format: '<funder_address>': '<cabal_name>'. Cold-start empty {} = no known cabals.",
+  "_examples": {
+    "EXAMPLE_FUNDER_ADDRESS_1": "CashCartel",
+    "EXAMPLE_FUNDER_ADDRESS_2": "MevSquad",
+    "EXAMPLE_FUNDER_ADDRESS_3": "AlphaGroup"
+  },
+  "5Q544fKrR8F2wKnWAZLzWqGvKfYJ8v9x2F3aBcDeFgHi": "ExampleCartel",
+  "9Fk2aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890AbCd": "ExampleSquad"
+}

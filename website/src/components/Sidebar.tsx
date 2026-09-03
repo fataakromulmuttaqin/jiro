@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { path: '/', label: 'OVERVIEW', icon: '◎' },
   { path: '/wallets', label: 'WALLETS', icon: '◈' },
   { path: '/cabals', label: 'CABALS', icon: '◇' },
+  { path: '/known-cabals', label: 'KNOWN CABALS', icon: '◬' },
   { path: '/watchlist', label: 'WATCHLIST', icon: '◉' },
   { path: '/behavior', label: 'BEHAVIOR', icon: '◆' },
 ];

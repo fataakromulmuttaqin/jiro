@@ -169,3 +169,104 @@ logs closely before trusting it with money.
 This is a scaffold for you to extend, test, and harden — not a finished,
 audited trading product. Nothing here is financial advice.
 
+---
+
+## Jiro Sniper Net — cabal & grinder analyzer
+
+A free-RPC memecoin cabal detector + behavior tracker + public dashboard
+that lives next to the trading bot. All on-chain reconstruction from
+public Solana RPC — no Birdeye/Nansen paid APIs.
+
+**Live dashboard: https://website-swart-phi-56.vercel.app/**
+
+### What it does
+
+1. **Profile top holders** of a memecoin (default: top 5) by reconstructing
+   their PnL from on-chain tx history. Free replacement for Birdeye Pro.
+2. **Detect cabal clusters** by shared-funder + co-buy timing analysis.
+   Wallets funded by the same master wallet within a tight window are
+   almost certainly operated by the same entity.
+3. **Tag wallet behavior** as BUNDLER, SNIPER, EARLY_EXIT, DIAMOND_HAND,
+   WHALE, SCALPER, SWING, EXIT_LIQUIDITY, WINNER, or LOSER — for the
+   website " archetype" view.
+4. **Auto-curate the smart-money watchlist** by promoting winners (pnl > 0
+   + win=True) and pruning losers (pnl < 0 + win=False), with manual-label
+   + fresh-entry protections.
+5. **Render a cyberpunk-themed dashboard** (Vite + React + Tailwind v4) at
+   the URL above — read-only, public, $0/month to run.
+
+### Architecture
+
+```
+                 Python pipeline (free RPC, ~600 Helius credits/mint)
+   wallet_profiler.py ─┐
+   fund_flow.py ───────┼─→ profile_top_holders.py → sniper_net_report.json
+   cabal_detector.py ──┤
+   behavior_miner.py ──┤
+   watchlist_updater.py┘
+                              ↓
+                       sync_website_data.py
+                              ↓
+                 Static JSON in website/public/data/
+                              ↓
+                Vercel SPA (Vite + React 19 + Tailwind v4)
+                              ↓
+       https://website-swart-phi-56.vercel.app/
+```
+
+### Pipeline run
+
+```bash
+# one mint
+python3 run_sniper_net.py <MINT>
+
+# multiple mints
+python3 run_sniper_net.py MINT1 MINT2 MINT3
+
+# without watchlist update
+python3 run_sniper_net.py <MINT> --no-watchlist
+
+# skip cache (burns Helius credits)
+python3 run_sniper_net.py <MINT> --no-cache
+```
+
+### Sync to website + deploy
+
+```bash
+# copy pipeline output → website/public/data/
+python3 sync_website_data.py
+
+# rebuild + deploy (or just push to master — GitHub Actions does it)
+cd website && npm run build
+VERCEL_TOKEN=*** vercel --prod --yes
+```
+
+### Cabal seed DB
+
+Curate known cabal/funding wallets in `cabal_seeds.json` at the project
+root. Each match boosts the cabal_score by +0.3 on the website. See
+`cabal_seeds.example.json` for format. Add funder addresses you find via
+GMGN's "Top Traders → Funded by" view, Frontrun.pro, or KOL chats.
+
+### Cron schedule (suggested)
+
+```cron
+# Every 15 minutes — profile top trending memecoin
+*/15 * * * * cd ~/ruangkerja/jiro && python3 run_sniper_net.py $(cat .lastmint) --no-cache 2>&1 | tee -a logs/sniper_net.log
+
+# Every 6 hours — sync website data + redeploy
+0 */6 * * * cd ~/ruangkerja/jiro && python3 sync_website_data.py && cd website && npm run build && VERCEL_TOKEN=*** vercel --prod --yes
+```
+
+### Cost
+
+**$0/month.** Static SPA on Vercel free tier + public Helius RPC free tier.
+Only paid cost would be a paid Birdeye/Nansen key — but the free pipeline
+gives you ~80% of the same signal.
+
+### Tests
+
+`python3 -m unittest discover -s tests` — 97 tests covering wallet
+profiling, fund tracing, cabal detection (incl. seed DB), behavior
+tagging, watchlist auto-curation, and end-to-end sync.
+

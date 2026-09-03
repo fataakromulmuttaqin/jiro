@@ -84,7 +84,10 @@ SUSPECT_SCORE_THRESHOLD = float(os.environ.get("SUSPECT_SCORE_THRESHOLD", "0.3")
 CO_BUY_WINDOW_S = int(os.environ.get("CO_BUY_WINDOW_S", "300"))  # 5 min default
 FUNDER_TIME_WINDOW_S = int(os.environ.get("FUNDER_TIME_WINDOW_S", "600"))  # 10 min
 # Optional user-supplied cabal seed DB (Bos said he'd provide later)
-CABAL_SEED_PATH = os.environ.get("CABAL_SEED_PATH", "")
+CABAL_SEED_PATH = os.environ.get(
+    "CABAL_SEED_PATH",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "cabal_seeds.json"),
+)
 
 # Cache cabal analysis results (pure analytics, no RPC involved)
 CABAL_CACHE_PATH = os.environ.get(
