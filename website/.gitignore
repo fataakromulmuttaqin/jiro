@@ -19,3 +19,4 @@ pnpm-debug.log*
 
 # build output verification
 .tsbuildinfo
+.vercel
