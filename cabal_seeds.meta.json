@@ -13,19 +13,6 @@
     "source": "manual",
     "confidence": "manual"
   },
-  "3C5YE97HADPDxZehYq9Cis8AXr9aNyrUsczKzE1nDbW9": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1737191463,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 4756,
-    "sell_count": 4947,
-    "volume_usd": 13265191.78
-  },
   "DKj8pa8oYRntMP3UN7p4JWt9PMbabcgc9MgyboTZ8Jek": {
     "discovered_ts": 1788475347,
     "last_active_ts": 1788424881,
@@ -78,19 +65,6 @@
     "sell_count": 935,
     "volume_usd": 2260599.49
   },
-  "4fuUiYxTQ6QCrdSq9ouBYcTM7bqSwYTSyLueGZLTy4T4": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1669603219,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 400,
-    "sell_count": 1003,
-    "volume_usd": 1023422.86
-  },
   "gjL62zuUAdJm7cZhrWtnBoCGN31kSFyWHScEYfTWiWh": {
     "discovered_ts": 1788475347,
     "last_active_ts": 1786487677,
@@ -129,19 +103,6 @@
     "buy_count": 1112,
     "sell_count": 928,
     "volume_usd": 714229.4
-  },
-  "AKQyQgEifBBhQmANuKzrRuRGoKSkKBv8NVdccc87FrR8": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1780809325,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 351,
-    "sell_count": 374,
-    "volume_usd": 113621.81
   },
   "ARwi1S4DaiTG5DX7S4M4ZsrXqpMD1MrTmbu9ue2tpmEq": {
     "discovered_ts": 1788475347,
@@ -182,32 +143,6 @@
     "sell_count": 15,
     "volume_usd": 1870.46
   },
-  "3NeUgARDmFgnKtkJLqUcEUNCfknFCcGsFfMJCtx6bAgx": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1723699419,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 141,
-    "sell_count": 162,
-    "volume_usd": 1571.3
-  },
-  "FPPHjpjBk98pd5Z3xXQuDcrZdUdqfraCRJU8yvdT1ZKR": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1703788397,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 7,
-    "sell_count": 36,
-    "volume_usd": 1114.45
-  },
   "7C5EwcJbRH16ruxzVfz6VTkWJuVEDEdWwMctRpURjWhF": {
     "discovered_ts": 1788475347,
     "last_active_ts": 1788473634,
@@ -246,19 +181,6 @@
     "buy_count": 191,
     "sell_count": 183,
     "volume_usd": 527.17
-  },
-  "BmdTFuWX5QqsFdYe8554TV45TJbGGmcThDK6ArLFHemt": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1712274093,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 48,
-    "sell_count": 58,
-    "volume_usd": 362.12
   },
   "4bg8UDLXEm4T6pCyoW7iUizAz9HMoxhTAtMquSXigFZu": {
     "discovered_ts": 1788475347,
@@ -299,19 +221,6 @@
     "sell_count": 2,
     "volume_usd": 72.34
   },
-  "ELqXddRqcnRJXQnqZdPwBXEEBpQ6SEbCQrBe12wpHBU": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1709683865,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 1,
-    "sell_count": 8,
-    "volume_usd": 52.27
-  },
   "By3gjE18rtuqSXdjefh9oTDjyaswYrjL3mqG53tkWjYR": {
     "discovered_ts": 1788475347,
     "last_active_ts": 1733753010,
@@ -324,45 +233,6 @@
     "buy_count": 18,
     "sell_count": 6,
     "volume_usd": 40.58
-  },
-  "FPfbntAR84nyxfcmATEwYG55joLcPCxgYBC3BTPqB7yR": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1723730288,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 0,
-    "sell_count": 7,
-    "volume_usd": 14.25
-  },
-  "uGv7HFB1cKuxoAb36g65BzK8UVorpAR7SfrkwDZRzdJ": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1712653306,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 1,
-    "sell_count": 5,
-    "volume_usd": 3.11
-  },
-  "4N41hUkrayX6duXJH8oYzybVpH3mcbG8TzoM14VXmTmh": {
-    "discovered_ts": 1788475347,
-    "last_active_ts": 1712984304,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 3,
-    "sell_count": 3,
-    "volume_usd": 0.54
   },
   "Es7bSM24764r8RUzoL8eecf9VVjeJmLTjZ6NSbo8MXtL": {
     "discovered_ts": 1788475347,
@@ -906,5 +776,429 @@
     "sell_count": 2,
     "volume_usd": 0.0736836,
     "realized_pnl_sol": -0.004677943203669537
+  },
+  "J7VEv12HzTWqfjjbaqBToRMM6mX1aEW7Q9414EHF8AZm": {
+    "discovered_ts": 1788483065,
+    "last_active_ts": 1788481372,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 10,
+    "sell_count": 2,
+    "volume_usd": 1128.0156510000002,
+    "realized_pnl_sol": -0.0008413745713415554
+  },
+  "3C5YE97HADPDxZehYq9Cis8AXr9aNyrUsczKzE1nDbW9": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1737191463,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4756,
+    "sell_count": 4947,
+    "volume_usd": 13265191.78
+  },
+  "4fuUiYxTQ6QCrdSq9ouBYcTM7bqSwYTSyLueGZLTy4T4": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1669603219,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 400,
+    "sell_count": 1003,
+    "volume_usd": 1023422.86
+  },
+  "AKQyQgEifBBhQmANuKzrRuRGoKSkKBv8NVdccc87FrR8": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1780809325,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 351,
+    "sell_count": 374,
+    "volume_usd": 113621.81
+  },
+  "3NeUgARDmFgnKtkJLqUcEUNCfknFCcGsFfMJCtx6bAgx": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1723699419,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 141,
+    "sell_count": 162,
+    "volume_usd": 1571.3
+  },
+  "FPPHjpjBk98pd5Z3xXQuDcrZdUdqfraCRJU8yvdT1ZKR": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1703788397,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 7,
+    "sell_count": 36,
+    "volume_usd": 1114.45
+  },
+  "BmdTFuWX5QqsFdYe8554TV45TJbGGmcThDK6ArLFHemt": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1712274093,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 48,
+    "sell_count": 58,
+    "volume_usd": 362.12
+  },
+  "ELqXddRqcnRJXQnqZdPwBXEEBpQ6SEbCQrBe12wpHBU": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1709683865,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 8,
+    "volume_usd": 52.27
+  },
+  "FPfbntAR84nyxfcmATEwYG55joLcPCxgYBC3BTPqB7yR": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1723730288,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 0,
+    "sell_count": 7,
+    "volume_usd": 14.25
+  },
+  "uGv7HFB1cKuxoAb36g65BzK8UVorpAR7SfrkwDZRzdJ": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1712653306,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 5,
+    "volume_usd": 3.11
+  },
+  "4N41hUkrayX6duXJH8oYzybVpH3mcbG8TzoM14VXmTmh": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1712984304,
+    "still_holding": false,
+    "source": "api_adapter",
+    "sources_seen": [
+      "api_adapter"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 3,
+    "volume_usd": 0.54
+  },
+  "HrSWmoBDZYhZmxHVjAe1SXDh2tQZHapzRyUbnZTQxtA": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788482332,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 61.91665819999999,
+    "realized_pnl_sol": 0.0
+  },
+  "92si2ahwimXpEH88kWtrzzdfH1q5hvgYFyNwsWaXygEo": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788478612,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 9.620323599999999,
+    "realized_pnl_sol": 0.0
+  },
+  "HfghaARWmqQFTSyzqfGcCGwidMvWR5fJGAu8tzwL4UKR": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788479601,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 0.1876666,
+    "realized_pnl_sol": 0.0
+  },
+  "AvA36ELpUMzZqpVMeFv5bYPtjersF4wCeWWd58Tbqv6v": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788480393,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2,
+    "sell_count": 0,
+    "volume_usd": 0.1009202,
+    "realized_pnl_sol": 0.0
+  },
+  "BcuPoicUk3ZEGQ7GLbUhEJHU84EfzeYbfFKP9C6wsYLV": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788482042,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 0.07884479999999999,
+    "realized_pnl_sol": 0.0
+  },
+  "C3gQzLx7vbNdDB29SohQspkwfTvD1Gbv8VJ5PBgbfhxW": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788478660,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 0.06197559999999999,
+    "realized_pnl_sol": 0.0
+  },
+  "CHnJm5xFCNdSmbRjmWpqNGjfi9p5UHtkNUrYgJctN7PG": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788480099,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 0.04214,
+    "realized_pnl_sol": 0.0
+  },
+  "DmctNAs1PLC8RwsRpuSWifpeiVLxCYP4FDDyi2FLZDS9": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788480428,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 0.016024999999999998,
+    "realized_pnl_sol": 0.0
+  },
+  "FUBHprFThbzAXvwQHmp2ymEqn1W7d8sKMQECyyhXqNjL": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788478930,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2,
+    "sell_count": 0,
+    "volume_usd": 0.0048000000000000004,
+    "realized_pnl_sol": 0.0
+  },
+  "7bbvjp2nkGYwYWex8ACPNK4W5wjhuASGYZjfSpHThei3": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788483014,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 0.0027602,
+    "realized_pnl_sol": 0.0
+  },
+  "HgTmrGqSAMCoeZmxmDpVVjWjsFcZHnC5rPwRNYqMq9B5": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788481445,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 1,
+    "volume_usd": 0.1647134,
+    "realized_pnl_sol": 0.0
+  },
+  "82cDbc7FoiQcNNqGEhrp8H3ny454ofC8cqiKa5cVy1ar": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788481372,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 0,
+    "sell_count": 1,
+    "volume_usd": 0.0,
+    "realized_pnl_sol": 0.0
+  },
+  "GWnfscE3bi3nwRMKBwUcgJZcEPpUJ2YEV73fspwm7LWv": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788481271,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 1,
+    "volume_usd": 0.007191400000000001,
+    "realized_pnl_sol": 0.0
+  },
+  "J5hN7iUCRuwVqwPxdypyfvUEFgErKGjYYUjjXmkNAVhM": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788481224,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 0,
+    "sell_count": 1,
+    "volume_usd": 0.0,
+    "realized_pnl_sol": 0.0
+  },
+  "8kuAuyjSREB9XCCvt85p9XnWqn7pFeUvRSp1RcDt8pfz": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788480428,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 1,
+    "volume_usd": 0.003,
+    "realized_pnl_sol": 0.0
+  },
+  "9EggPK7pNsYFDzTwEjHj5mySjGciRGDczaLFsoft9GBe": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788480099,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 1,
+    "volume_usd": 0.041,
+    "realized_pnl_sol": 0.0
+  },
+  "FJKCre6igRJis1e39Y2cuBXZWXavue4andnfFnwZTUyc": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788479921,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 0,
+    "sell_count": 1,
+    "volume_usd": 0.0,
+    "realized_pnl_sol": 0.0
+  },
+  "Dpficd4WCzfqXKgJpfsHv62XNHUJfWgSKdGWgTUJCeAb": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788479699,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 0,
+    "sell_count": 1,
+    "volume_usd": 0.0,
+    "realized_pnl_sol": 0.0
+  },
+  "5THPW2uw1Qq11yYJUDQbbXZwEPyzxfBeMz28PKa955tK": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788479561,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 0,
+    "sell_count": 1,
+    "volume_usd": 0.0,
+    "realized_pnl_sol": 0.0
+  },
+  "DUNTdb7oufgHAjpUdNWbWMUAqAyTGKXxau3DtuiQiiYs": {
+    "discovered_ts": 1788483177,
+    "last_active_ts": 1788477824,
+    "still_holding": false,
+    "source": "onchain",
+    "sources_seen": [
+      "onchain"
+    ],
+    "confidence": "single_source",
+    "buy_count": 29,
+    "sell_count": 5,
+    "volume_usd": 2.2334566000000002,
+    "realized_pnl_sol": -1.1114960022710711
   }
 }
