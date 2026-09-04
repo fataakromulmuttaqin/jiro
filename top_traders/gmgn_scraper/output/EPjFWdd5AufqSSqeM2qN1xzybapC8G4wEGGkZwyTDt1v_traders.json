@@ -1,0 +1,100 @@
+{
+  "ca": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "source": "stub_fallback",
+  "fetched_at": 1788475456,
+  "raw_status": 200,
+  "note": "stub because: gmgn returned 200 but parser found 0 trader rows (body_len=124512 bytes \u2014 top-traders panel likely JS-only)",
+  "n_traders": 10,
+  "traders": [
+    {
+      "wallet_address": "dPj1CD9MAxF7kjb8gqA7SSjUopQA7zNLmREJJuo6yPzo",
+      "trader_tag": null,
+      "buy_30d": 7,
+      "sell_30d": 4,
+      "pnl_30d": -2607.09,
+      "volume_30d": 548.42,
+      "last_active_timestamp": 1788268822
+    },
+    {
+      "wallet_address": "nKsTfGupjN4mbmZmAUktoSkwCukePdG3czhXgoE7fHvP",
+      "trader_tag": null,
+      "buy_30d": 30,
+      "sell_30d": 0,
+      "pnl_30d": 1756.26,
+      "volume_30d": 11568.17,
+      "last_active_timestamp": 1788265415
+    },
+    {
+      "wallet_address": "LVMQU93paetH9Zs7eLQJ4h1QtgMYWgedRWcc2RGwf8M8",
+      "trader_tag": null,
+      "buy_30d": 54,
+      "sell_30d": 24,
+      "pnl_30d": -4705.11,
+      "volume_30d": 11726.47,
+      "last_active_timestamp": 1787894739
+    },
+    {
+      "wallet_address": "nTNiqhgT9LHcQJ9PCvbmyr9frAd8BaEGHyCF8DkZ6WUM",
+      "trader_tag": null,
+      "buy_30d": 16,
+      "sell_30d": 6,
+      "pnl_30d": -3624.38,
+      "volume_30d": 1752.03,
+      "last_active_timestamp": 1787946936
+    },
+    {
+      "wallet_address": "YbDmTx7pasnh5Fy1PduTUWc65pQiq9eza84aoLpGKW2n",
+      "trader_tag": null,
+      "buy_30d": 73,
+      "sell_30d": 8,
+      "pnl_30d": -2379.66,
+      "volume_30d": 5696.87,
+      "last_active_timestamp": 1787926318
+    },
+    {
+      "wallet_address": "ZUFdCAPuVdcB3fBG83uRZctzdHHMjmpaLU2VBEX3PdXq",
+      "trader_tag": null,
+      "buy_30d": 33,
+      "sell_30d": 13,
+      "pnl_30d": -4205.5,
+      "volume_30d": 8620.94,
+      "last_active_timestamp": 1787875724
+    },
+    {
+      "wallet_address": "VSxeRAaPbChUEQovHxLdfTKWs45VRLbyhFKRk6hX7wyF",
+      "trader_tag": null,
+      "buy_30d": 75,
+      "sell_30d": 18,
+      "pnl_30d": -2525.89,
+      "volume_30d": 36576.51,
+      "last_active_timestamp": 1788342380
+    },
+    {
+      "wallet_address": "eCcs6mrPEofZh6qcdLv5Ww3rE5BPpTwhtk5KpohxoxiR",
+      "trader_tag": null,
+      "buy_30d": 14,
+      "sell_30d": 11,
+      "pnl_30d": 1647.81,
+      "volume_30d": 6706.15,
+      "last_active_timestamp": 1788436537
+    },
+    {
+      "wallet_address": "WdMoCXGcUEwrWmPz3DqQhDqxTAMbqDapiaHZbFzFZwWj",
+      "trader_tag": null,
+      "buy_30d": 7,
+      "sell_30d": 7,
+      "pnl_30d": 2706.52,
+      "volume_30d": 2678.29,
+      "last_active_timestamp": 1788077896
+    },
+    {
+      "wallet_address": "KPrMi4uDxsizoT23iVpe5NTT3bCvDsMgr3fZofFP9qn9",
+      "trader_tag": null,
+      "buy_30d": 70,
+      "sell_30d": 59,
+      "pnl_30d": 3552.5,
+      "volume_30d": 19647.03,
+      "last_active_timestamp": 1788098962
+    }
+  ]
+}

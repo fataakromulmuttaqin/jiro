@@ -147,6 +147,16 @@ class RpcClient:
 _default = RpcClient()
 
 
+def get_rpc_client() -> RpcClient:
+    """Return the shared multi-provider RpcClient instance.
+
+    Added so callers can `client = get_rpc_client(); client.rpc(...)`
+    for explicit reuse. Older `rpc_call(method, params)` wrapper below
+    stays for backwards compatibility.
+    """
+    return _default
+
+
 def rpc_call(method: str, params: list, timeout_s: Optional[float] = None) -> Optional[Dict[str, Any]]:
     """Backwards-compatible wrapper: rpc_call(method, params) -> result or None.
     Same semantics as the old single-RPC trading.rpc_call() helper, but now

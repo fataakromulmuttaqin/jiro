@@ -1,0 +1,10 @@
+{
+  "fetch": {
+    "ok": false,
+    "status": 400,
+    "error": "HTTP 400: {\"code\":40000301,\"reason\":\"P_GMGN_WEB_INVALID_ARGUMENT\",\"message\":\"invalid interval\",\"data\":null}",
+    "url": "https://gmgn.ai/defi/quotation/v1/rank/sol/swaps/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v?interval=1h&orderby=volume&direction=desc&limit=20",
+    "data_preview": null
+  },
+  "data": null
+}

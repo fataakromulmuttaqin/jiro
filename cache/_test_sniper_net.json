@@ -1,0 +1,64 @@
+{
+  "reports": [
+    {
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "top_holders": [
+        {
+          "wallet": "W1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxA",
+          "first_buy_ts": 1788470000,
+          "pnl_sol": 0.5,
+          "win": true,
+          "buy_count": 3,
+          "sell_count": 1,
+          "volume_usd": 1200
+        },
+        {
+          "wallet": "W2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxB",
+          "first_buy_ts": 1788470050,
+          "pnl_sol": -0.2,
+          "win": false,
+          "buy_count": 2,
+          "sell_count": 2,
+          "volume_usd": 800
+        },
+        {
+          "wallet": "W3xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxC",
+          "first_buy_ts": 1788470100,
+          "pnl_sol": 1.1,
+          "win": true,
+          "buy_count": 4,
+          "sell_count": 1,
+          "volume_usd": 2000
+        },
+        {
+          "wallet": "W4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxD",
+          "first_buy_ts": 1788470900,
+          "pnl_sol": 0.0,
+          "win": false,
+          "buy_count": 1,
+          "sell_count": 1,
+          "volume_usd": 400
+        }
+      ],
+      "funders": {
+        "W1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxA": [
+          "Fxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "W2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxB": [
+          "Fxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "W3xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxC": [
+          "Fxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        ]
+      },
+      "funder_details": {
+        "Fxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx": {
+          "label": "MasterFunder",
+          "tx_count": 3
+        }
+      }
+    }
+  ],
+  "ts": 1788470000,
+  "n_mints": 1
+}

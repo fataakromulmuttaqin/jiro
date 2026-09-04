@@ -1,0 +1,9 @@
+# gmgn_top_traders proxy list — one per line
+# Format: http://user:pass@host:port   or   http://host:port
+# Without proxies, the module still works (StealthyFetcher handles basic stealth)
+# but you may hit Cloudflare 403s. Add residential/mobile proxies here for best
+# results. Public datacenter proxies usually get blocked by gmgn within minutes.
+#
+# Examples:
+# http://user:pass@resi1.example.com:8080
+# http://10.0.0.5:3128

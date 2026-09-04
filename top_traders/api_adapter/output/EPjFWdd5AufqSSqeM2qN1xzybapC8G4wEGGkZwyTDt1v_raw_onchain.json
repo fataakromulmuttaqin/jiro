@@ -1,0 +1,10 @@
+{
+  "fetch": {
+    "ok": false,
+    "status": 0,
+    "error": "getTokenLargestAccounts returned no accounts",
+    "url": "",
+    "data_preview": "<137 chars>"
+  },
+  "rows": []
+}

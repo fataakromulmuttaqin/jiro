@@ -839,6 +839,10 @@ def _new_wallet_row(wallet: str) -> Dict[str, Any]:
 # CLI
 # ---------------------------------------------------------------------------
 def _cli() -> int:
+    # Declare global up front so the help-string default expressions (which
+    # read MIN_TX_COUNT / MIN_TX_AGE_DAYS at function-def time) and the
+    # later override don't trip Python's "used before global" check.
+    global MIN_TX_COUNT, MIN_TX_AGE_DAYS
     ap = argparse.ArgumentParser(
         description="Jiro on-chain top trader scanner (PnL or frequency).",
     )
@@ -848,10 +852,19 @@ def _cli() -> int:
     ap.add_argument("--max-sigs", type=int, default=MAX_SIGS)
     ap.add_argument("--concurrency", type=int, default=TX_CONCURRENCY)
     ap.add_argument("--budget", type=float, default=BUDGET_S)
+    ap.add_argument("--min-tx-count", type=int, default=MIN_TX_COUNT,
+                    help=f"drop wallets with < N total txs (default {MIN_TX_COUNT})")
+    ap.add_argument("--min-tx-age-days", type=int, default=MIN_TX_AGE_DAYS,
+                    help=f"drop wallets whose last_active older than N days (default {MIN_TX_AGE_DAYS})")
     ap.add_argument("--no-cache", action="store_true",
                     help="ignore cache and re-fetch signatures/txs")
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
+
+    # Override module-level constants with CLI args (must mutate globals
+    # because the filter logic reads them at call time, not capture time).
+    MIN_TX_COUNT = args.min_tx_count
+    MIN_TX_AGE_DAYS = args.min_tx_age_days
 
     os.makedirs(CACHE_DIR, exist_ok=True)
     os.makedirs(OUTPUT_DIR, exist_ok=True)

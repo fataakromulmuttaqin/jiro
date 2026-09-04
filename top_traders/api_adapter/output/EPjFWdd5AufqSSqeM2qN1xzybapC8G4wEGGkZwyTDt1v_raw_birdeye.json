@@ -1,0 +1,10 @@
+{
+  "fetch": {
+    "ok": false,
+    "status": 0,
+    "error": "BIRDEYE_API_KEY env var not set; skipping Birdeye",
+    "url": "https://public-api.birdeye.so/defi/v2/tokens/top_traders",
+    "data_preview": null
+  },
+  "data": null
+}
