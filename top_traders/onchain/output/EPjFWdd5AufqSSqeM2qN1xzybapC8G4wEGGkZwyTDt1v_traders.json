@@ -1,0 +1,71 @@
+{
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "strategy": "pnl",
+  "limit": 5,
+  "warnings": [],
+  "stats": {
+    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "strategy": "pnl",
+    "limit": 5,
+    "max_sigs": 200,
+    "tx_concurrency": 5,
+    "budget_s": 60.0,
+    "signatures_fetched": 200,
+    "txs_decoded": 45,
+    "wallets_after_filter": 2,
+    "sol_price_usd": 103.99,
+    "elapsed_s": 43.01,
+    "result": "ok",
+    "rpc_provider_stats": [
+      {
+        "url": "https://mainnet.helius-rpc.com/?api-key=01a870da-d068-414a-a057-1abc6331da83",
+        "ok": 50,
+        "fail": 1,
+        "in_cooldown": false,
+        "cooldown_remaining_s": 0.0
+      }
+    ]
+  },
+  "traders": [
+    {
+      "wallet_address": "G4zxFHdZ8nqeHeX9bvhRLfFYGEeZLSVQhRdK5BTGaEwh",
+      "buys": 0,
+      "sells": 3,
+      "buy_volume_token": 0.0,
+      "sell_volume_token": 518561529.0,
+      "buy_volume_sol": 0.0,
+      "sell_volume_sol": 0.0,
+      "realized_pnl_sol": 0.0,
+      "unrealized_pnl_estimate": 0.0,
+      "current_sol_balance": 0.00206028,
+      "still_holding": false,
+      "current_token_balance_ui": 0.0,
+      "first_seen_ts": 1788479171,
+      "last_active_ts": 1788479171,
+      "source": "onchain_rpc",
+      "tx_signatures_sampled": 45,
+      "is_program": false,
+      "realized_pnl_usd": 0.0
+    },
+    {
+      "wallet_address": "HrTf9CzXR1dRH4Sof5QrpmGWwpwAf3qZzwCsEjQpXcSq",
+      "buys": 2,
+      "sells": 0,
+      "buy_volume_token": 389760.0,
+      "sell_volume_token": 0.0,
+      "buy_volume_sol": 0.0,
+      "sell_volume_sol": 0.0,
+      "realized_pnl_sol": 0.0,
+      "unrealized_pnl_estimate": 0.0,
+      "current_sol_balance": 0.004583049,
+      "still_holding": false,
+      "current_token_balance_ui": 0.0,
+      "first_seen_ts": 1788479171,
+      "last_active_ts": 1788479171,
+      "source": "onchain_rpc",
+      "tx_signatures_sampled": 45,
+      "is_program": false,
+      "realized_pnl_usd": 0.0
+    }
+  ]
+}

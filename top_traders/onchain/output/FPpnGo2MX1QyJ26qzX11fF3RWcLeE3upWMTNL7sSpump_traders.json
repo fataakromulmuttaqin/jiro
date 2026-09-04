@@ -1,0 +1,91 @@
+{
+  "mint": "FPpnGo2MX1QyJ26qzX11fF3RWcLeE3upWMTNL7sSpump",
+  "strategy": "pnl",
+  "limit": 10,
+  "warnings": [],
+  "stats": {
+    "mint": "FPpnGo2MX1QyJ26qzX11fF3RWcLeE3upWMTNL7sSpump",
+    "strategy": "pnl",
+    "limit": 10,
+    "max_sigs": 200,
+    "tx_concurrency": 5,
+    "budget_s": 60.0,
+    "signatures_fetched": 200,
+    "txs_decoded": 47,
+    "wallets_after_filter": 3,
+    "sol_price_usd": 103.63,
+    "elapsed_s": 43.63,
+    "result": "ok",
+    "rpc_provider_stats": [
+      {
+        "url": "https://mainnet.helius-rpc.com/?api-key=01a870da-d068-414a-a057-1abc6331da83",
+        "ok": 54,
+        "fail": 2,
+        "in_cooldown": false,
+        "cooldown_remaining_s": 0.0
+      }
+    ]
+  },
+  "traders": [
+    {
+      "wallet_address": "ELrj6z5Et66tFGiGmLD6aH7x9BpHbCD4yH1e3pzqonue",
+      "buys": 1,
+      "sells": 1,
+      "buy_volume_token": 437698894231.0,
+      "sell_volume_token": 437698894231.0,
+      "buy_volume_sol": 0.001512731,
+      "sell_volume_sol": 0.0,
+      "realized_pnl_sol": 0.0,
+      "unrealized_pnl_estimate": 0.0,
+      "current_sol_balance": 0.0,
+      "still_holding": false,
+      "current_token_balance_ui": 0.0,
+      "first_seen_ts": 1788466681,
+      "last_active_ts": 1788476268,
+      "source": "onchain_rpc",
+      "tx_signatures_sampled": 47,
+      "is_program": false,
+      "realized_pnl_usd": 0.0
+    },
+    {
+      "wallet_address": "8srPKqLhbFETTEXwRPPuGDmb4xt8ucUeGp1JLpAG8Jvd",
+      "buys": 1,
+      "sells": 2,
+      "buy_volume_token": 1386336385085.0,
+      "sell_volume_token": 17602839358034.0,
+      "buy_volume_sol": 0.000368418,
+      "sell_volume_sol": 0.0,
+      "realized_pnl_sol": -0.004677943203669537,
+      "unrealized_pnl_estimate": 0.0,
+      "current_sol_balance": 0.00207408,
+      "still_holding": false,
+      "current_token_balance_ui": 0.0,
+      "first_seen_ts": 1788463793,
+      "last_active_ts": 1788468643,
+      "source": "onchain_rpc",
+      "tx_signatures_sampled": 47,
+      "is_program": false,
+      "realized_pnl_usd": -0.48477525419627415
+    },
+    {
+      "wallet_address": "DUNTdb7oufgHAjpUdNWbWMUAqAyTGKXxau3DtuiQiiYs",
+      "buys": 29,
+      "sells": 5,
+      "buy_volume_token": 126335176110319.0,
+      "sell_volume_token": 44052617008325.0,
+      "buy_volume_sol": 0.011167283000000002,
+      "sell_volume_sol": 0.0,
+      "realized_pnl_sol": -1.1114960022710711,
+      "unrealized_pnl_estimate": 0.007273291982066901,
+      "current_sol_balance": 0.00207408,
+      "still_holding": false,
+      "current_token_balance_ui": 0.0,
+      "first_seen_ts": 1788463793,
+      "last_active_ts": 1788477824,
+      "source": "onchain_rpc",
+      "tx_signatures_sampled": 47,
+      "is_program": false,
+      "realized_pnl_usd": -115.1843307153511
+    }
+  ]
+}

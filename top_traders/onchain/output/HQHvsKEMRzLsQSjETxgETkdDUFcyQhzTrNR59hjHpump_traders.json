@@ -1,0 +1,19 @@
+{
+  "mint": "HQHvsKEMRzLsQSjETxgETkdDUFcyQhzTrNR59hjHpump",
+  "strategy": "pnl",
+  "limit": 10,
+  "warnings": [
+    "getSignaturesForAddress returned no signatures"
+  ],
+  "stats": {
+    "mint": "HQHvsKEMRzLsQSjETxgETkdDUFcyQhzTrNR59hjHpump",
+    "strategy": "pnl",
+    "limit": 10,
+    "max_sigs": 500,
+    "tx_concurrency": 5,
+    "budget_s": 90.0,
+    "result": "rpc_unavailable",
+    "elapsed_s": 0.34737348556518555
+  },
+  "traders": []
+}
