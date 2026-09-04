@@ -26,3 +26,4 @@ website/.tsbuildinfo
 
 # Python caches inside website/ (none expected but just in case)
 website/**/__pycache__/
+top_traders/*/cache/
