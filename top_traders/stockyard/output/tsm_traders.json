@@ -1,0 +1,266 @@
+{
+  "mint": "0x58FfE4a942d3885bAa22D7520691F611EF09e7AA",
+  "ticker": "tsm",
+  "token_name": "Taiwan Semiconductor Manufacturing \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559873,
+  "source": "stockyard",
+  "price_usd": "425.14",
+  "traders": 16,
+  "change_pct": -14.9,
+  "volume_usd_24h": 5536360,
+  "top_traders": [
+    {
+      "wallet_address": "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
+      "label": "SPY",
+      "buy_30d": 4804,
+      "sell_30d": 0,
+      "volume_30d": 2330707.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 531610.0,
+        "market_cap_at_entry_usd": 15610575.0,
+        "wallet_age_years": 31.9,
+        "position_type": "StockV4",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4c862e5846659b086fe73896bbb9058513417e4e6938a1be93aeb7a768fa5754",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0xd4aAe326dDd1a2537A92C00E6576E4605e5D1e18",
+      "label": "AU",
+      "buy_30d": 8055,
+      "sell_30d": 0,
+      "volume_30d": 1948179.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 546716.0,
+        "market_cap_at_entry_usd": 2843865.0,
+        "wallet_age_years": 7.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa656346c328c7185f783e78936b68eb5868aa9cf5809260320b279f7e13790fc",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0xaA0b48DEFDE440B8445bA45DB88cb076Cf261E18",
+      "label": "TAIWAN",
+      "buy_30d": 2664,
+      "sell_30d": 0,
+      "volume_30d": 423385.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 189533.0,
+        "market_cap_at_entry_usd": 432762.0,
+        "wallet_age_years": 4.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1b31cea0ab55d9f08db1ba7a9dfedddef48e9b7803a0ed39092fb6cd4756ecc2",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0xcfdAbd5618A4606CaE27A8D27b051553D7191E18",
+      "label": "GEEG",
+      "buy_30d": 1395,
+      "sell_30d": 0,
+      "volume_30d": 66907.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 41073.0,
+        "market_cap_at_entry_usd": 45768.0,
+        "wallet_age_years": 0.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa0ff5023e310863f0ce32b4ff8725dc597423aecdabfed1bfee23ce56414297e",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0x92430d275A22313D6F8Ff76b12AAF2524fF01E18",
+      "label": "TSM",
+      "buy_30d": 1122,
+      "sell_30d": 0,
+      "volume_30d": 53343.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22391.0,
+        "market_cap_at_entry_usd": 22293.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x3a8f4c8831884199a4f0d48ee5de6ad9b437b935fc0ba33dd779a95de8ff9662",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0x5ec338C96e67252E2e8419A79Aae8988CC4cEe36",
+      "label": "GEEG",
+      "buy_30d": 504,
+      "sell_30d": 0,
+      "volume_30d": 39122.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22757.0,
+        "market_cap_at_entry_usd": 60656.0,
+        "wallet_age_years": 0.7,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa380a7639c61b1333e1e46cdcc58c05352ca408816b3c52e0061e9d21fb7c373",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0xe5e97e36CFdD014f73d7A4281cF8099A387b1e18",
+      "label": "CHINASPY",
+      "buy_30d": 42,
+      "sell_30d": 0,
+      "volume_30d": 3517.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20748.0,
+        "market_cap_at_entry_usd": 20738.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe7c94f4c79fbae99bd1eb93b8f8ddaf7ec5520ef6a91aa4d1ff1521cb6e98185",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0x5F2E3c78b6314CAB2fb958864d61772Dfd5D1E18",
+      "label": "TSMC",
+      "buy_30d": 57,
+      "sell_30d": 0,
+      "volume_30d": 2574.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20540.0,
+        "market_cap_at_entry_usd": 20533.0,
+        "wallet_age_years": 0.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa616495904fabc226d6627f5541d2ec6ec312faa092ba086e870ef5ffcfbb5a6",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0xB9818Da3ca135b19A01b8724C3568aeE2a6C1E18",
+      "label": "TYSM",
+      "buy_30d": 24,
+      "sell_30d": 0,
+      "volume_30d": 1557.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20678.0,
+        "market_cap_at_entry_usd": 20657.0,
+        "wallet_age_years": 0.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x5ddcd0b6b7f7c9f1b01c7493642c2cf2cf72d59b5162546823d94878f1c440f2",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0xf917931F92135fBEe3a26628a1Bd99E33cF71e18",
+      "label": "CHYNA",
+      "buy_30d": 21,
+      "sell_30d": 0,
+      "volume_30d": 1234.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20630.0,
+        "market_cap_at_entry_usd": 20626.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x93a7927443a8e2baac6f27a12db37de8501bbeac90170c456c3d51c34fed40b7",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0x67F12480f1FEb2e096E46A497C751caceebB1e18",
+      "label": "MORRIS",
+      "buy_30d": 9,
+      "sell_30d": 0,
+      "volume_30d": 371.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20740.0,
+        "market_cap_at_entry_usd": 20739.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x508ca1ddc1e4e5e90b91344957719c125bd1bdd49dc2bd2f87de3565e681804a",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0x9038057c68B2703A43D1c7AF29f926cCdcdB1e18",
+      "label": "THESTOCKMEME",
+      "buy_30d": 6,
+      "sell_30d": 0,
+      "volume_30d": 333.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20667.0,
+        "market_cap_at_entry_usd": 20666.0,
+        "wallet_age_years": 0.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xdf707e4ea71c1e4b368f77e275ec8a2f77afceb42e5948d901faa9f228d2999a",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0xA0f33c463D05e1952B950504122BC18206391E18",
+      "label": "BAP",
+      "buy_30d": 9,
+      "sell_30d": 0,
+      "volume_30d": 103.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20721.0,
+        "market_cap_at_entry_usd": 20720.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x8b9c977544509badd82828bcd19abf4432e499825371ddd883e2c02e0c982346",
+        "token_ticker": "tsm"
+      }
+    },
+    {
+      "wallet_address": "0x875Cd489d1C149460Bb7fe0889F79e5ec5da9C29",
+      "label": "Charley",
+      "buy_30d": 2,
+      "sell_30d": 0,
+      "volume_30d": 63.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 26631.0,
+        "market_cap_at_entry_usd": 26631.0,
+        "wallet_age_years": 43.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1d6b1b4caf160e2d0b1594318d60917b7bd9a871736e2c161c764b967462afe8",
+        "token_ticker": "tsm"
+      }
+    }
+  ]
+}

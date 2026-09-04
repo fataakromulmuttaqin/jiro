@@ -1,0 +1,266 @@
+{
+  "mint": "0xec262a75e413fAfD0dF80480274532C79D42da09",
+  "ticker": "mstr",
+  "token_name": "Strategy Inc. \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559872,
+  "source": "stockyard",
+  "price_usd": "142.33",
+  "traders": 53,
+  "change_pct": 250.5,
+  "volume_usd_24h": 11381631,
+  "top_traders": [
+    {
+      "wallet_address": "0x99452D7519e103daF9bC9f02311DD164a073A7A2",
+      "label": "MSTR",
+      "buy_30d": 24187,
+      "sell_30d": 0,
+      "volume_30d": 4114873.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 56908.0,
+        "market_cap_at_entry_usd": 338540.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xca0dd606324b5eb393173fceba496259ef550b173377a892fdc0bdc16278e254",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0xD18528b39dA6464B3662c331a52181ecB15b1E18",
+      "label": "SAYLORMOON",
+      "buy_30d": 11046,
+      "sell_30d": 0,
+      "volume_30d": 1846659.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 456218.0,
+        "market_cap_at_entry_usd": 1788631.0,
+        "wallet_age_years": 6.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xd1c2f6cb178a165a643deae8752098dea08d51b6170cd8e36e196ef03dc74751",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0x168661C52E5922288dFb2b3f323b6Cf90eb21e18",
+      "label": "STRATEGY",
+      "buy_30d": 23662,
+      "sell_30d": 0,
+      "volume_30d": 1811811.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 179561.0,
+        "market_cap_at_entry_usd": 440329.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa6975f4720a95aa9cdfa9b010a065b0e941534c93f9fa708104c08f0ac029ca0",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0x5cDA982F3D5f34459EEF8fdeB66CE5C5F70d1e18",
+      "label": "BULLROPE",
+      "buy_30d": 4542,
+      "sell_30d": 0,
+      "volume_30d": 222557.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 62379.0,
+        "market_cap_at_entry_usd": 80131.0,
+        "wallet_age_years": 0.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4f832ee3509d4898f635ba5614978366c1fb447d51eaedcfaa9cde9f694e5686",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0x6137347f6F3eD5FEb26656E87962566E47381E18",
+      "label": "CHIEF",
+      "buy_30d": 2343,
+      "sell_30d": 0,
+      "volume_30d": 135409.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 26235.0,
+        "market_cap_at_entry_usd": 26297.0,
+        "wallet_age_years": 1.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x604e370e2211e526fd611d5229c45fa17d46f4f62fc6a306e5373c556d3f5bff",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0x0F6eB7e87fF40506491260F28ecFd100aAB4CBa3",
+      "label": "MINR",
+      "buy_30d": 193,
+      "sell_30d": 0,
+      "volume_30d": 18329.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 56262.0,
+        "market_cap_at_entry_usd": 77106.0,
+        "wallet_age_years": 15.2,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa36f46fc6896ccf65131578a97766e5f2aa7f8e79ab40adead940ad5755411a9",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0x369c66849a0E5108aF3f7F040e2d519B6a181e18",
+      "label": "SAYLORHOOD",
+      "buy_30d": 114,
+      "sell_30d": 0,
+      "volume_30d": 12232.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 35688.0,
+        "market_cap_at_entry_usd": 38172.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xd59474d930660da6ffea775c2a740f4bf1d8c67296d0ec0e31d188eb5829cc10",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0xb560680d862d6a898c77084080183E3291581e18",
+      "label": "ABTC",
+      "buy_30d": 144,
+      "sell_30d": 0,
+      "volume_30d": 7312.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 31387.0,
+        "market_cap_at_entry_usd": 32013.0,
+        "wallet_age_years": 6.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x35cce897504bf7d59c1087994baa312657e3e57cb705d5dd564a963de18ddffd",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0xEbDb8acA558bF8225747770474f3FC2CCe5B1e18",
+      "label": "NOSTRATEGY",
+      "buy_30d": 210,
+      "sell_30d": 0,
+      "volume_30d": 7226.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 45086.0,
+        "market_cap_at_entry_usd": 46764.0,
+        "wallet_age_years": 2.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x33ce54147a81c2954e98dc59ba775bcca164512b3f7a19d454e7afd14271046c",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0xbbb3D4bAF906E95218147B33fBC686417E2e1E18",
+      "label": "MIKEY",
+      "buy_30d": 72,
+      "sell_30d": 0,
+      "volume_30d": 2665.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 30817.0,
+        "market_cap_at_entry_usd": 30879.0,
+        "wallet_age_years": 3.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x5580886785dadce4b2c274a930efe2ff81364c467946bcea234ce70831e1abda",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0xE5aD3aF8d46beB6A03226370479C8A11A64E1e18",
+      "label": "SELLOR",
+      "buy_30d": 18,
+      "sell_30d": 0,
+      "volume_30d": 2114.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 38137.0,
+        "market_cap_at_entry_usd": 38365.0,
+        "wallet_age_years": 36.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1e8afb374544512fb61afb76373d69689aa7cc2d0111ef7155b44aa98861e68d",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0x431a2327Ad44f2284c2a7fCB7b33494a47F81E18",
+      "label": "HODL",
+      "buy_30d": 45,
+      "sell_30d": 0,
+      "volume_30d": 1851.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 28536.0,
+        "market_cap_at_entry_usd": 28774.0,
+        "wallet_age_years": 7.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x8ea1f6505b7822a168a6370224080ac01d63b2a1f7f18fed26a5f0d22b6c34e0",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0x9E67936Df3b96BD6B59cfb8Cc7c9dF5f3c0E1E18",
+      "label": "BHR",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 293.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 25519.0,
+        "market_cap_at_entry_usd": 25470.0,
+        "wallet_age_years": 5.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x6a09f7228f1ad121179547dceeb7c14641820707f1b8718a1f9abb69a3c6ef45",
+        "token_ticker": "mstr"
+      }
+    },
+    {
+      "wallet_address": "0xEb5e79262B9d96Dcdb2Ceb1A2b5b0eD26bFF2bA3",
+      "label": "BTC",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 9.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 28327.0,
+        "market_cap_at_entry_usd": 32742.0,
+        "wallet_age_years": 41.3,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa13583435298df81be8d7e585341d654cfdae406f5892aeb4e37c0b52825df8e",
+        "token_ticker": "mstr"
+      }
+    }
+  ]
+}

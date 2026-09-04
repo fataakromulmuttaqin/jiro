@@ -1,0 +1,266 @@
+{
+  "mint": "0x05a3d1Cd21d0C88145E82600E62e7E496e0F222B",
+  "ticker": "amc",
+  "token_name": "AMC Entertainment \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559869,
+  "source": "stockyard",
+  "price_usd": "2.66",
+  "traders": 292,
+  "change_pct": 77.7,
+  "volume_usd_24h": 60322592,
+  "top_traders": [
+    {
+      "wallet_address": "0x9936403A9cc72CF306063E3496EA387428A3aeCd",
+      "label": "CINEMA",
+      "buy_30d": 36002,
+      "sell_30d": 0,
+      "volume_30d": 17427335.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 238044.0,
+        "market_cap_at_entry_usd": 4161932.0,
+        "wallet_age_years": 5.1,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf452715675de947f6b7cfba359f9e1d9f8eb42cba54a5e7275a12bf31487bf53",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xE0514A254B465C8c804F77230FB1059f84b21E18",
+      "label": "AMC",
+      "buy_30d": 113184,
+      "sell_30d": 0,
+      "volume_30d": 11031083.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 105743.0,
+        "market_cap_at_entry_usd": 415292.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0fbd4be474e818682b8586522600b6113204a75dedd60d89376e0fb7bcaa5adf",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xf5F5F51C4ab83C303c4fAD5b6A0838E106eF1e18",
+      "label": "concern",
+      "buy_30d": 27974,
+      "sell_30d": 0,
+      "volume_30d": 5148530.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 89287.0,
+        "market_cap_at_entry_usd": 149680.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa2ddbe9fd209d47432f54a7f8becf1d14a6991ac2c06af2e7d10cd0855a54bee",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xcb6f4711e9Af0E22cF0Be5A15b9333F8C03d1E18",
+      "label": "TAMC",
+      "buy_30d": 34002,
+      "sell_30d": 0,
+      "volume_30d": 2627250.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 57120.0,
+        "market_cap_at_entry_usd": 67710.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9bfe900c6d40151fe3ad56538869e8aa8b517ace96ab274554b878352a6894a0",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0x91109Fc8e6bBF4b6A45381dc26629C8771E51E18",
+      "label": "DECIST",
+      "buy_30d": 14316,
+      "sell_30d": 0,
+      "volume_30d": 1102023.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 80634.0,
+        "market_cap_at_entry_usd": 130855.0,
+        "wallet_age_years": 0.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x31ae63db155611cfb181e6f7c40584910036f8d664113c37f2ba4478b64d6d17",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xe6EA0B1C9bd1838ee12c2AD41CC2757E6ff91E18",
+      "label": "APES",
+      "buy_30d": 10593,
+      "sell_30d": 0,
+      "volume_30d": 836338.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 57384.0,
+        "market_cap_at_entry_usd": 69205.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xcb70ffa0ea51eb0a6b68cd068e95bc7f78eabfef739b95e4885d9bebb67a962d",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xab093dEF657F15dF31b33922A95e047aDd645B29",
+      "label": "SHROOM",
+      "buy_30d": 39,
+      "sell_30d": 0,
+      "volume_30d": 19350.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 80724.0,
+        "market_cap_at_entry_usd": 8460106.0,
+        "wallet_age_years": 0.5,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xcb6d33f02b4234719918670703c70d841fbeb00b2189032dec484c1bf1b93811",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0x9e91A7a4410F40715483eE704C802dFFE10d1E18",
+      "label": "GORILLAZ",
+      "buy_30d": 138,
+      "sell_30d": 0,
+      "volume_30d": 11102.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 88815.0,
+        "market_cap_at_entry_usd": 88777.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1d5acdd13fd732b105d4554f1a485d449411fc39f4d0bb9eb46d91a3ff3e667d",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xd607577bF9B34da79976D39BbCE0519661131E18",
+      "label": "AVATARADAM",
+      "buy_30d": 108,
+      "sell_30d": 0,
+      "volume_30d": 3615.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 63605.0,
+        "market_cap_at_entry_usd": 63594.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc598686ac9922fe4d65506f31f3d197ed82c1f2b68be496ba0cb48206afdc12c",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xb97472D7b8c8c92Ade3b72C492c0F102346F1E18",
+      "label": "ADAM",
+      "buy_30d": 42,
+      "sell_30d": 0,
+      "volume_30d": 3007.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 53590.0,
+        "market_cap_at_entry_usd": 53583.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x5d503e245a58ad7ef247d7b5f0f177f5c2f5ad905bd5e7b3c4c4daeb5e564502",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0x0f5da7482Dd629854Cc0D4E59b3c3774eC3b1e18",
+      "label": "LEAWOODFILMS",
+      "buy_30d": 42,
+      "sell_30d": 0,
+      "volume_30d": 1295.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 49873.0,
+        "market_cap_at_entry_usd": 49870.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xbd4108f714983e25445cdb6873e9c1552eacadb052203665fd937b66b0386764",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0x17CEC6E51f3ba31b2E65104948D3B077eb811e18",
+      "label": "AMC",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 428.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 83090.0,
+        "market_cap_at_entry_usd": 83087.0,
+        "wallet_age_years": 4.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf687a12136294b097ea1f8c58ef86f2125283d4d50bf6fd9f74584e7eaf6cc1e",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0xa0c6C4Dd2f268174b23Aca18b0F8e1Bb3Fee1E18",
+      "label": "TESTOOR",
+      "buy_30d": 4,
+      "sell_30d": 0,
+      "volume_30d": 119.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 49907.0,
+        "market_cap_at_entry_usd": 49903.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe6005b500dc50aa626674aeff73917edff659e24dfe249b50b6eae2980bee72e",
+        "token_ticker": "amc"
+      }
+    },
+    {
+      "wallet_address": "0x01F44bBBc6Ae74B5c00362253D5901e7ea31069B",
+      "label": "AMCOIN",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 1.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 84985.0,
+        "market_cap_at_entry_usd": 84985.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x655c5665354e61455f8d9dfc7d2b4d8b10d2ec4e84861938a5e17022991ba72a",
+        "token_ticker": "amc"
+      }
+    }
+  ]
+}

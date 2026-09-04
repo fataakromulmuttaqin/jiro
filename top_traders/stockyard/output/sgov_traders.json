@@ -1,0 +1,266 @@
+{
+  "mint": "0x92FD66527192E3e61d4DDd13322Aa222DE86F9B5",
+  "ticker": "sgov",
+  "token_name": "iShares 0-3 Month Treasury Bond \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559872,
+  "source": "stockyard",
+  "price_usd": "100.98",
+  "traders": 70,
+  "change_pct": 47,
+  "volume_usd_24h": 7820215,
+  "top_traders": [
+    {
+      "wallet_address": "0x5b32971ee68B1Ed6D11476760106F29D81f77f6e",
+      "label": "DEBT",
+      "buy_30d": 13307,
+      "sell_30d": 0,
+      "volume_30d": 2942704.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 73513.0,
+        "market_cap_at_entry_usd": 631776.0,
+        "wallet_age_years": 0.1,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x75cb93baaaa87c22b58d4e3496d88a49bdc8c084e97309a388714949fda0d267",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x5afd97fdC289a31b5Dfb167ca6576564513a1E18",
+      "label": "NFAI",
+      "buy_30d": 13503,
+      "sell_30d": 0,
+      "volume_30d": 833052.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 38982.0,
+        "market_cap_at_entry_usd": 41366.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x8a907f0dfa160ff66a43c0a13a2a7bc94ae017365041af9c1c4d891eb7a7cf63",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x3fC0509C27E5228FebEde0f9DDf9F90bf3AF1e18",
+      "label": "BOOMER",
+      "buy_30d": 10995,
+      "sell_30d": 0,
+      "volume_30d": 738765.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 34697.0,
+        "market_cap_at_entry_usd": 35444.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x3969bb891f15819b216b88ead7fd29e241b1b95bec946124ad42ddf818c40297",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x55D9bC094C032cE0F4c57Cb09e6AB8F225531E18",
+      "label": "DEBTCOIN",
+      "buy_30d": 3597,
+      "sell_30d": 0,
+      "volume_30d": 313477.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 84929.0,
+        "market_cap_at_entry_usd": 117768.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x3458e9d5e42fc937c6fe9fe62e41e1c76bd9d808d431c57dac50d5cef6483e6d",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x64bcF4aA85559526cFf0528BCDc0Cb9d3ea41e18",
+      "label": "JOHNDOG",
+      "buy_30d": 2691,
+      "sell_30d": 0,
+      "volume_30d": 260168.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 174932.0,
+        "market_cap_at_entry_usd": 397204.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa9349400def8a8fb8b96763c52870fcadbc8775361dd49e95291486be5141e0a",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x4304519809cb846a98C99ce501655E12288b1E18",
+      "label": "NEXF",
+      "buy_30d": 2790,
+      "sell_30d": 0,
+      "volume_30d": 194787.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 25322.0,
+        "market_cap_at_entry_usd": 25217.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x3d4385cf24d4345d50d036427d87b5ff15124a4616dfd7b5f1bbbc36686d1489",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x0060378498C166763732e72bFf27B540e71d1e18",
+      "label": "Howeycoins",
+      "buy_30d": 1298,
+      "sell_30d": 0,
+      "volume_30d": 178297.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 36804.0,
+        "market_cap_at_entry_usd": 40197.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2c88846972d579b20dc825fba830d7bea6c058ab9afebaadb5a200a9f4cad20c",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0xdB1942c99350920cA148621b34CB50B6d9B0673a",
+      "label": "SorkinCoin",
+      "buy_30d": 1578,
+      "sell_30d": 0,
+      "volume_30d": 150854.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 27685.0,
+        "market_cap_at_entry_usd": 89568.0,
+        "wallet_age_years": 0.0,
+        "position_type": "?",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x39c185ebf4309e9aa92a100d11df4922000ba1d6d40cf22eba12bf7daf362a3f",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x20D60eB7D0dCe12D602A7a72698E458357e51e18",
+      "label": "FRANKLIN",
+      "buy_30d": 513,
+      "sell_30d": 0,
+      "volume_30d": 19553.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 61803.0,
+        "market_cap_at_entry_usd": 80204.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x278455ecd640193e8f317fb48a9c51af6e887e50e57790c891da1056ed003ec8",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x8E61dcDd1DE3d6BcF909c6573fEb978b5E611E18",
+      "label": "HOWEY",
+      "buy_30d": 90,
+      "sell_30d": 0,
+      "volume_30d": 4460.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 30823.0,
+        "market_cap_at_entry_usd": 27954.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0cf8318410e6dd0e5ce44b87ebb972227ff1a7834b04869ace541b0755622c51",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x021C03486fe81bC7BaC16EF339e21BB341A31E18",
+      "label": "EAGLE",
+      "buy_30d": 123,
+      "sell_30d": 0,
+      "volume_30d": 2623.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24123.0,
+        "market_cap_at_entry_usd": 24066.0,
+        "wallet_age_years": 1.3,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x5ac5cb1fab6881845f7eb3d17ad3f3f6bb717858204a53aaf728e36bb182187e",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x87A4888CeFCbC6266606cEE3C6049b79d64E510E",
+      "label": "ROBINCOIN",
+      "buy_30d": 48,
+      "sell_30d": 0,
+      "volume_30d": 2508.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 27614.0,
+        "market_cap_at_entry_usd": 28972.0,
+        "wallet_age_years": 2.3,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9b222aec95eda484726edaadd7a5913d010f5a4d203e79335c44d83962e20be6",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x4683E058244248821295dcB80364799E5A011E18",
+      "label": "TINA",
+      "buy_30d": 15,
+      "sell_30d": 0,
+      "volume_30d": 612.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 27240.0,
+        "market_cap_at_entry_usd": 27611.0,
+        "wallet_age_years": 2.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x941ef860b75874336854dc6f8e96648e8a827797bc9ce19ab8469e21563eb171",
+        "token_ticker": "sgov"
+      }
+    },
+    {
+      "wallet_address": "0x4776e0C4E1E11372647076acC93eDc9253b61e18",
+      "label": "CRYPTOCRAT",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 2.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24330.0,
+        "market_cap_at_entry_usd": 24262.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4148811428da7a9f45bdfcbe597b2f78062b2e2f3d4443384b86da154417e2e8",
+        "token_ticker": "sgov"
+      }
+    }
+  ]
+}

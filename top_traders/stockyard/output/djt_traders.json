@@ -1,0 +1,266 @@
+{
+  "mint": "0x1D11f0496982706C5e14A514D4E79F2e6BdE4516",
+  "ticker": "djt",
+  "token_name": "Trump Media & Technology Group \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559871,
+  "source": "stockyard",
+  "price_usd": 0,
+  "traders": 84,
+  "change_pct": 892.5,
+  "volume_usd_24h": 12553654,
+  "top_traders": [
+    {
+      "wallet_address": "0x37D21fD322DE90B946E6B6e4B4FC5AD1b50A1e18",
+      "label": "CRIME",
+      "buy_30d": 27057,
+      "sell_30d": 0,
+      "volume_30d": 3491796.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 287036.0,
+        "market_cap_at_entry_usd": 1087622.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xac26c41b47d514dca6b95a7962146303dc1614e216fa1a87120a0779c10143fe",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0xB51d57cBE67152fD163F59D1e0F950C6b647fB07",
+      "label": "Magatard",
+      "buy_30d": 4179,
+      "sell_30d": 0,
+      "volume_30d": 1204070.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 74224.0,
+        "market_cap_at_entry_usd": 795583.0,
+        "wallet_age_years": 1.2,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x357c15c846d9e1cd46e6dfaed64a72d21ab241bda4ecd9e6f03227e02d3fcc00",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0x488aebD810E4E4EA9844B98DC1e5826346741e18",
+      "label": "TRUTHCOIN",
+      "buy_30d": 14334,
+      "sell_30d": 0,
+      "volume_30d": 1203927.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 128397.0,
+        "market_cap_at_entry_usd": 249667.0,
+        "wallet_age_years": 13.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x039ab5579d3af49ee746df46be1239bbbbb6bcf5d85dbd35a7f031b12fbdc072",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0xdCe5C6317222C5b6e5d963EeAC010DFc4dA9e6da",
+      "label": "$1",
+      "buy_30d": 6159,
+      "sell_30d": 0,
+      "volume_30d": 1082085.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 68981.0,
+        "market_cap_at_entry_usd": 687148.0,
+        "wallet_age_years": 2.3,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe7daa50bae196f9476df483a9cd0051896980c4939d06664eec99d1b69386758",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0xa241401510fDbFc100C086D00d350A839fBB79DB",
+      "label": "YUGE",
+      "buy_30d": 3471,
+      "sell_30d": 0,
+      "volume_30d": 580417.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21983.0,
+        "market_cap_at_entry_usd": 69784.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0f92bbb9e0ec807d6a388ac188883ec4ea0c3781adf32f1dbe4eee3a79022cbf",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0xA2B0A8f53b7114d12C568D547B496A9fF3541e18",
+      "label": "ARCADE",
+      "buy_30d": 2246,
+      "sell_30d": 0,
+      "volume_30d": 344448.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 52028.0,
+        "market_cap_at_entry_usd": 65520.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x59e3b2a76e46cac612832d49c7ccb232944efc40f652d91fe095973ded034990",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0x73114aBD7dCF37000d90d8DE9fd1dE3957B17c04",
+      "label": "BIGLY",
+      "buy_30d": 748,
+      "sell_30d": 0,
+      "volume_30d": 114925.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 53968.0,
+        "market_cap_at_entry_usd": 420602.0,
+        "wallet_age_years": 20.2,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x331ae7478e52c0450b149d7531dc2a51b8d1bdb20910d2bbbe24426484a1047d",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0x3AbcC13eB62a86cA7195f2Ef77C1f74491ed1834",
+      "label": "FAFO",
+      "buy_30d": 344,
+      "sell_30d": 0,
+      "volume_30d": 104818.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 77234.0,
+        "market_cap_at_entry_usd": 861419.0,
+        "wallet_age_years": 5.6,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x06694db505089797cbedcfafabe51d703f430ed6daa35d157bbcfbcb72a08aff",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0xf9dD68611c409799AE2BD002Ba523E7e069ba4bE",
+      "label": "KIRKIVERSARY",
+      "buy_30d": 998,
+      "sell_30d": 0,
+      "volume_30d": 75426.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22130.0,
+        "market_cap_at_entry_usd": 70723.0,
+        "wallet_age_years": 1.2,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0296eec6c1aa63e76ec6b03a7077763bcca8e81bb4364daa33f0c5c43ffdf531",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0xCbE0a9c554aF4CDfe9733736c06730363D481e18",
+      "label": "QUEEZING",
+      "buy_30d": 219,
+      "sell_30d": 0,
+      "volume_30d": 20685.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 23611.0,
+        "market_cap_at_entry_usd": 23421.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2a84408068fb1599e9a1faa18d2f1f9a55e03f546c246519e33bfb269e39bca1",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0x52c8c5554CA5f5313FeF7C2b35e8Cc24f9081e18",
+      "label": "PWEASE",
+      "buy_30d": 201,
+      "sell_30d": 0,
+      "volume_30d": 16606.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24168.0,
+        "market_cap_at_entry_usd": 24350.0,
+        "wallet_age_years": 3.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xac3b50c54e124d0795b70a4e2093255409edf2c98d0372c51b6dfcc6f7dcb599",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0x4803B6d2ae134EACe6d620571432706852801e18",
+      "label": "RIPTRUMP",
+      "buy_30d": 33,
+      "sell_30d": 0,
+      "volume_30d": 3087.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21854.0,
+        "market_cap_at_entry_usd": 21780.0,
+        "wallet_age_years": 1.3,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x242a5b5b453201ce694584565b3b6a83b71b2e3b5c112d204e9c2c3b587d90a6",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0xfe752CCE9eD88d7b7B95DAc31a35E775A5381E18",
+      "label": "DUCKS",
+      "buy_30d": 21,
+      "sell_30d": 0,
+      "volume_30d": 1405.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24356.0,
+        "market_cap_at_entry_usd": 24135.0,
+        "wallet_age_years": 7.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa85d5cc0fb6ec71a83e4baa6952a95492441345e43cb488d68b15d685c710d14",
+        "token_ticker": "djt"
+      }
+    },
+    {
+      "wallet_address": "0x2AE556445b22a066A488c40e6575289B6A901e18",
+      "label": "FIGHT",
+      "buy_30d": 9,
+      "sell_30d": 0,
+      "volume_30d": 218.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22070.0,
+        "market_cap_at_entry_usd": 21893.0,
+        "wallet_age_years": 4.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xd260725222494e1186b199d878da9ebddea4debb84e476675c1af4b728bf4840",
+        "token_ticker": "djt"
+      }
+    }
+  ]
+}

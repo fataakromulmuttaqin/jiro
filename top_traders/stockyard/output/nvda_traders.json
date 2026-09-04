@@ -1,0 +1,266 @@
+{
+  "mint": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
+  "ticker": "nvda",
+  "token_name": "NVIDIA \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559871,
+  "source": "stockyard",
+  "price_usd": 0,
+  "traders": 143,
+  "change_pct": 15.5,
+  "volume_usd_24h": 8847497,
+  "top_traders": [
+    {
+      "wallet_address": "0xaD066e27A97B23c6F2Ada0CfAF5edaE4B3AC2CE2",
+      "label": "HDR",
+      "buy_30d": 8260,
+      "sell_30d": 0,
+      "volume_30d": 1635184.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 32025.0,
+        "market_cap_at_entry_usd": 134212.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf3f89c2f7cb0da6bca42692b4ec4c9295993de80f9272cb4b108dfe44ff203d6",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xAa07A0e9209e16aC99708C3EC70159c6eF3128A3",
+      "label": "ORBIO",
+      "buy_30d": 1302,
+      "sell_30d": 0,
+      "volume_30d": 710080.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 180221.0,
+        "market_cap_at_entry_usd": 4037802.0,
+        "wallet_age_years": 3.7,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa95b1fbdccb15d2b07509b980f63adab8a94303b1781f5ebc53b72942d12ddc1",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xB05618FE540d0bE2bd193153dE86A9f84dE0D76A",
+      "label": "Figure03",
+      "buy_30d": 3090,
+      "sell_30d": 0,
+      "volume_30d": 449881.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 36291.0,
+        "market_cap_at_entry_usd": 172352.0,
+        "wallet_age_years": 1.2,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc081130d120aada0e1f657d10decc647cff771c1bac9fefd5e987f22ae0aa5cb",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+      "label": "FLOCK",
+      "buy_30d": 1354,
+      "sell_30d": 0,
+      "volume_30d": 424069.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 113044.0,
+        "market_cap_at_entry_usd": 25825868.0,
+        "wallet_age_years": 2.3,
+        "position_type": "self",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9f07ef9fa97791b29762ec32af8d4c9db2cd0a04e5ea0d8c2ffd87738ff4574c",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xa9Fcd15f315f5ffa918D3A767A980EE3dC019667",
+      "label": "BABYAI",
+      "buy_30d": 2574,
+      "sell_30d": 0,
+      "volume_30d": 286603.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 25305.0,
+        "market_cap_at_entry_usd": 83793.0,
+        "wallet_age_years": 1.3,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4512a1035669e5e7e36a5b083c58080646d74bd80331c3ba682929ebaa1745fd",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0x587Be69569AE1f1647264D06717A85B106CC1E18",
+      "label": "LONGBOW",
+      "buy_30d": 2772,
+      "sell_30d": 0,
+      "volume_30d": 162230.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 23765.0,
+        "market_cap_at_entry_usd": 23895.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Longbow",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xfaa7e714f002e75b7c56ff23ff9f8d95edf462ae79d6d3610f6bac129f2be372",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xF6E4F7945Bba125c36f4f42Ae904DD6Cc129Cf2A",
+      "label": "UNC",
+      "buy_30d": 172,
+      "sell_30d": 0,
+      "volume_30d": 17594.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 38049.0,
+        "market_cap_at_entry_usd": 189450.0,
+        "wallet_age_years": 6.2,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa994ed0b94d12994f9dcaf6ce93193007658937a9e2b10e06141c5177fc1c0ba",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xa7F6F1C5434F5A8ac4aC3D2588515E44E05Fcb66",
+      "label": "AGl",
+      "buy_30d": 88,
+      "sell_30d": 0,
+      "volume_30d": 11703.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 39781.0,
+        "market_cap_at_entry_usd": 39782.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4cff7a2388bed1c6f2627b661ecf896ee2206167479d55e92e07fca5f8a2d176",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xb8D9F969dB56bb57353e36Fd0015D98e3A761E18",
+      "label": "KOLI",
+      "buy_30d": 231,
+      "sell_30d": 0,
+      "volume_30d": 3605.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 35971.0,
+        "market_cap_at_entry_usd": 35975.0,
+        "wallet_age_years": 2.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1d67df0e83b4bfd6366279c55d40e82e7e6df010d90d928fd08c1c9d76481aa4",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0x3F947613aC089F4AA47c5bbe51CfB90034651E18",
+      "label": "COMPUTE",
+      "buy_30d": 34,
+      "sell_30d": 0,
+      "volume_30d": 2478.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 31152.0,
+        "market_cap_at_entry_usd": 32341.0,
+        "wallet_age_years": 44.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2d0ac59a0ddefc64634d972ec512649e3b01e1fd08afa08018739f3993dc25b3",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0x6EF9114f9E04D3e90dc9F566e72b245145aE1E18",
+      "label": "NANOCHICKLET",
+      "buy_30d": 60,
+      "sell_30d": 0,
+      "volume_30d": 263.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 26609.0,
+        "market_cap_at_entry_usd": 26558.0,
+        "wallet_age_years": 1.3,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xda044458d5e61a0001728a73c4c3260bf212eba2db5ca2f0ee405b71407e07e6",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xaf2fEfAb10c203FB3e7c3A709bC7C6C5B6c51E18",
+      "label": "LONGERRH",
+      "buy_30d": 33,
+      "sell_30d": 0,
+      "volume_30d": 224.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 26190.0,
+        "market_cap_at_entry_usd": 25849.0,
+        "wallet_age_years": 1.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xcc488a41de58231ab87b4aeff96931ff7701fb673c6b3e0cb9146eaad18fd6dc",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0xC8a1E3Bd7311b491f0dE57c31021b213F3e11e18",
+      "label": "MC",
+      "buy_30d": 18,
+      "sell_30d": 0,
+      "volume_30d": 150.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 23038.0,
+        "market_cap_at_entry_usd": 22455.0,
+        "wallet_age_years": 2.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9016461b5219f9f6ce2b3cbe52125b6bf6baf480682731894b1a968e2538c986",
+        "token_ticker": "nvda"
+      }
+    },
+    {
+      "wallet_address": "0x1e8D97A216EE09b9B4a2Feaf4c9602876eA88885",
+      "label": "HUMAI",
+      "buy_30d": 1,
+      "sell_30d": 0,
+      "volume_30d": 0.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 39486.0,
+        "market_cap_at_entry_usd": 39486.0,
+        "wallet_age_years": 3.3,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xfbdab8fd33e2a8992144b12f395654d3d70c43d5c7ca609bef786dc54a00ebf5",
+        "token_ticker": "nvda"
+      }
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "mint": "0x4e62068525Ab11FE768e29dfD00ef909B9803016",
+  "ticker": "lulu",
+  "token_name": "Lululemon \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559872,
+  "source": "stockyard",
+  "price_usd": 0,
+  "traders": 53,
+  "change_pct": -0.7,
+  "volume_usd_24h": 5706816,
+  "top_traders": [
+    {
+      "wallet_address": "0xadA85E113fc5c33046cAE2Fc66006Fd84F093C9b",
+      "label": "DELULU",
+      "buy_30d": 15109,
+      "sell_30d": 0,
+      "volume_30d": 2715115.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 40044.0,
+        "market_cap_at_entry_usd": 229318.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x279a01d4459f06e70ffe06dcfbf1d3c7e254f51f512ae2519e1a5a23fbeaabb0",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xc32B91Fe216aF1B834dB02f33326E983Ad8Cf201",
+      "label": "CAMELTOE",
+      "buy_30d": 3625,
+      "sell_30d": 0,
+      "volume_30d": 1037717.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 66955.0,
+        "market_cap_at_entry_usd": 370617.0,
+        "wallet_age_years": 2.6,
+        "position_type": "o1",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1e75aa57c6f96fd805296b4fa4969741060407f62c94a7f88c3fdfccc6cc2d35",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0x9f029188a2dCD44c54dEdA575Bc8ED490B9f1e18",
+      "label": "BIGLONG",
+      "buy_30d": 8667,
+      "sell_30d": 0,
+      "volume_30d": 558169.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24820.0,
+        "market_cap_at_entry_usd": 23883.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x6c1bd15c07a42938775e6ece5ec7f2d6020aab37c9fb74b6f6b2f81ac2d723dc",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xC1300316A66D60B83Af5188851Fa8cB9F9E51e18",
+      "label": "GORILLAA",
+      "buy_30d": 423,
+      "sell_30d": 0,
+      "volume_30d": 31578.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24288.0,
+        "market_cap_at_entry_usd": 23892.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xaff4fa09e7258b0963ef6c4ab9d1a9e94fd84538f087fd67425d27a8de704aad",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xC1930463Cdfd9FcAC37941d2AE0Edc141A831E18",
+      "label": "RURUREMON",
+      "buy_30d": 171,
+      "sell_30d": 0,
+      "volume_30d": 10766.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24724.0,
+        "market_cap_at_entry_usd": 24659.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x5184bbf1de7817023b372aa693f67f1358cca7048156c3fda6ada086057edbf1",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xF55B8fCf961671338051e3A1A42f1A1716d21E18",
+      "label": "FOID",
+      "buy_30d": 69,
+      "sell_30d": 0,
+      "volume_30d": 7983.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 265664.0,
+        "market_cap_at_entry_usd": 265648.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe75206ac641263008ea704f2749369a91112f8c780cac177c5aed99ae214b0be",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0x9EfB7bd3718Ba8584558BFeED60C1e71a07e1e18",
+      "label": "LULONG",
+      "buy_30d": 315,
+      "sell_30d": 0,
+      "volume_30d": 3703.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24580.0,
+        "market_cap_at_entry_usd": 24570.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2db57f66a2aca44dfbd2b7b5334739fcca5242fba33220afe150e4c99ecf018e",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xc77A369f4097a0Cf6c030df65B175Cac57ab1e18",
+      "label": "LEGGINGS",
+      "buy_30d": 18,
+      "sell_30d": 0,
+      "volume_30d": 2971.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24431.0,
+        "market_cap_at_entry_usd": 24384.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2147ab1e9ade5da9276c650dd626610d2186ea1d5406d00d513c0a216a08daf8",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0x75681877Ec68B6313FAb36Ae441E508543131E18",
+      "label": "LOLO",
+      "buy_30d": 30,
+      "sell_30d": 0,
+      "volume_30d": 2822.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24572.0,
+        "market_cap_at_entry_usd": 24565.0,
+        "wallet_age_years": 0.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x8fed9d9cabf7c686a8622630917cd6d47f51e1a2eea4fd057be3dfc35fafa1a6",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0x91fC10167fE94b8E49E071053f627c9CF22d1e18",
+      "label": "LULUGIRL",
+      "buy_30d": 36,
+      "sell_30d": 0,
+      "volume_30d": 2338.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24649.0,
+        "market_cap_at_entry_usd": 24643.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x25c2969099169a3bb1d7a0e9748bb87cc4639305008f1a9e2dd0958f7ef8b372",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xEdb05aD4126662CBE2C555a8cEB2F4E92B0E1E18",
+      "label": "PANTS",
+      "buy_30d": 36,
+      "sell_30d": 0,
+      "volume_30d": 2006.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24409.0,
+        "market_cap_at_entry_usd": 24403.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf0e47191b007d2bec5e6fb9d01a2881e7a3821558bd3e3c4a63d97a457d7859e",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xC08D8a526db48Cc46d78D7097F5f22384E7f1e18",
+      "label": "BEARY",
+      "buy_30d": 60,
+      "sell_30d": 0,
+      "volume_30d": 1640.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24551.0,
+        "market_cap_at_entry_usd": 24468.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf93e40ce2e6dfa3698f0313417a60102eefcfae017ea292b097607cbb8315a3e",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xeAfe9a76F9d0963C15fa4B0f7425dDF5dBB31e18",
+      "label": "ALIGN",
+      "buy_30d": 6,
+      "sell_30d": 0,
+      "volume_30d": 597.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 308260.0,
+        "market_cap_at_entry_usd": 308251.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x527672d37f58e779d42ec3d668d1765acd31a4e87d74ebb3aa5bf1b743e67b04",
+        "token_ticker": "lulu"
+      }
+    },
+    {
+      "wallet_address": "0xdAd36623C482d049b6d7BB3046e21292a1A11e18",
+      "label": "RHINOCEROS",
+      "buy_30d": 6,
+      "sell_30d": 0,
+      "volume_30d": 12.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24469.0,
+        "market_cap_at_entry_usd": 24469.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xbf17ad806d7c5f134af32426a5492686c9f1b01ceb224d1073cf4bc6ddb52915",
+        "token_ticker": "lulu"
+      }
+    }
+  ]
+}

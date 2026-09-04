@@ -1,0 +1,266 @@
+{
+  "mint": "0xCceE82fE024c36fA15E1005edE3E9e4787e23D09",
+  "ticker": "hims",
+  "token_name": "Hims & Hers Health \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559870,
+  "source": "stockyard",
+  "price_usd": 0,
+  "traders": 58,
+  "change_pct": -16.6,
+  "volume_usd_24h": 5037872,
+  "top_traders": [
+    {
+      "wallet_address": "0x98096d17e191B3dA1d5f99a6D7b3584351b11E18",
+      "label": "BONER",
+      "buy_30d": 7275,
+      "sell_30d": 0,
+      "volume_30d": 2835642.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 2215509.0,
+        "market_cap_at_entry_usd": 44918284.0,
+        "wallet_age_years": 14.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x997e29E62e16140fbb10077668BB1998831B1Da0",
+      "label": "CONDOM ",
+      "buy_30d": 12198,
+      "sell_30d": 0,
+      "volume_30d": 1411071.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 39851.0,
+        "market_cap_at_entry_usd": 195216.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0630cb490c5a39185ea83dc1e0d4bb39e0d3a2f2bfc7d02a621c9a5fb178835a",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0xBE58054707De04F849B16db6020Ddb5EC0521E18",
+      "label": "LADYBONER",
+      "buy_30d": 1011,
+      "sell_30d": 0,
+      "volume_30d": 58272.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22167.0,
+        "market_cap_at_entry_usd": 21822.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xffe31e937d8b3e72a3ef87972feeec978fd46059365f9a317b445b1cdaab1fab",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0xE2DfbBAe2d2D329968E986D29c5d83f8d4501e18",
+      "label": "CIALIS",
+      "buy_30d": 429,
+      "sell_30d": 0,
+      "volume_30d": 25824.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22308.0,
+        "market_cap_at_entry_usd": 22488.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Longbow",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0efa64838faf34cdb4837f52649cbfe5cd1b0e4e6a3dff5646ac62a623181080",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x422FA6121BeeB19dc322dBb52AB2b9f7e8d71E18",
+      "label": "PEPETIDES",
+      "buy_30d": 348,
+      "sell_30d": 0,
+      "volume_30d": 22370.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 33172.0,
+        "market_cap_at_entry_usd": 34324.0,
+        "wallet_age_years": 5.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x693a3a12628e2a7e5b9e8c29681377f6a3f8aba453dbd7fcb28d9c8b5ed80402",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x3E2ae441dcbDaaEDDe4B552ad613b340d9ac1E18",
+      "label": "JIZZ",
+      "buy_30d": 303,
+      "sell_30d": 0,
+      "volume_30d": 18781.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22977.0,
+        "market_cap_at_entry_usd": 22953.0,
+        "wallet_age_years": 0.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0b959651fdf67260f928c330bc077c20ced0f3983afa18f464e6811903d64b20",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0xab093dEF657F15dF31b33922A95e047aDd645B29",
+      "label": "SHROOM",
+      "buy_30d": 33,
+      "sell_30d": 0,
+      "volume_30d": 13872.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 82960.0,
+        "market_cap_at_entry_usd": 8469803.0,
+        "wallet_age_years": 0.5,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc4c874974910f9bd738ebee59127dba52bee1b2c515628717e58a54c6b07e3fe",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x3fAc90D5d8Ff1702fD304805Badad4e7C9b71e18",
+      "label": "VIAGRA",
+      "buy_30d": 63,
+      "sell_30d": 0,
+      "volume_30d": 3986.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24507.0,
+        "market_cap_at_entry_usd": 24619.0,
+        "wallet_age_years": 4.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc94d37e2cfe0f3e909d3ccfe1b90394caacb02115e4a9332651a56030bc9a731",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0xBc43Dd310B6fEA638245F2ef6522EC812B121e18",
+      "label": "CONDOM",
+      "buy_30d": 33,
+      "sell_30d": 0,
+      "volume_30d": 3604.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21662.0,
+        "market_cap_at_entry_usd": 21596.0,
+        "wallet_age_years": 1.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x39fb00e68101033a8ca87b0a4a6a84bc25f654639b0bdd96fde60e49b90c62ab",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0xC480784416FcE91C4ac64A35cE067e11F9F01E18",
+      "label": "MINOXIDIL",
+      "buy_30d": 63,
+      "sell_30d": 0,
+      "volume_30d": 2317.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21440.0,
+        "market_cap_at_entry_usd": 21169.0,
+        "wallet_age_years": 1.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xddaa297118bc8a1c802a2f44203f5799ad73f984e53164c4b9d89010b913bd5c",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x5fda38f45e5915A3f8546cbB7C8faf68B18f1e18",
+      "label": "PEPTIDE",
+      "buy_30d": 33,
+      "sell_30d": 0,
+      "volume_30d": 2133.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 29042.0,
+        "market_cap_at_entry_usd": 29685.0,
+        "wallet_age_years": 5.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x6841af96a82531c372e63f6c0a39b1848fc46011afae16729dcf91b402ad964a",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x83bC791AB2f20Df50F94c2d0CA670EaDa9841E18",
+      "label": "BINKERCOIN",
+      "buy_30d": 15,
+      "sell_30d": 0,
+      "volume_30d": 778.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21257.0,
+        "market_cap_at_entry_usd": 21150.0,
+        "wallet_age_years": 1.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xbdb76f375a573c3634883ba2202aefd3bed972109dee050f0b38f2f746abcad6",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x2F1daDAfec9df4dBAb4bf2cC8974cEe21a3e1e18",
+      "label": "MINOX",
+      "buy_30d": 21,
+      "sell_30d": 0,
+      "volume_30d": 246.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21342.0,
+        "market_cap_at_entry_usd": 21347.0,
+        "wallet_age_years": 2.3,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x92012811c80b0e4b37ef71aec1fce33164af29076556d5209374b6978d2eb3d9",
+        "token_ticker": "hims"
+      }
+    },
+    {
+      "wallet_address": "0x1DD1baf5C98cb734EaFCB1afe62c19d939e11E18",
+      "label": "HOODCOIN",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 4.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21718.0,
+        "market_cap_at_entry_usd": 21675.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xdf53f410130916285ad0075cc20b1437308429c40ac142caa2648b740d07aafd",
+        "token_ticker": "hims"
+      }
+    }
+  ]
+}

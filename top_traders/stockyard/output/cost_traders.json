@@ -1,0 +1,266 @@
+{
+  "mint": "0x4EA005168D7F09a7A0Ba9D1DEf21a479950E44C2",
+  "ticker": "cost",
+  "token_name": "Costco \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559869,
+  "source": "stockyard",
+  "price_usd": "914.34",
+  "traders": 26,
+  "change_pct": -21.8,
+  "volume_usd_24h": 4049079,
+  "top_traders": [
+    {
+      "wallet_address": "0x1C1DAEF0300551aDBfbE403e7d567b6c5aFF566f",
+      "label": "HOTDOG",
+      "buy_30d": 9880,
+      "sell_30d": 0,
+      "volume_30d": 3016770.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 74764.0,
+        "market_cap_at_entry_usd": 873995.0,
+        "wallet_age_years": 1.9,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x6d16129c968395aa5b2b47527bc6ccd78bed27748271891b73baa323fdbca250",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0xaAc0Eaf0B8a17FB428903D274413a1Fca36AEB03",
+      "label": "KIRKLAND",
+      "buy_30d": 2179,
+      "sell_30d": 0,
+      "volume_30d": 481259.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 33478.0,
+        "market_cap_at_entry_usd": 175238.0,
+        "wallet_age_years": 1.8,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x135fc32f487fbbc8306d21df09a8c8b470bd716e9ab06e6c0875626f257d8d5d",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x9c05CBEc6C6F8cE87926fec6A491314030D4215C",
+      "label": "HOTDOG",
+      "buy_30d": 1824,
+      "sell_30d": 0,
+      "volume_30d": 373925.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 71792.0,
+        "market_cap_at_entry_usd": 721000.0,
+        "wallet_age_years": 5.8,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xb116ae2b09dc74519a8c83e3e0f3141ce9b3fb2a67469f56f48b31b043a37b7a",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x45443A4a7b58ab26A4B4D72616cf36D5aAE7188C",
+      "label": "HOTDOG",
+      "buy_30d": 1524,
+      "sell_30d": 0,
+      "volume_30d": 36692.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 68438.0,
+        "market_cap_at_entry_usd": 411459.0,
+        "wallet_age_years": 36.7,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x264ad13bfc0585208b7d8b1712df51b096a5f55c",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0xD0aF8809B7ABfB613f0E2bEbBf65F9289f4a1e18",
+      "label": "ANYTHING",
+      "buy_30d": 597,
+      "sell_30d": 0,
+      "volume_30d": 29599.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20643.0,
+        "market_cap_at_entry_usd": 20753.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Longbow",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x48bc3816adb4285c2e34d2a548f5a6b96673ba7093dff09fec277b17edc85053",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x804fBd73Bf190cC7EF09cA13B2eB35dF1Eb31E18",
+      "label": "HOTDOG",
+      "buy_30d": 249,
+      "sell_30d": 0,
+      "volume_30d": 15363.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 34089.0,
+        "market_cap_at_entry_usd": 36094.0,
+        "wallet_age_years": 4.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xef3a5c95b79b39be19fa57fa0e2d6e46b366b4a8eaa2892ccc3b1545a234053f",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x86220d4f4bD4eB9Bf5D6bfB4b6E9b4caa0211E18",
+      "label": "COSTCARD",
+      "buy_30d": 240,
+      "sell_30d": 0,
+      "volume_30d": 13080.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22048.0,
+        "market_cap_at_entry_usd": 22002.0,
+        "wallet_age_years": 1.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x98f1263cf53d7b89c1486f89419a4b95dc327403167bcdcc58743a7018535876",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x6b59fEe41181a44E9b9DdDb7B5baBd286E871E18",
+      "label": "BOOMS",
+      "buy_30d": 117,
+      "sell_30d": 0,
+      "volume_30d": 9034.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20655.0,
+        "market_cap_at_entry_usd": 20631.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x3085671b8f8528970f9980030a598ff63c91041b9c9fac8857b168d500e124b1",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x86040975cF00C47CF4D2b19B33C92Da62B751e18",
+      "label": "LOW",
+      "buy_30d": 99,
+      "sell_30d": 0,
+      "volume_30d": 6957.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20615.0,
+        "market_cap_at_entry_usd": 20597.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x171cf7fb58fadb1d70e09ff388f2e360de5d3150f3ebff975688a03e55e006ce",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x08a1F6E321E8A5E22B6B9A3D43435b22246453E5",
+      "label": "Lola",
+      "buy_30d": 36,
+      "sell_30d": 0,
+      "volume_30d": 2438.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 90134.0,
+        "market_cap_at_entry_usd": 90134.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x42d58352bb32094ef356a9546f4b28887a79bf4e1a8754f177063ab14539d8e6",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0xe48E3ef04a915595A79a3d2C8b17A02325321E18",
+      "label": "HOLO",
+      "buy_30d": 16,
+      "sell_30d": 0,
+      "volume_30d": 1654.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22390148.0,
+        "market_cap_at_entry_usd": 22390133.0,
+        "wallet_age_years": 0.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x8cb1e78007e4c0d9e502c9281916fb77534e63ddec8b8ed7e8960f58968e1459",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x8e68D0c0495dA598A85477ED8B8ee02e8aaC1e18",
+      "label": "CHONK",
+      "buy_30d": 12,
+      "sell_30d": 0,
+      "volume_30d": 512.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20569.0,
+        "market_cap_at_entry_usd": 20567.0,
+        "wallet_age_years": 0.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1e011ab7b7e09deea6fb8ae8f1894e192e74d7b6e3eae7fdb6617613e1e2cc98",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x7A839e4df07191a2250332b3ea69E7aDedC71e18",
+      "label": "CHUSD",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 262.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20791.0,
+        "market_cap_at_entry_usd": 20753.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xbeb035c8949f97d12d004d4c4c53a3254ec99b8e01e206354672d3abcaa14aa7",
+        "token_ticker": "cost"
+      }
+    },
+    {
+      "wallet_address": "0x8Ff30bC3Baae6699CA92A2e7855CCf136a511E18",
+      "label": "BAKED",
+      "buy_30d": 6,
+      "sell_30d": 0,
+      "volume_30d": 254.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 20613.0,
+        "market_cap_at_entry_usd": 20612.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x56d48a4e970b69a3be2cf87d2a26c7f1079e4e4f7e858c656aac8d088f902e9a",
+        "token_ticker": "cost"
+      }
+    }
+  ]
+}

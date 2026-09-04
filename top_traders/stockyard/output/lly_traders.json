@@ -1,0 +1,266 @@
+{
+  "mint": "0x8005d266423c7ea827372c9c864491e5786600ea",
+  "ticker": "lly",
+  "token_name": "Eli Lilly \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559871,
+  "source": "stockyard",
+  "price_usd": 0,
+  "traders": 50,
+  "change_pct": 65.7,
+  "volume_usd_24h": 19376446,
+  "top_traders": [
+    {
+      "wallet_address": "0x12D5ee7917cA430073C3A638ee1e6f0648A98a01",
+      "label": "FATCOIN",
+      "buy_30d": 15304,
+      "sell_30d": 0,
+      "volume_30d": 13413722.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 726809.0,
+        "market_cap_at_entry_usd": 35841874.0,
+        "wallet_age_years": 3.2,
+        "position_type": "o1",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x46ba8216b5d05ff33427b976663836ec5b34b3e261f374f9a5e773d776d3af85",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x52F380A513112428723abF8AFED125824E4A1e18",
+      "label": "PEPTIDES",
+      "buy_30d": 26403,
+      "sell_30d": 0,
+      "volume_30d": 3317419.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 165621.0,
+        "market_cap_at_entry_usd": 370181.0,
+        "wallet_age_years": 2.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x6a2423f70a10915bc776300f952e0bebb8361f47b8eedcdae057c7d75a0d0754",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x7981992155389b44c17e08422749d77023Be2ba3",
+      "label": "BE",
+      "buy_30d": 16596,
+      "sell_30d": 0,
+      "volume_30d": 1556485.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 46891.0,
+        "market_cap_at_entry_usd": 54018.0,
+        "wallet_age_years": 1.0,
+        "position_type": "Airlock",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc7a30f705b43ae6750e0a61d4da03d99e5574e05396c1fbb427e38df860faf77",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x4cf6b98699821AD707B31addFc04F39D86F01e18",
+      "label": "ALZHEIMERS",
+      "buy_30d": 6036,
+      "sell_30d": 0,
+      "volume_30d": 521293.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 116308.0,
+        "market_cap_at_entry_usd": 212708.0,
+        "wallet_age_years": 1.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x8b05f6cb0b24a39d21262ab1d4155fc63cddad1eaa11cce475fd66d75ea0e2e5",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x9e4B53dF3367282302De7A37a037bD0D335641Ab",
+      "label": "OZEMPIG",
+      "buy_30d": 968,
+      "sell_30d": 0,
+      "volume_30d": 138751.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 32179.0,
+        "market_cap_at_entry_usd": 141505.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xba7b0d8301ea103e1cd2c0f38c13935edf529f27535d928f5cdba96fd6b28e92",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x4043742F30c673F0e55585c9f056Add365e61E18",
+      "label": "LOOKSMAX",
+      "buy_30d": 249,
+      "sell_30d": 0,
+      "volume_30d": 28683.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 40629.0,
+        "market_cap_at_entry_usd": 44923.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xefb914b070448a3f910db9a099adc470e4e84ee2facf49ee7e7b7a91f7151b59",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0xab093dEF657F15dF31b33922A95e047aDd645B29",
+      "label": "SHROOM",
+      "buy_30d": 25,
+      "sell_30d": 0,
+      "volume_30d": 16792.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 80808.0,
+        "market_cap_at_entry_usd": 8352715.0,
+        "wallet_age_years": 0.5,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4aa620b5ffee1e7c9c57f233b25763ac001c4914cc90810a96d3002dbd60acff",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x59C0ed458914FDF814157961DD6Cf30eaf5f1e18",
+      "label": "MOGGING",
+      "buy_30d": 372,
+      "sell_30d": 0,
+      "volume_30d": 15792.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 31898.0,
+        "market_cap_at_entry_usd": 32882.0,
+        "wallet_age_years": 2.0,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x850c62fdf8fcaf9e65ed171a3952d1b264af608ffcbd065ae0d76fcb55ef61a7",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x450f5D6a0a9A715A2BD6452901932636EEF31e18",
+      "label": "MOONJARO",
+      "buy_30d": 231,
+      "sell_30d": 0,
+      "volume_30d": 13350.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24222.0,
+        "market_cap_at_entry_usd": 24338.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x593bc474f2b5851157bcfcf5a18c9507e0e6ae57e3886076c558540d967cf4c2",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x67C61Bfb169ce68A61EF28E4CE9D7f53EFBd1e18",
+      "label": "biohacking",
+      "buy_30d": 279,
+      "sell_30d": 0,
+      "volume_30d": 8270.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 27264.0,
+        "market_cap_at_entry_usd": 27051.0,
+        "wallet_age_years": 1.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x36c4b30bdeabdf9fb08c0f4be745e59910f8b03a343fb640c62470bda997917f",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x2571f6697c247E547bf22FBC86EcF787952E1e18",
+      "label": "RETATRUTIDE",
+      "buy_30d": 84,
+      "sell_30d": 0,
+      "volume_30d": 4534.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 25702.0,
+        "market_cap_at_entry_usd": 25607.0,
+        "wallet_age_years": 2.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xfa6aa5a62d5128c957870fb2b60295cf0bfd75d612349492cad7e28e70475f9c",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x70458E50C7520C9494D2E20b9Be632aF667F1E18",
+      "label": "WOO",
+      "buy_30d": 12,
+      "sell_30d": 0,
+      "volume_30d": 176.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 29731.0,
+        "market_cap_at_entry_usd": 30243.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x232d64ea711bc9d24fbafbb87b9adaba4aeb79c0e0d187a2748037e630a447ce",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0x526Ca23c1e5cb112389e1F021736f5d01d3e1e18",
+      "label": "PEPS",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 23.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22893.0,
+        "market_cap_at_entry_usd": 22915.0,
+        "wallet_age_years": 1.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa72629248c73486f77e64fedde7a0ef67e9f4edbd8a1337ee6fc50b3c69c6d28",
+        "token_ticker": "lly"
+      }
+    },
+    {
+      "wallet_address": "0xE7b18733B39C56ca9B23ECEa70b7fc0858243850",
+      "label": "LOOKSMAXX",
+      "buy_30d": 1,
+      "sell_30d": 0,
+      "volume_30d": 4.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 207322.0,
+        "market_cap_at_entry_usd": 207322.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf2eb1fd3965e01195ea5fd954eee555a3ad8ee924ff123551f62060531ceacc7",
+        "token_ticker": "lly"
+      }
+    }
+  ]
+}

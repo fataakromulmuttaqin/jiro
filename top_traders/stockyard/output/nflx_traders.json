@@ -1,0 +1,266 @@
+{
+  "mint": "0xE0444EF8BF4eD74f74FD73686e2ddF4C1c5591E8",
+  "ticker": "nflx",
+  "token_name": "Netflix \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559872,
+  "source": "stockyard",
+  "price_usd": "80.38",
+  "traders": 37,
+  "change_pct": -2.5,
+  "volume_usd_24h": 1626710,
+  "top_traders": [
+    {
+      "wallet_address": "0x5c3a0e5f0A29a76FEAb447e8eb3219B4Ad03d26a",
+      "label": "CHILL",
+      "buy_30d": 4162,
+      "sell_30d": 0,
+      "volume_30d": 538476.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 26138.0,
+        "market_cap_at_entry_usd": 79394.0,
+        "wallet_age_years": 0.0,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa76f5f3eb4359e97696d5b869c3128f1be1c98e8969b2bd38ac05fcb180c6a95",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x5B6Ef408c4eBb166788C0cA4cB644f12AC757777",
+      "label": "CHILLZ",
+      "buy_30d": 840,
+      "sell_30d": 0,
+      "volume_30d": 178502.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 62642.0,
+        "market_cap_at_entry_usd": 379557.0,
+        "wallet_age_years": 3.9,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x31a03eb2751456ee01b09546fbb5be2e3b9e7ba9",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x57ffde6EAFB5dC2D5d596b6502eDEBE982FF1e18",
+      "label": "CHILL",
+      "buy_30d": 1014,
+      "sell_30d": 0,
+      "volume_30d": 87114.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 59681.0,
+        "market_cap_at_entry_usd": 72817.0,
+        "wallet_age_years": 36.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa210ffd9d80f975ba5a716583d7ee14da2b059e08038691942ad77497632896e",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x241160709f38683Df6CB11Ce83B85093E5031E18",
+      "label": "DALMATIAN",
+      "buy_30d": 543,
+      "sell_30d": 0,
+      "volume_30d": 35723.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 24158.0,
+        "market_cap_at_entry_usd": 24152.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe317b606f88193a65d8b704ebf4a449c232bd99bb50fb42ce17412de8aa9b4c8",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x7c92CFfB9862723cDba55a4E34Dcbeb164211E18",
+      "label": "THEINVESTOR",
+      "buy_30d": 510,
+      "sell_30d": 0,
+      "volume_30d": 34207.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 240923.0,
+        "market_cap_at_entry_usd": 240822.0,
+        "wallet_age_years": 0.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x6ebc80bb8d786e7f1e5b439d3929dc868f564db4cabc9a89bba386195d9abd2a",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0xce5873DDd1e68E715ED3523B25E144ba3781257F",
+      "label": "KIBBLE",
+      "buy_30d": 216,
+      "sell_30d": 0,
+      "volume_30d": 18119.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21976.0,
+        "market_cap_at_entry_usd": 22179.0,
+        "wallet_age_years": 1.8,
+        "position_type": "Airlock",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x88461259413b684c22bbb1c59bab6d92b34c3fbe3b5c49935923766996d084a5",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x56e6e2Eee74C0aC272a0A788be18234dE19E1E18",
+      "label": "PASSWORD",
+      "buy_30d": 150,
+      "sell_30d": 0,
+      "volume_30d": 10383.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 211483.0,
+        "market_cap_at_entry_usd": 211453.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x0aa11daea4ffc5552ce67d514b7784056870517d7437969bd10efd4dee59132c",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x5De18FE337D48C85EFAbf34462d33eACc2751E18",
+      "label": "INVEST",
+      "buy_30d": 72,
+      "sell_30d": 0,
+      "volume_30d": 7339.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 240721.0,
+        "market_cap_at_entry_usd": 240493.0,
+        "wallet_age_years": 0.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xdb71e4a124a5897d6350c5efdd233e395254d2ba7326df8f4fae2c4eefc4c924",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0xaC292FDa653018e459d69Db1c88f11565e551E18",
+      "label": "THEINVESTOR",
+      "buy_30d": 267,
+      "sell_30d": 0,
+      "volume_30d": 7253.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 27687.0,
+        "market_cap_at_entry_usd": 28118.0,
+        "wallet_age_years": 2.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2af62f296d7a2370426062576e8c2656423d818fa986a86350b054171753b752",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x12966F9c6046484e52F3EaeF28C109C83Bc81e18",
+      "label": "RATRACE",
+      "buy_30d": 108,
+      "sell_30d": 0,
+      "volume_30d": 4966.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 30211.0,
+        "market_cap_at_entry_usd": 29802.0,
+        "wallet_age_years": 5.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x75fb7dd29c659d758f1ab7c5ec804ec6443ef3025a018e7c8feb1301769f0ca9",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x66cEa691bD555ce8b674bDFb45C9e927cd571e18",
+      "label": "CHILL",
+      "buy_30d": 33,
+      "sell_30d": 0,
+      "volume_30d": 1472.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 22404.0,
+        "market_cap_at_entry_usd": 22272.0,
+        "wallet_age_years": 1.9,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xee1fe8b9a1e198d0a19b10d9da2edd2d83fcc852a6f50a263a236a4032e8f6aa",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0xc75f39e96992afe01240858A301cD414a5D51e18",
+      "label": "INVESTOOR",
+      "buy_30d": 9,
+      "sell_30d": 0,
+      "volume_30d": 395.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 241519.0,
+        "market_cap_at_entry_usd": 241518.0,
+        "wallet_age_years": 0.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x62dec1a2fcce1acdaad963abdd08c85abc84302140750c098c8154416fad0a9a",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0x1D1CD70a2855c483eE74837ca116D7b06F7e3797",
+      "label": "CNRY",
+      "buy_30d": 2,
+      "sell_30d": 0,
+      "volume_30d": 191.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 49749.0,
+        "market_cap_at_entry_usd": 61206.0,
+        "wallet_age_years": 2.2,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf3f5141bb5bdbfd8c5a3208061174c76fa46a3e4e6d046ea373c9a4e1c5d7ed3",
+        "token_ticker": "nflx"
+      }
+    },
+    {
+      "wallet_address": "0xc9CB7CCE6C24aebCD23AAd6e7A28E5D606Ce1e18",
+      "label": "RATRACE",
+      "buy_30d": 1,
+      "sell_30d": 0,
+      "volume_30d": 1.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 21553.0,
+        "market_cap_at_entry_usd": 21561.0,
+        "wallet_age_years": 4.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x8affc23c3acdaf646c5332255a9be2eabb8d7e1737258bddd2b447b23cfa6b90",
+        "token_ticker": "nflx"
+      }
+    }
+  ]
+}

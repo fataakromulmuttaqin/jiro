@@ -1,0 +1,266 @@
+{
+  "mint": "0xe93237C50D904957Cf27E7B1133b510C669c2e74",
+  "ticker": "msft",
+  "token_name": "Microsoft \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559872,
+  "source": "stockyard",
+  "price_usd": "499.95",
+  "traders": 64,
+  "change_pct": 45.4,
+  "volume_usd_24h": 4417723,
+  "top_traders": [
+    {
+      "wallet_address": "0x16A49c0896b889B31d00ac1EdF51AD1fFcDF7BC6",
+      "label": "VERITY",
+      "buy_30d": 5836,
+      "sell_30d": 0,
+      "volume_30d": 1315290.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 47408.0,
+        "market_cap_at_entry_usd": 341748.0,
+        "wallet_age_years": 1.8,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4711ddd41dcc198823fed7e52eb8bc1a270134f0fa129c77f35965216ab3b49b",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x85856F025BF13b8Fd2aaE2F6DA458318744F1E18",
+      "label": "CLIPPY",
+      "buy_30d": 1328,
+      "sell_30d": 0,
+      "volume_30d": 648084.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 392120.0,
+        "market_cap_at_entry_usd": 1665923.0,
+        "wallet_age_years": 49.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xb3e164e6cce432f23a0d553f37091216963010de78c5d3ca80d1d56aadab3e25",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x8d3b5246Be12824DD61CcDe7aF974C3c1E867A34",
+      "label": "CLICK",
+      "buy_30d": 666,
+      "sell_30d": 0,
+      "volume_30d": 211600.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 94649.0,
+        "market_cap_at_entry_usd": 991777.0,
+        "wallet_age_years": 1.0,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x588b85edf6ae2f6de7ddbf4018e081eac374ed2b9b77f849623c0b27ebde582a",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x11Feed2daAd06BF44274B1d9a450282263c21e18",
+      "label": "MACROHARD",
+      "buy_30d": 164,
+      "sell_30d": 0,
+      "volume_30d": 25941.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 49580.0,
+        "market_cap_at_entry_usd": 55186.0,
+        "wallet_age_years": 47.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x26b08a94299eedeb32d732aebb3826f51961809a9308263e6d70daff9c6238f8",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x3452E3fAC0378698Aa1A929dD03676804d0A1E18",
+      "label": "MACROHARD",
+      "buy_30d": 276,
+      "sell_30d": 0,
+      "volume_30d": 15754.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 43932.0,
+        "market_cap_at_entry_usd": 50823.0,
+        "wallet_age_years": 2.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x17c2792a15aa8c9c83c5f58c169668edf427d7e804ec5281eba10c33b53b73e4",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x448AfcdD449ec7Df3754133D00475589e3581e18",
+      "label": "STEVE",
+      "buy_30d": 160,
+      "sell_30d": 0,
+      "volume_30d": 14697.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 30444.0,
+        "market_cap_at_entry_usd": 30603.0,
+        "wallet_age_years": 40.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1200f78631ad60b4e2f0cacac9f2a361ec4d2f1d1d45bafca0db85e836a0edac",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x2895ee0AbF6B3DdbBC8D1C6fA52e42d226421E18",
+      "label": "NANAMI",
+      "buy_30d": 180,
+      "sell_30d": 0,
+      "volume_30d": 6224.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 31702.0,
+        "market_cap_at_entry_usd": 32427.0,
+        "wallet_age_years": 2.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x818583e7056932a717e6ae5545943ed88ac8ff9c3ba86f2edd77e8d7bbca4394",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x8d02c2a969F8b54332D5ed453B150082BCB51E18",
+      "label": "DROYD",
+      "buy_30d": 45,
+      "sell_30d": 0,
+      "volume_30d": 2433.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 29919.0,
+        "market_cap_at_entry_usd": 29812.0,
+        "wallet_age_years": 2.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xb2c195ff27e5fcabca561469e23593eafc8103bb5c077411f0fb62be191e4028",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0xD140F8FF4e3946d7E2EE53Bd3D07cBc20A241E18",
+      "label": "ROVER",
+      "buy_30d": 10,
+      "sell_30d": 0,
+      "volume_30d": 1597.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 30984.0,
+        "market_cap_at_entry_usd": 31307.0,
+        "wallet_age_years": 45.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x54f371fe827f61b77f076c748abe2acaaf3144c9bd2e39d06de2f283c421d4f5",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x60FC24F10819D09649dA013cb45ea6aA13181e18",
+      "label": "LINKS",
+      "buy_30d": 4,
+      "sell_30d": 0,
+      "volume_30d": 1355.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 29612.0,
+        "market_cap_at_entry_usd": 29720.0,
+        "wallet_age_years": 42.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x467ab725724b2ec91f643df6f247cd2c80e7a0b7bd76da498bffeb697d73f81c",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x506d6e6F49B533B0a453CfFFc3aeC1a40fa11e18",
+      "label": "HEIS",
+      "buy_30d": 9,
+      "sell_30d": 0,
+      "volume_30d": 508.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 44644.0,
+        "market_cap_at_entry_usd": 45093.0,
+        "wallet_age_years": 0.7,
+        "position_type": "Longbow",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x36088ff822c4f7ca683331d8dd0363f0a112588a0f543ef3b915468dafae8745",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x32C144f9C9F11bE7c1a07B1B01c8128ab5ec1E18",
+      "label": "MAGE",
+      "buy_30d": 6,
+      "sell_30d": 0,
+      "volume_30d": 393.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 28444.0,
+        "market_cap_at_entry_usd": 28081.0,
+        "wallet_age_years": 37.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x416606c4a46d3ad6678ed139c824ee5940484a365a591a7c721acab210c81029",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x80Db362eAB104Ec378E19D0a3dCD5E84Bafd4bA3",
+      "label": "DEVS",
+      "buy_30d": 16,
+      "sell_30d": 0,
+      "volume_30d": 184.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 26761.0,
+        "market_cap_at_entry_usd": 30922.0,
+        "wallet_age_years": 6.7,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x130caf8b43343e182a79a4046932bd5623a87e9309e7c53e2d1efb4ec6b8e2a0",
+        "token_ticker": "msft"
+      }
+    },
+    {
+      "wallet_address": "0x2BB977eeFCa788aD692a532c952ABA9d8B311e18",
+      "label": "MICROSOFT",
+      "buy_30d": 1,
+      "sell_30d": 0,
+      "volume_30d": 1.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 26600.0,
+        "market_cap_at_entry_usd": 26601.0,
+        "wallet_age_years": 44.1,
+        "position_type": "Pair.fund",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x91b57aa9e5cdff08b91fbffca3d546805e40c08bb50d5f6642d85887d3aca9be",
+        "token_ticker": "msft"
+      }
+    }
+  ]
+}

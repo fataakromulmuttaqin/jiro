@@ -1,0 +1,266 @@
+{
+  "mint": "0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9",
+  "ticker": "aapl",
+  "token_name": "Apple \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559869,
+  "source": "stockyard",
+  "price_usd": "321.42",
+  "traders": 80,
+  "change_pct": 9.4,
+  "volume_usd_24h": 8850231,
+  "top_traders": [
+    {
+      "wallet_address": "0x5d6EF090a1461B11c9427aC319260122D1C61e18",
+      "label": "ICOIN",
+      "buy_30d": 11657,
+      "sell_30d": 0,
+      "volume_30d": 5165528.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 763980.0,
+        "market_cap_at_entry_usd": 6986795.0,
+        "wallet_age_years": 44.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc39187cec78a076c41a4085598b4cc05be2ed9b04a3443167471fa0fc4984188",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x69c68e4C00C6F6e4Ac027300293a879Be1E11E18",
+      "label": "AP",
+      "buy_30d": 2806,
+      "sell_30d": 0,
+      "volume_30d": 788775.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 141609.0,
+        "market_cap_at_entry_usd": 311689.0,
+        "wallet_age_years": 53.3,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x29482ee44cd08c368b8024fbc19896ef8fd7e0a88e0cce7ede825aca346956e0",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0xA89C770C96DFcc48EeE66Ba5D276C372e4aBf6F9",
+      "label": "ULTRA",
+      "buy_30d": 1540,
+      "sell_30d": 0,
+      "volume_30d": 296180.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 367637.0,
+        "market_cap_at_entry_usd": 611694.0,
+        "wallet_age_years": 1.3,
+        "position_type": "Airlock",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf5055f9b5483266109b0f54c14163297af9bae8db1be3877de5cb73291739e7e",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x33C042495874A5aE3FD5F367a1228631597D788c",
+      "label": "CAT",
+      "buy_30d": 1051,
+      "sell_30d": 0,
+      "volume_30d": 223041.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 46258.0,
+        "market_cap_at_entry_usd": 326876.0,
+        "wallet_age_years": 0.6,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe41fc03e8144d6f381639c16e2fedded7772bc0232a7024891fd2ce295e7a95b",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x73A9999f6e9Db138E1aE4595fde049A401161E18",
+      "label": "AAPLCAT",
+      "buy_30d": 1016,
+      "sell_30d": 0,
+      "volume_30d": 154847.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 122731.0,
+        "market_cap_at_entry_usd": 247210.0,
+        "wallet_age_years": 49.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x719a752f07c591328c94ba2d1cb44f11d0eafb98f3caf67566c33ba74061c5b6",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x22ea949763dB855880264A8FB689E07021661e18",
+      "label": "CLARUS",
+      "buy_30d": 1046,
+      "sell_30d": 0,
+      "volume_30d": 99042.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 174611.0,
+        "market_cap_at_entry_usd": 353969.0,
+        "wallet_age_years": 0.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc0ebbeede3977751f06e4fffb384699dbb3cba55ec10507b42959f8df02c1841",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x2db0DD0cC9dC0C112c6d28476A93DBB96c2F1E18",
+      "label": "AIRDROP",
+      "buy_30d": 969,
+      "sell_30d": 0,
+      "volume_30d": 50507.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 52815.0,
+        "market_cap_at_entry_usd": 63657.0,
+        "wallet_age_years": 2.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xdd71fbe15b2382a83b8094cd6fda877c22898c5b81e4692c4a23890c85c82bb0",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x06e52E5fdDF0D8A6d10B963c753A8eF3E1161e18",
+      "label": "AAPLDOG",
+      "buy_30d": 807,
+      "sell_30d": 0,
+      "volume_30d": 49705.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 46860.0,
+        "market_cap_at_entry_usd": 51048.0,
+        "wallet_age_years": 2.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe11d3a207d4106d234e678f0991b7f2393c5c9ce58c668304b082c7fe29d47ab",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x9b9933B948719DeDC323F0ac3e81542dE2Bf1e18",
+      "label": "FINDER",
+      "buy_30d": 361,
+      "sell_30d": 0,
+      "volume_30d": 48745.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 64930.0,
+        "market_cap_at_entry_usd": 89122.0,
+        "wallet_age_years": 44.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xb31de9ba327d06240c0afa1e079bee2956b3b5f6a02a318f0d0e557df4994040",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x3F6fEb2A54153Fc92258faa9BEAd822586a61e18",
+      "label": "HELLO",
+      "buy_30d": 217,
+      "sell_30d": 0,
+      "volume_30d": 28208.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 45417.0,
+        "market_cap_at_entry_usd": 52992.0,
+        "wallet_age_years": 44.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x32158886078cbdf4c3d50fb3d21435118eb5fa819075ed6874c2b40be76ba287",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x08109E95a52627b5C6FC55273c230df93c291E18",
+      "label": "GUH",
+      "buy_30d": 39,
+      "sell_30d": 0,
+      "volume_30d": 9360.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 44702.0,
+        "market_cap_at_entry_usd": 50890.0,
+        "wallet_age_years": 5.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9e3732c3a5f5fe01d82003e536f18756a07bb352a9fbb8f485311d3f98ed09b6",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x1513f8aFE7Ef4889e961e26dCaE9f644e9591E18",
+      "label": "BELIEVE",
+      "buy_30d": 180,
+      "sell_30d": 0,
+      "volume_30d": 7397.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 50028.0,
+        "market_cap_at_entry_usd": 55831.0,
+        "wallet_age_years": 3.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xb022c000594900ecfa44c664411c751eb94367f65dce734aba6d49ff13aa9c92",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0x5A567aa93db1Ae540a9FF620C106A173cbdF1E18",
+      "label": "dwqdsadw",
+      "buy_30d": 12,
+      "sell_30d": 0,
+      "volume_30d": 2490.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 2157472.0,
+        "market_cap_at_entry_usd": 2157472.0,
+        "wallet_age_years": 0.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x64c026787adffe7a696548e0977f45ea012ce6d0fd3b8bc9820b0d5c60a515ac",
+        "token_ticker": "aapl"
+      }
+    },
+    {
+      "wallet_address": "0xBEf47467d3F90E25D86492100fa41EE5e8d81e18",
+      "label": "IDOG",
+      "buy_30d": 12,
+      "sell_30d": 0,
+      "volume_30d": 601.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 3831084.0,
+        "market_cap_at_entry_usd": 3831078.0,
+        "wallet_age_years": 0.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xb002949e857a2d3c6cda1f7e5aa521aa250e1d2e2e6f13f883f28b100b1d21d9",
+        "token_ticker": "aapl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "mint": "0xC9a981FEE1F9DEc688bb123ccDeCc63D0deBFC4e",
+  "ticker": "gld",
+  "token_name": "SPDR Gold Trust \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559871,
+  "source": "stockyard",
+  "price_usd": "407.67",
+  "traders": 82,
+  "change_pct": 6.8,
+  "volume_usd_24h": 4883452,
+  "top_traders": [
+    {
+      "wallet_address": "0x812486EAea648819853F8E372dc9f1516C7868Bd",
+      "label": "UBIK",
+      "buy_30d": 2331,
+      "sell_30d": 0,
+      "volume_30d": 1060747.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 255708.0,
+        "market_cap_at_entry_usd": 7709765.0,
+        "wallet_age_years": 3.1,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1f28c0c3938fd48947bdb02c43377534ef0a3ffb23945e68052bcaaec1d2e676",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0xcaCB0e9caCcee63ec4d82952E561a291c68Bcb68",
+      "label": "GG",
+      "buy_30d": 2611,
+      "sell_30d": 0,
+      "volume_30d": 1046822.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 238494.0,
+        "market_cap_at_entry_usd": 6706683.0,
+        "wallet_age_years": 6.8,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9009d141e9189ca9d19d565468078383c192c2fa1d6f855957507bf8539643c5",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x42aFA2124ca5a2B83898E46B2dA9a190995b1E18",
+      "label": "SCHIFFY",
+      "buy_30d": 4131,
+      "sell_30d": 0,
+      "volume_30d": 665716.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 243031.0,
+        "market_cap_at_entry_usd": 1049561.0,
+        "wallet_age_years": 6.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc749412e31087a6e6f9210af575bc9100159fbc9f45da3ca8b26b31f3bf5777e",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x92e4B008161aC64a7D0C5e540F453F8e6B8Bd8D7",
+      "label": "GOLDEN",
+      "buy_30d": 1731,
+      "sell_30d": 0,
+      "volume_30d": 288204.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 62252.0,
+        "market_cap_at_entry_usd": 456931.0,
+        "wallet_age_years": 0.2,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2b2f171fe944df3f8b230272682755b7d5c8adb0e2d76aabb621f1f870251841",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x38C8f642A04FEaC9899990276b4207fE4F621e18",
+      "label": "CASHBIRD",
+      "buy_30d": 1914,
+      "sell_30d": 0,
+      "volume_30d": 158249.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 106452.0,
+        "market_cap_at_entry_usd": 166028.0,
+        "wallet_age_years": 2.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf25fc6cf0b524e236ffe33e762caee47ef7284ec65c175900a1542a6bc91fdfb",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0xB6b5D146d89cDceD2E304389D08448E327c71E18",
+      "label": "ROCK",
+      "buy_30d": 729,
+      "sell_30d": 0,
+      "volume_30d": 54865.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 89675.0,
+        "market_cap_at_entry_usd": 133840.0,
+        "wallet_age_years": 3.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x028ae8b2eaed39d131ef7cac36d838d466ec3912f7a4ca7d4d15d67d38d31d7e",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x4217d5CadfD3A8EC1bA914914a05148BBA861e18",
+      "label": "GBCCOIN",
+      "buy_30d": 1005,
+      "sell_30d": 0,
+      "volume_30d": 42683.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 25022.0,
+        "market_cap_at_entry_usd": 25117.0,
+        "wallet_age_years": 0.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xf408551ef41d18f3aa9424ebe60884dafb9434a4bec65e3b36499f8f698346d7",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x46Bd9f1276234651D9Be3Ade250203C2094E1e18",
+      "label": "GLDR",
+      "buy_30d": 399,
+      "sell_30d": 0,
+      "volume_30d": 28467.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 40221.0,
+        "market_cap_at_entry_usd": 44247.0,
+        "wallet_age_years": 2.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x06d26bdeea80f58caa7b07e017633500adbb57c197c2bc07f565a5315ccfdc14",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x544092A0De16225e12B3e7F8aFa4a713751C1e18",
+      "label": "BASEMENT",
+      "buy_30d": 84,
+      "sell_30d": 0,
+      "volume_30d": 6883.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 51492.0,
+        "market_cap_at_entry_usd": 60900.0,
+        "wallet_age_years": 7.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4821da79d1006ae2d71ce2f00e82b5cc17c61980eb362f6f9cf9214b39851300",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x9e83C5C365382A95A82EFdfC7b18f1F1364B1e18",
+      "label": "LATTICE",
+      "buy_30d": 69,
+      "sell_30d": 0,
+      "volume_30d": 5007.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 51204.0,
+        "market_cap_at_entry_usd": 58116.0,
+        "wallet_age_years": 6.6,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xbb211275b8d2b4a441d631d758462398f89d67124f9653af55607fe6bdeb9052",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x4306Bacd4a3F462dE82502F1a748c02DaEBA1e18",
+      "label": "GOLDINU",
+      "buy_30d": 66,
+      "sell_30d": 0,
+      "volume_30d": 3313.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 38773.0,
+        "market_cap_at_entry_usd": 40675.0,
+        "wallet_age_years": 15.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xcb2f084dddc15606093c3fd125026b98acc1ac039643cda532df89b1a172efee",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x6E1589cd14f79Dc8DfCc186520F4B34848781e18",
+      "label": "BRICKED",
+      "buy_30d": 60,
+      "sell_30d": 0,
+      "volume_30d": 635.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 29480.0,
+        "market_cap_at_entry_usd": 29521.0,
+        "wallet_age_years": 4.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xee70858bb70faab5db50139947b5006550aff1aaf64a9a9714d7ee4655e67798",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x7b799F6274E672Fc324f714880c489BC09591e18",
+      "label": "SCHIFF",
+      "buy_30d": 9,
+      "sell_30d": 0,
+      "volume_30d": 566.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 34699.0,
+        "market_cap_at_entry_usd": 36575.0,
+        "wallet_age_years": 4.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x232ee95d4e96ea725c2b9a080d9267fbd6c4d5c7aa30fabfd4976c12bd61086e",
+        "token_ticker": "gld"
+      }
+    },
+    {
+      "wallet_address": "0x2B6B845B3B7BDaA928714B12FC427b07a3Bd1E18",
+      "label": "FOOLS",
+      "buy_30d": 9,
+      "sell_30d": 0,
+      "volume_30d": 395.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 25020.0,
+        "market_cap_at_entry_usd": 25126.0,
+        "wallet_age_years": 3.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x83ba6bb2cf27d15dc1b1b1719eef950ddcbed334b4fe03eec9b8fa0d7510000e",
+        "token_ticker": "gld"
+      }
+    }
+  ]
+}

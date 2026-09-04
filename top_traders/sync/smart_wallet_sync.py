@@ -97,6 +97,12 @@ GMGN_SCRAPER_OUTPUT = GMGN_SCRAPER_DIR / "output"
 ONCHAIN_DIR = TOP_TRADERS_DIR / "onchain"  # may not exist yet
 ONCHAIN_OUTPUT = ONCHAIN_DIR / "output"
 
+STOCKYARD_DIR = TOP_TRADERS_DIR / "stockyard"
+STOCKYARD_OUTPUT = STOCKYARD_DIR / "output"
+
+CHARTZONE_DIR = TOP_TRADERS_DIR / "chart_zone"
+CHARTZONE_OUTPUT = CHARTZONE_DIR / "output"
+
 CABAL_SEEDS_PATH = JIRO_ROOT / "cabal_seeds.json"
 CABAL_SEEDS_EXAMPLE = JIRO_ROOT / "cabal_seeds.example.json"
 CABAL_SEEDS_META = JIRO_ROOT / "cabal_seeds.meta.json"
@@ -110,8 +116,16 @@ OUTPUT_DIR = SCRIPT_DIR / "output"
 SOURCE_API_ADAPTER = "api_adapter"
 SOURCE_GMGN_SCRAPER = "gmgn_scraper"
 SOURCE_ONCHAIN = "onchain"
+SOURCE_STOCKYARD = "stockyard"
+SOURCE_CHART_ZONE = "chart_zone"
 
-ALL_SOURCES = (SOURCE_API_ADAPTER, SOURCE_GMGN_SCRAPER, SOURCE_ONCHAIN)
+ALL_SOURCES = (
+    SOURCE_API_ADAPTER,
+    SOURCE_GMGN_SCRAPER,
+    SOURCE_ONCHAIN,
+    SOURCE_STOCKYARD,
+    SOURCE_CHART_ZONE,
+)
 
 # Confidence tiers
 HIGH_CONFIDENCE = "high_confidence"  # seen in 2+ sources
@@ -167,9 +181,19 @@ def _load_traders_from_dir(out_dir: Path, source_id: str) -> List[Dict[str, Any]
             print(f"[sync] WARN: failed to read {path}: {e}", file=sys.stderr)
             continue
 
-        # Two shapes: list (most sources) OR dict with `traders` key (gmgn_scraper, api_adapter report)
+        # Two shapes:
+        #  - list (most sources)
+        #  - dict with `traders` key (gmgn_scraper, api_adapter report)
+        #  - dict with `top_traders` key (stockyard, chart_zone)
+        # Note: `traders` may also be an int (count) on some sources —
+        # in that case fall through to `top_traders`.
         if isinstance(data, dict):
-            rows_raw = data.get("traders") or []
+            rows_raw = []
+            for key in ("traders", "top_traders"):
+                v = data.get(key)
+                if isinstance(v, list):
+                    rows_raw = v
+                    break
         elif isinstance(data, list):
             rows_raw = data
         else:
@@ -198,6 +222,15 @@ def _load_all_sources(enabled: Iterable[str]) -> List[Dict[str, Any]]:
         all_rows.extend(_load_traders_from_dir(GMGN_SCRAPER_OUTPUT, SOURCE_GMGN_SCRAPER))
     if SOURCE_ONCHAIN in enabled_set:
         all_rows.extend(_load_traders_from_dir(ONCHAIN_OUTPUT, SOURCE_ONCHAIN))
+    if SOURCE_STOCKYARD in enabled_set:
+        all_rows.extend(_load_traders_from_dir(STOCKYARD_OUTPUT, SOURCE_STOCKYARD))
+    if SOURCE_CHART_ZONE in enabled_set:
+        # chart_zone writes per-chain subdirs (solana/, base/, etc.) —
+        # walk each one so we pick up all chains, not just the first.
+        if CHARTZONE_OUTPUT.exists():
+            for chain_dir in sorted(CHARTZONE_OUTPUT.iterdir()):
+                if chain_dir.is_dir():
+                    all_rows.extend(_load_traders_from_dir(chain_dir, SOURCE_CHART_ZONE))
     return all_rows
 
 
@@ -859,7 +892,7 @@ def _parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     )
     p.add_argument(
         "--source",
-        choices=("onchain", "api_adapter", "gmgn", "all"),
+        choices=("onchain", "api_adapter", "gmgn", "stockyard", "chart_zone", "all"),
         default="all",
         help="Which data source(s) to aggregate. Default: all.",
     )
@@ -917,6 +950,8 @@ def _resolve_sources(arg: str) -> List[str]:
         "onchain": SOURCE_ONCHAIN,
         "api_adapter": SOURCE_API_ADAPTER,
         "gmgn": SOURCE_GMGN_SCRAPER,
+        "stockyard": SOURCE_STOCKYARD,
+        "chart_zone": SOURCE_CHART_ZONE,
     }
     return [aliases[arg]]
 

@@ -1,0 +1,266 @@
+{
+  "mint": "0x322F0929c4625eD5bAd873c95208D54E1c003b2d",
+  "ticker": "tsla",
+  "token_name": "Tesla \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559870,
+  "source": "stockyard",
+  "price_usd": "353.28",
+  "traders": 112,
+  "change_pct": 34.2,
+  "volume_usd_24h": 5088776,
+  "top_traders": [
+    {
+      "wallet_address": "0x0fF9072a1EAD154d92C2d2Fef16AFba6028Ce2B2",
+      "label": "OPTIMUS",
+      "buy_30d": 2331,
+      "sell_30d": 0,
+      "volume_30d": 1544491.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 346965.0,
+        "market_cap_at_entry_usd": 15921391.0,
+        "wallet_age_years": 6.5,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa1771923045e0dade6578f8c99de248d5a6029b97fb928328f9e767674e7663a",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0xa9eFe2Fc94dE79734C03051515F48f254Ce61e18",
+      "label": "DOGGIE",
+      "buy_30d": 6048,
+      "sell_30d": 0,
+      "volume_30d": 806506.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 341278.0,
+        "market_cap_at_entry_usd": 1447453.0,
+        "wallet_age_years": 8.9,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x141be60316aeb3aa7c0e0d8e4fbdc0aa78105e6e462cfc03b8a0f0c59f0bf3f8",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0xfe7E4b4850979BA7920ce786493B7371761F1e18",
+      "label": "LONGDOG",
+      "buy_30d": 4329,
+      "sell_30d": 0,
+      "volume_30d": 427344.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 163220.0,
+        "market_cap_at_entry_usd": 348004.0,
+        "wallet_age_years": 10.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9b6604eeffbad3b216199d63cad1b46d9665c1429207e1c442531fb7263d28a2",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0xBebACCA31e990e36c3293B100D48E41773C61E18",
+      "label": "CYBERCAB",
+      "buy_30d": 7521,
+      "sell_30d": 0,
+      "volume_30d": 395957.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 76754.0,
+        "market_cap_at_entry_usd": 112126.0,
+        "wallet_age_years": 3.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x668527f13b35873786d18efafc72ad0eda12705f7e843c80d94b142d895867cd",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0xB5D553Cc06F9b3569731b7a74fc269B939841E18",
+      "label": "OPTIMUS",
+      "buy_30d": 581,
+      "sell_30d": 0,
+      "volume_30d": 125102.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 83934.0,
+        "market_cap_at_entry_usd": 139998.0,
+        "wallet_age_years": 47.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xef3422f03f45e33527e9837a30328c36368f0d5b10455d4098760ba75c18d4c3",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0x80B600eaE89DDa383B78C7bEc2d4105011Bc1e18",
+      "label": "COIL",
+      "buy_30d": 123,
+      "sell_30d": 0,
+      "volume_30d": 27805.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 41495.0,
+        "market_cap_at_entry_usd": 47698.0,
+        "wallet_age_years": 0.4,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x7fbe5004cce990b305898315e9d363bec71c4d3bd3e74f175a1d086088c6f283",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0x51d3bBe1ab7467F71E06029e46Ef9044BF551E18",
+      "label": "DOGECOIN",
+      "buy_30d": 372,
+      "sell_30d": 0,
+      "volume_30d": 16607.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 50376.0,
+        "market_cap_at_entry_usd": 56947.0,
+        "wallet_age_years": 2.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x4c023aad373f280d83c81edf1de4ff30164aa75f5365642c5e71448e86ea86d8",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0x3264084B14b5C23f3569eB80ee103f64d83E1E18",
+      "label": "RIZO",
+      "buy_30d": 97,
+      "sell_30d": 0,
+      "volume_30d": 11875.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 42002.0,
+        "market_cap_at_entry_usd": 48976.0,
+        "wallet_age_years": 44.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x1dac42c55b63e08e0128dc786470de0473991d6cbad7a90c8d9344fd62c1aa3b",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0xBc799896383558A9b685c9a3353C1060E6431e18",
+      "label": "FTR",
+      "buy_30d": 150,
+      "sell_30d": 0,
+      "volume_30d": 6513.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 43826.0,
+        "market_cap_at_entry_usd": 49170.0,
+        "wallet_age_years": 10.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x269085dd23424926d58f53fd776464423a40140d27c899778d71f21ee57fd549",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0x35a2D19eD9c90A4F1C13Ab370D07e8BBb8F41e18",
+      "label": "YILONG",
+      "buy_30d": 84,
+      "sell_30d": 0,
+      "volume_30d": 5702.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 31954.0,
+        "market_cap_at_entry_usd": 32264.0,
+        "wallet_age_years": 0.8,
+        "position_type": "Longbow",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc4f4217d3a4d531e121db5b880e937e643a9f8b034f603968ad3302fdc948f4e",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0x07212b25897230CA97bf67e1def86bb7C7461E18",
+      "label": "FTR",
+      "buy_30d": 27,
+      "sell_30d": 0,
+      "volume_30d": 2403.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 36012.0,
+        "market_cap_at_entry_usd": 38929.0,
+        "wallet_age_years": 5.8,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x86936e5579ce24e3c13be304c5678a777a2148d570d6d5236604fe37751194be",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0x24117e8e9312223e8fE02078c1EF8077e9b66Ba3",
+      "label": "TSLR",
+      "buy_30d": 34,
+      "sell_30d": 0,
+      "volume_30d": 1463.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 42773.0,
+        "market_cap_at_entry_usd": 52831.0,
+        "wallet_age_years": 31.1,
+        "position_type": "Doppler",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x7bba397eba6a5031c60df68ab0885f5de37fce30e9607bedf53c90880a5fce26",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0x982732A974738b771B07a2588f1b38A968A11e18",
+      "label": "TESLAHOOD",
+      "buy_30d": 12,
+      "sell_30d": 0,
+      "volume_30d": 40.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 31475.0,
+        "market_cap_at_entry_usd": 33119.0,
+        "wallet_age_years": 3.5,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xb7f1bc27a3d6f5794126591d157985bba4d01696d92754d016fe251dd61681b9",
+        "token_ticker": "tsla"
+      }
+    },
+    {
+      "wallet_address": "0xb91C11fF03b99fb4E4dEbE09B8280e76aA299118",
+      "label": "DANGER",
+      "buy_30d": 3,
+      "sell_30d": 0,
+      "volume_30d": 23.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 62248.0,
+        "market_cap_at_entry_usd": 62248.0,
+        "wallet_age_years": 1.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x68bba783e6b8ff8324933bf3cb329b2fb9b943e89534a97648c6a048017f0ab6",
+        "token_ticker": "tsla"
+      }
+    }
+  ]
+}

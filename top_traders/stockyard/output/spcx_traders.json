@@ -1,0 +1,266 @@
+{
+  "mint": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
+  "ticker": "spcx",
+  "token_name": "SpaceX \u2022 Robinhood Token",
+  "chain": "robinhood",
+  "fetched_at": 1788559870,
+  "source": "stockyard",
+  "price_usd": 0,
+  "traders": 108,
+  "change_pct": 274.4,
+  "volume_usd_24h": 32458138,
+  "top_traders": [
+    {
+      "wallet_address": "0x5759A852243A56A48853Af1d28fd4e0f33747C9B",
+      "label": "18932",
+      "buy_30d": 35286,
+      "sell_30d": 0,
+      "volume_30d": 9174090.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 122762.0,
+        "market_cap_at_entry_usd": 1723453.0,
+        "wallet_age_years": 0.3,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xedf5d3c9f4a0cb59734c13e73309d70ddafa19ca113790449311554a6f6c4f4e",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x8aaA802C942193E1C8ab38B52814ba211d643f9f",
+      "label": "VenusCoin",
+      "buy_30d": 18231,
+      "sell_30d": 0,
+      "volume_30d": 4832736.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 96998.0,
+        "market_cap_at_entry_usd": 1076306.0,
+        "wallet_age_years": 1.5,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xd707691151332daee01550c861c230f21453baf8acc875eef2d2191c5db57a8f",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0xFe7E19CbCe2f896C6C528BC355bAF5a768291E18",
+      "label": "SPACEHOOD",
+      "buy_30d": 4651,
+      "sell_30d": 0,
+      "volume_30d": 2283915.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 677159.0,
+        "market_cap_at_entry_usd": 5365727.0,
+        "wallet_age_years": 52.2,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x225cc98f7d66b29fef96377becc7bf89582e2ab7b923a09aee9719fd80eb94ca",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0xE0883aA4298D424e13Ab6c98555B95af25F41e18",
+      "label": "ELONCOIN",
+      "buy_30d": 26631,
+      "sell_30d": 0,
+      "volume_30d": 1843973.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 144735.0,
+        "market_cap_at_entry_usd": 316508.0,
+        "wallet_age_years": 0.3,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x28e9a7cc55b63878d112c29ef1e7254b0edfae58bdf2c89edb732d1123a92dc3",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0xFd82D8DB539b6AcE0D50815845133767e24F1E18",
+      "label": "ASTEROID",
+      "buy_30d": 5444,
+      "sell_30d": 0,
+      "volume_30d": 1826918.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 358006.0,
+        "market_cap_at_entry_usd": 1638280.0,
+        "wallet_age_years": 52.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x15a09db785c7b5fc9d794f685a04e4ad38842a2035b9a8fab17909c0e54c425f",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x4874845b0d4aCffd896DdE1E42828A543717AF7f",
+      "label": "urmom",
+      "buy_30d": 3716,
+      "sell_30d": 0,
+      "volume_30d": 1152623.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 123122.0,
+        "market_cap_at_entry_usd": 1733978.0,
+        "wallet_age_years": 3.5,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x826ae3756e19d32a75cad183ce156554864f0087aa55879f33a7b8fb82ff4eee",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x3eC8A8174129D5cBeCef67eE2AF8621319c34c03",
+      "label": "DOGE-1",
+      "buy_30d": 3498,
+      "sell_30d": 0,
+      "volume_30d": 640538.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 73534.0,
+        "market_cap_at_entry_usd": 618567.0,
+        "wallet_age_years": 2.2,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x037dea9a1851a87f997c42cc9bf18659675f642d01d28fc7b1cc94695a0ad54c",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x6B12ec435f15F823ee3C550e9013123e4187429B",
+      "label": "\ud83d\ude80",
+      "buy_30d": 506,
+      "sell_30d": 0,
+      "volume_30d": 192670.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 67732.0,
+        "market_cap_at_entry_usd": 516384.0,
+        "wallet_age_years": 11.1,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xe77403a28d7ed79ffa0ef0c8f34ada42b5645cf67fa0302cc9a15b9b3db1a792",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0xAc77646bcff9d52e99800534192E0290933F4094",
+      "label": "MARTIANS",
+      "buy_30d": 910,
+      "sell_30d": 0,
+      "volume_30d": 171322.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 63860.0,
+        "market_cap_at_entry_usd": 465195.0,
+        "wallet_age_years": 11.9,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x9cefedf424dc6ae9f341c78e8e5e2ba73c669866fddb9ee15ab57a32a3e998b6",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x20f24b8D2BCaD7cd252fC60EE5f2Db27C2f2f261",
+      "label": "PROMETHEUS",
+      "buy_30d": 809,
+      "sell_30d": 0,
+      "volume_30d": 162450.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 58602.0,
+        "market_cap_at_entry_usd": 392710.0,
+        "wallet_age_years": 7.0,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x627c2c78063757b8e85ef1eae046df8ad0695a1ebd3dbb6b62aec2ee516de2e8",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x5A02ff1Fa21055E40753Fb039B3589781a361e18",
+      "label": "MARSCOIN",
+      "buy_30d": 512,
+      "sell_30d": 0,
+      "volume_30d": 73397.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 72181.0,
+        "market_cap_at_entry_usd": 96855.0,
+        "wallet_age_years": 49.1,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xc6944c251a3afb7572ae323bd54b913e16422ee2c076123e76a7ee61d1adcc93",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x320D9B0F1B438567D28452B715f8766a7617043E",
+      "label": "EARTHCOIN",
+      "buy_30d": 1911,
+      "sell_30d": 0,
+      "volume_30d": 32301.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 47592.0,
+        "market_cap_at_entry_usd": 129353.0,
+        "wallet_age_years": 30.9,
+        "position_type": "Pons",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x49a11a3515755a730b20ae1d6c3ef5a997e20f728ad46d8859654c4d4eaad95a",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0x2bF8b4b83abD88621E557AFba047AEa22FAe1e18",
+      "label": "ASS",
+      "buy_30d": 354,
+      "sell_30d": 0,
+      "volume_30d": 23087.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 35988.0,
+        "market_cap_at_entry_usd": 48942.0,
+        "wallet_age_years": 2.7,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0x2db7de185f3b4b228b0bbb9edcd872e52e5e4bb572a8da807a866da897cbe08e",
+        "token_ticker": "spcx"
+      }
+    },
+    {
+      "wallet_address": "0xA5839ec14251c6D18330340a4E62e062e4A51E18",
+      "label": "STARMAN",
+      "buy_30d": 149,
+      "sell_30d": 0,
+      "volume_30d": 22325.0,
+      "pnl_30d": null,
+      "last_active_timestamp": null,
+      "source": "stockyard",
+      "extras": {
+        "liquidity_provided_usd": 78658.0,
+        "market_cap_at_entry_usd": 108900.0,
+        "wallet_age_years": 48.0,
+        "position_type": "Long",
+        "dexscreener_url": "https://dexscreener.com/robinhood/0xa44c8fecb0ac2cb2bb32a2ee6d57158c2b1af5472d149b06530dbe51cb1c3645",
+        "token_ticker": "spcx"
+      }
+    }
+  ]
+}
