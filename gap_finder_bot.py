@@ -442,6 +442,10 @@ def main():
     parser.add_argument("--loop", action="store_true", help="run continuously")
     parser.add_argument("--with-monitor", action="store_true",
                          help="also run the TP/SL/on-chain position monitor in this same loop")
+    parser.add_argument("--no-startup-notif", action="store_true",
+                         help="skip the 'Jiro started' Telegram notification")
+    parser.add_argument("--quiet-notif", action="store_true",
+                         help="only send Telegram on actual events (no per-cycle summary, no heartbeat)")
     args = parser.parse_args()
 
     if not args.loop:
@@ -452,14 +456,33 @@ def main():
     # without SSH. Safe no-op if token/chat not configured.
     bot_controller.start_control_thread()
 
-    poll_minutes = cfgmod.load_config()["system"]["poll_interval_minutes"]
+    cfg0 = cfgmod.load_config()
+    poll_minutes = cfg0["system"]["poll_interval_minutes"]
     print(f"Looping: scan every {poll_minutes} min" +
-          (f", monitor every {cfgmod.load_config()['system']['monitor_interval_seconds']}s" if args.with_monitor else "") +
+          (f", monitor every {cfg0['system']['monitor_interval_seconds']}s" if args.with_monitor else "") +
           ". Ctrl+C to stop.")
+
+    # Startup heartbeat — confirms the bot is up AND Telegram is reachable.
+    # Useful because the bot normally goes silent for 15 min between scans,
+    # and a Telegram-down issue would otherwise only surface on a trade
+    # alert that never arrives.
+    if not args.no_startup_notif and notifier.is_configured() and not args.quiet_notif:
+        narrative_state = "ON" if os.environ.get("ENABLE_NARRATIVE", "true").lower() not in ("0", "false", "no", "off") else "OFF"
+        dry_state = "ON" if os.environ.get("DRY_RUN", "true").lower() in ("1", "true", "yes", "on") else "OFF"
+        send_telegram(
+            f"🟢 Jiro online\n"
+            f"• scan: every {poll_minutes}m\n"
+            f"• monitor: every {cfg0['system']['monitor_interval_seconds']}s\n"
+            f"• narrative/X: {narrative_state}\n"
+            f"• DRY_RUN: {dry_state}\n"
+            f"• pid: {os.getpid()}"
+        )
 
     wallet = trading.Wallet(trading.SOLANA_PRIVATE_KEY) if trading.SOLANA_PRIVATE_KEY else None
     scan_count = 0
     last_scan_at = 0.0
+    start_ts = time.time()          # for heartbeat uptime display
+    last_heartbeat_at = start_ts    # first heartbeat at 6h uptime
 
     while True:
         # /stop check — clean shutdown at the next cycle boundary.
@@ -476,8 +499,37 @@ def main():
         now = time.time()
         if now - last_scan_at >= poll_seconds:
             scan_count += 1
+            cycle_t0 = time.time()
             run_once(scan_count)
+            cycle_elapsed = time.time() - cycle_t0
             last_scan_at = time.time()
+
+            # Per-cycle summary (skip if --quiet-notif). Sent AFTER run_once
+            # so we can include anything it discovered without re-running.
+            if not args.quiet_notif and notifier.is_configured():
+                try:
+                    narrative_off = os.environ.get("ENABLE_NARRATIVE", "true").lower() in ("0", "false", "no", "off")
+                    txt = (
+                        f"🔄 scan #{scan_count} done in {cycle_elapsed:.0f}s"
+                        + ("  (X scan: off)" if narrative_off else "")
+                    )
+                    notifier.send(txt)
+                except Exception as e:
+                    print(f"[warn] cycle summary notif failed: {e}", file=sys.stderr)
+
+        # 6-hour heartbeat: only if not quiet, and only when 6h elapsed.
+        if not args.quiet_notif and notifier.is_configured():
+            if now - last_heartbeat_at >= 6 * 3600:
+                try:
+                    notifier.send(
+                        f"💓 Jiro heartbeat\n"
+                        f"• scans: {scan_count} total\n"
+                        f"• uptime: {int(now - start_ts) // 3600}h {(int(now - start_ts) % 3600) // 60}m\n"
+                        f"• pid: {os.getpid()} still alive"
+                    )
+                    last_heartbeat_at = now
+                except Exception as e:
+                    print(f"[warn] heartbeat notif failed: {e}", file=sys.stderr)
 
         if args.with_monitor:
             try:
