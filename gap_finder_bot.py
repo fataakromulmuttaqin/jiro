@@ -399,7 +399,36 @@ def run_once(scan_count: int) -> None:
 
     if not new_gaps:
         print("  -> no gap candidates with a matching fresh token this cycle")
+        # Even when nothing was selected, send a "scan done" report so the
+        # operator can confirm the bot is alive AND see WHY nothing was
+        # picked. Distinguishes "no signals" from "bot is dead". Sent at
+        # low priority (📡) to keep alert volume sane.
+        try:
+            terms_seen = len(candidates) if 'candidates' in locals() else 0
+            fresh_launches = len(coins) if 'coins' in locals() else 0
+            _narrative_off_here = os.environ.get("ENABLE_NARRATIVE", "true").lower() in ("0", "false", "no", "off")
+            msg = (
+                f"📡 scan #{scan_count} — no picks\n"
+                f"• narrative terms: {terms_seen}\n"
+                f"• fresh launches scanned: {fresh_launches}\n"
+                f"• gap candidates (term+token): 0"
+            )
+            if terms_seen == 0 and _narrative_off_here:
+                msg += "\n  (X scan disabled — waiting for narrative API)"
+            send_telegram(msg)
+        except Exception as e:
+            print(f"[warn] scan-empty notif failed: {e}", file=sys.stderr)
     else:
+        # First: a summary of how many gaps we found this cycle
+        try:
+            top = max(new_gaps, key=lambda g: g.get("score") or 0)
+            top_score = top.get("score", 0)
+            send_telegram(
+                f"🎯 scan #{scan_count} — {len(new_gaps)} gap candidate(s) | top: "
+                f"{top.get('term','?')} (score {top_score})"
+            )
+        except Exception as e:
+            print(f"[warn] scan-picks notif failed: {e}", file=sys.stderr)
         for g in new_gaps:
             alert = format_alert(g)
             print("\n" + alert + "\n" + "-" * 60)
@@ -431,10 +460,14 @@ def run_once(scan_count: int) -> None:
     # before price fully reflects it
     recheck_every = CFG["system"]["narrative_recheck_every_n_scans"]
     if recheck_every > 0 and scan_count % recheck_every == 0:
-        try:
-            trading.recheck_open_positions_narrative()
-        except Exception as e:
-            print(f"[warn] narrative recheck failed: {e}", file=sys.stderr)
+        # Skip the X recheck entirely when narrative is disabled — saves
+        # an XAI call per cycle and avoids the "narrative failed" warning
+        # spam in the dry-run / X-off case.
+        if os.environ.get("ENABLE_NARRATIVE", "true").lower() not in ("0", "false", "no", "off"):
+            try:
+                trading.recheck_open_positions_narrative()
+            except Exception as e:
+                print(f"[warn] narrative recheck failed: {e}", file=sys.stderr)
 
 
 def main():
