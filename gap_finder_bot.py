@@ -360,14 +360,21 @@ def run_once(scan_count: int) -> None:
     except Exception as e:
         print(f"[warn] smart_money.poll_watchlist failed: {e}", file=sys.stderr)
 
-    print(f"[{dt.datetime.now().isoformat()}] asking Grok for off-crypto viral candidates...")
-    try:
-        candidates = narrative.scan_for_candidates()
-    except Exception as e:
-        print(f"[error] Grok call failed: {e}", file=sys.stderr)
-        candidates = []
+    print(f"[{dt.datetime.now().isoformat()}] scanning for off-crypto viral candidates...")
+    candidates = []
+    # Narrative / X scan can be disabled via env (e.g. during dry-runs or
+    # when xAI is rate-limited / key invalid). When disabled, the rest of
+    # the pipeline still runs on any locally-staged watchlist entries.
+    if os.environ.get("ENABLE_NARRATIVE", "true").lower() not in ("0", "false", "no", "off"):
+        try:
+            candidates = narrative.scan_for_candidates()
+        except Exception as e:
+            print(f"[error] Grok call failed: {e}", file=sys.stderr)
+            candidates = []
+    else:
+        print("  [narrative] DISABLED via ENABLE_NARRATIVE=false — skipping X scan")
 
-    print(f"  -> {len(candidates)} candidate(s) from Grok")
+    print(f"  -> {len(candidates)} candidate(s) from narrative")
 
     # Fetch fresh launches ONCE per cycle (all candidates share the same
     # recent-launch window — avoids N separate API calls).
