@@ -128,42 +128,75 @@ def _extract_first_address_mint(detail: Dict[str, Any], chain: str, addr: str) -
 
 def harvest_chart_zone(chain: str = "solana", top_n_tokens: int = 30) -> List[Path]:
     """Pull top N trending tokens from chart.zone's /markets/{chain}
-    page, then fetch each token's detail page for richer fields.
-    Writes per-token output files into
-    top_traders/output/chart_zone/{chain}_{short_addr}_traders.json.
+    endpoint (richer than scraping /markets/{chain} HTML). Then
+    writes per-token output files with market data + address.
+
+    Per-token 'top traders' list is rendered client-side via
+    Birdeye/DexScreener embed on the token detail page, not exposed
+    via the public API. To capture per-token traders from chart.zone
+    would need a browser harness on the token detail page — a
+    follow-up task.
     """
+    import urllib.request
     out_dir = CHARTZONE_OUT / chain
     out_dir.mkdir(parents=True, exist_ok=True)
     for f in out_dir.glob("*_traders.json"):
         f.unlink()
-    items = chart_zone.fetch_markets_page(chain)
-    items = items[:top_n_tokens]
-    print(f"[harvest:chart_zone:{chain}] {len(items)} tokens indexed")
+    # Use the public markets API for richer fields (priceUsd, marketCap,
+    # fdv, volume24h/1h, priceChange5m/1h/24h, txns24h).
+    url = (
+        f"https://chart.zone/api/chart-zone/markets?"
+        f"chain={chain}&view=trending&issuer=all&launchpad=all&limit={top_n_tokens}"
+    )
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            data = json.loads(r.read())
+    except Exception as e:
+        print(f"[harvest:chart_zone:{chain}] markets API failed: {e}", file=sys.stderr)
+        return []
+    markets = data.get("markets", [])
+    # Filter for the requested chain only (defense — the API ignores chain
+    # query sometimes and returns base pairs).
+    markets = [m for m in markets if m.get("chainId") == chain][:top_n_tokens]
+    print(f"[harvest:chart_zone:{chain}] {len(markets)} markets from API")
     saved: List[Path] = []
-    for it in items:
-        addr = it.get("address", "")
-        if not addr:
+    for i, m in enumerate(markets, 1):
+        base = m.get("base") or {}
+        mint = base.get("address", "")
+        if not mint:
             continue
-        # Fetch detail (only Solana for now; EVM chains would need a
-        # different price feed).
-        detail = chart_zone.fetch_token_page(chain, addr) if chain == "solana" else {"chain": chain, "address": addr}
-        # chart.zone doesn't expose per-token top traders via sitemap
-        # or markets page (that data is on the token detail page only,
-        # and it's hydrated client-side). We log a placeholder.
+        txns = m.get("txns24h") or {}
         out = {
-            "mint": addr,
+            "mint": mint,
             "chain": chain,
             "fetched_at": int(time.time()),
             "source": "chart_zone",
-            "name": it.get("name", ""),
-            "position": it.get("position", 0),
-            "title": detail.get("title", ""),
-            "description": detail.get("description", ""),
-            "og_image": detail.get("og_image", ""),
-            "url": detail.get("url", f"https://chart.zone/{chain}/{addr}"),
-            "top_traders": [],  # chart.zone renders trader lists client-side; revisit with browser harness if needed
+            "name": f"{base.get('symbol', '?')} / {m.get('quote',{}).get('symbol','?')}",
+            "position": i,
+            "dex_id": m.get("dexId", ""),
+            "pool_address": m.get("poolAddress", ""),
+            "url": f"https://chart.zone/{chain}/{mint}",
+            "price_usd": m.get("priceUsd"),
+            "price_quote": m.get("priceQuote"),
+            "liquidity_usd": m.get("liquidityUsd"),
+            "market_cap_usd": m.get("marketCapUsd"),
+            "fdv_usd": m.get("fdvUsd"),
+            "volume_24h": m.get("volume24h"),
+            "volume_1h": m.get("volume1h"),
+            "price_change_5m_pct": m.get("priceChange5m"),
+            "price_change_1h_pct": m.get("priceChange1h"),
+            "price_change_24h_pct": m.get("priceChange24h"),
+            "txns_24h_buys": txns.get("buys"),
+            "txns_24h_sells": txns.get("sells"),
+            "created_at": m.get("createdAt"),
+            "labels": m.get("labels", []),
+            "implementation": m.get("implementation", ""),
+            "data_source": m.get("source", ""),
+            "launchpad_id": m.get("launchpadId", ""),
+            "top_traders": [],
         }
-        short = addr[:16]
+        short = mint[:16]
         out_path = out_dir / f"{short}_traders.json"
         out_path.write_text(json.dumps(out, indent=2, default=str))
         saved.append(out_path)

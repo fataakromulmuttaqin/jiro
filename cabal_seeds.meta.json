@@ -791,136 +791,6 @@
     "volume_usd": 1128.0156510000002,
     "realized_pnl_sol": -0.0008413745713415554
   },
-  "3C5YE97HADPDxZehYq9Cis8AXr9aNyrUsczKzE1nDbW9": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1737191463,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 4756,
-    "sell_count": 4947,
-    "volume_usd": 13265191.78
-  },
-  "4fuUiYxTQ6QCrdSq9ouBYcTM7bqSwYTSyLueGZLTy4T4": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1669603219,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 400,
-    "sell_count": 1003,
-    "volume_usd": 1023422.86
-  },
-  "AKQyQgEifBBhQmANuKzrRuRGoKSkKBv8NVdccc87FrR8": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1780809325,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 351,
-    "sell_count": 374,
-    "volume_usd": 113621.81
-  },
-  "3NeUgARDmFgnKtkJLqUcEUNCfknFCcGsFfMJCtx6bAgx": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1723699419,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 141,
-    "sell_count": 162,
-    "volume_usd": 1571.3
-  },
-  "FPPHjpjBk98pd5Z3xXQuDcrZdUdqfraCRJU8yvdT1ZKR": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1703788397,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 7,
-    "sell_count": 36,
-    "volume_usd": 1114.45
-  },
-  "BmdTFuWX5QqsFdYe8554TV45TJbGGmcThDK6ArLFHemt": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1712274093,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 48,
-    "sell_count": 58,
-    "volume_usd": 362.12
-  },
-  "ELqXddRqcnRJXQnqZdPwBXEEBpQ6SEbCQrBe12wpHBU": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1709683865,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 1,
-    "sell_count": 8,
-    "volume_usd": 52.27
-  },
-  "FPfbntAR84nyxfcmATEwYG55joLcPCxgYBC3BTPqB7yR": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1723730288,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 0,
-    "sell_count": 7,
-    "volume_usd": 14.25
-  },
-  "uGv7HFB1cKuxoAb36g65BzK8UVorpAR7SfrkwDZRzdJ": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1712653306,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 1,
-    "sell_count": 5,
-    "volume_usd": 3.11
-  },
-  "4N41hUkrayX6duXJH8oYzybVpH3mcbG8TzoM14VXmTmh": {
-    "discovered_ts": 1788483177,
-    "last_active_ts": 1712984304,
-    "still_holding": false,
-    "source": "api_adapter",
-    "sources_seen": [
-      "api_adapter"
-    ],
-    "confidence": "single_source",
-    "buy_count": 3,
-    "sell_count": 3,
-    "volume_usd": 0.54
-  },
   "HrSWmoBDZYhZmxHVjAe1SXDh2tQZHapzRyUbnZTQxtA": {
     "discovered_ts": 1788483177,
     "last_active_ts": 1788482332,
@@ -1200,5 +1070,3606 @@
     "sell_count": 5,
     "volume_usd": 2.2334566000000002,
     "realized_pnl_sol": -1.1114960022710711
+  },
+  "0x5d6EF090a1461B11c9427aC319260122D1C61e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 11657,
+    "sell_count": 0,
+    "volume_usd": 5165528.0
+  },
+  "0x69c68e4C00C6F6e4Ac027300293a879Be1E11E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2806,
+    "sell_count": 0,
+    "volume_usd": 788775.0
+  },
+  "0xA89C770C96DFcc48EeE66Ba5D276C372e4aBf6F9": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1540,
+    "sell_count": 0,
+    "volume_usd": 296180.0
+  },
+  "0x33C042495874A5aE3FD5F367a1228631597D788c": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1051,
+    "sell_count": 0,
+    "volume_usd": 223041.0
+  },
+  "0x73A9999f6e9Db138E1aE4595fde049A401161E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1016,
+    "sell_count": 0,
+    "volume_usd": 154847.0
+  },
+  "0x22ea949763dB855880264A8FB689E07021661e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1046,
+    "sell_count": 0,
+    "volume_usd": 99042.0
+  },
+  "0x2db0DD0cC9dC0C112c6d28476A93DBB96c2F1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 969,
+    "sell_count": 0,
+    "volume_usd": 50507.0
+  },
+  "0x06e52E5fdDF0D8A6d10B963c753A8eF3E1161e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 807,
+    "sell_count": 0,
+    "volume_usd": 49705.0
+  },
+  "0x9b9933B948719DeDC323F0ac3e81542dE2Bf1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 361,
+    "sell_count": 0,
+    "volume_usd": 48745.0
+  },
+  "0x3F6fEb2A54153Fc92258faa9BEAd822586a61e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 217,
+    "sell_count": 0,
+    "volume_usd": 28208.0
+  },
+  "0x08109E95a52627b5C6FC55273c230df93c291E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 39,
+    "sell_count": 0,
+    "volume_usd": 9360.0
+  },
+  "0x1513f8aFE7Ef4889e961e26dCaE9f644e9591E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 180,
+    "sell_count": 0,
+    "volume_usd": 7397.0
+  },
+  "0x5A567aa93db1Ae540a9FF620C106A173cbdF1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12,
+    "sell_count": 0,
+    "volume_usd": 2490.0
+  },
+  "0xBEf47467d3F90E25D86492100fa41EE5e8d81e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12,
+    "sell_count": 0,
+    "volume_usd": 601.0
+  },
+  "0x9936403A9cc72CF306063E3496EA387428A3aeCd": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 36002,
+    "sell_count": 0,
+    "volume_usd": 17427335.0
+  },
+  "0xE0514A254B465C8c804F77230FB1059f84b21E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 113184,
+    "sell_count": 0,
+    "volume_usd": 11031083.0
+  },
+  "0xf5F5F51C4ab83C303c4fAD5b6A0838E106eF1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 27974,
+    "sell_count": 0,
+    "volume_usd": 5148530.0
+  },
+  "0xcb6f4711e9Af0E22cF0Be5A15b9333F8C03d1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 34002,
+    "sell_count": 0,
+    "volume_usd": 2627250.0
+  },
+  "0x91109Fc8e6bBF4b6A45381dc26629C8771E51E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 14316,
+    "sell_count": 0,
+    "volume_usd": 1102023.0
+  },
+  "0xe6EA0B1C9bd1838ee12c2AD41CC2757E6ff91E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 10593,
+    "sell_count": 0,
+    "volume_usd": 836338.0
+  },
+  "0xab093dEF657F15dF31b33922A95e047aDd645B29": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 39,
+    "sell_count": 0,
+    "volume_usd": 19350.0
+  },
+  "0x9e91A7a4410F40715483eE704C802dFFE10d1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 138,
+    "sell_count": 0,
+    "volume_usd": 11102.0
+  },
+  "0xd607577bF9B34da79976D39BbCE0519661131E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 108,
+    "sell_count": 0,
+    "volume_usd": 3615.0
+  },
+  "0xb97472D7b8c8c92Ade3b72C492c0F102346F1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 42,
+    "sell_count": 0,
+    "volume_usd": 3007.0
+  },
+  "0x0f5da7482Dd629854Cc0D4E59b3c3774eC3b1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 42,
+    "sell_count": 0,
+    "volume_usd": 1295.0
+  },
+  "0x17CEC6E51f3ba31b2E65104948D3B077eb811e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 428.0
+  },
+  "0xa0c6C4Dd2f268174b23Aca18b0F8e1Bb3Fee1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4,
+    "sell_count": 0,
+    "volume_usd": 119.0
+  },
+  "0x01F44bBBc6Ae74B5c00362253D5901e7ea31069B": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 1.0
+  },
+  "0x1C1DAEF0300551aDBfbE403e7d567b6c5aFF566f": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9880,
+    "sell_count": 0,
+    "volume_usd": 3016770.0
+  },
+  "0xaAc0Eaf0B8a17FB428903D274413a1Fca36AEB03": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2179,
+    "sell_count": 0,
+    "volume_usd": 481259.0
+  },
+  "0x9c05CBEc6C6F8cE87926fec6A491314030D4215C": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1824,
+    "sell_count": 0,
+    "volume_usd": 373925.0
+  },
+  "0x45443A4a7b58ab26A4B4D72616cf36D5aAE7188C": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1524,
+    "sell_count": 0,
+    "volume_usd": 36692.0
+  },
+  "0xD0aF8809B7ABfB613f0E2bEbBf65F9289f4a1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 597,
+    "sell_count": 0,
+    "volume_usd": 29599.0
+  },
+  "0x804fBd73Bf190cC7EF09cA13B2eB35dF1Eb31E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 249,
+    "sell_count": 0,
+    "volume_usd": 15363.0
+  },
+  "0x86220d4f4bD4eB9Bf5D6bfB4b6E9b4caa0211E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 240,
+    "sell_count": 0,
+    "volume_usd": 13080.0
+  },
+  "0x6b59fEe41181a44E9b9DdDb7B5baBd286E871E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 117,
+    "sell_count": 0,
+    "volume_usd": 9034.0
+  },
+  "0x86040975cF00C47CF4D2b19B33C92Da62B751e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 99,
+    "sell_count": 0,
+    "volume_usd": 6957.0
+  },
+  "0x08a1F6E321E8A5E22B6B9A3D43435b22246453E5": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 36,
+    "sell_count": 0,
+    "volume_usd": 2438.0
+  },
+  "0xe48E3ef04a915595A79a3d2C8b17A02325321E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 16,
+    "sell_count": 0,
+    "volume_usd": 1654.0
+  },
+  "0x8e68D0c0495dA598A85477ED8B8ee02e8aaC1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12,
+    "sell_count": 0,
+    "volume_usd": 512.0
+  },
+  "0x7A839e4df07191a2250332b3ea69E7aDedC71e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 262.0
+  },
+  "0x8Ff30bC3Baae6699CA92A2e7855CCf136a511E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6,
+    "sell_count": 0,
+    "volume_usd": 254.0
+  },
+  "0x37D21fD322DE90B946E6B6e4B4FC5AD1b50A1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 27057,
+    "sell_count": 0,
+    "volume_usd": 3491796.0
+  },
+  "0xB51d57cBE67152fD163F59D1e0F950C6b647fB07": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4179,
+    "sell_count": 0,
+    "volume_usd": 1204070.0
+  },
+  "0x488aebD810E4E4EA9844B98DC1e5826346741e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 14334,
+    "sell_count": 0,
+    "volume_usd": 1203927.0
+  },
+  "0xdCe5C6317222C5b6e5d963EeAC010DFc4dA9e6da": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6159,
+    "sell_count": 0,
+    "volume_usd": 1082085.0
+  },
+  "0xa241401510fDbFc100C086D00d350A839fBB79DB": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3471,
+    "sell_count": 0,
+    "volume_usd": 580417.0
+  },
+  "0xA2B0A8f53b7114d12C568D547B496A9fF3541e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2246,
+    "sell_count": 0,
+    "volume_usd": 344448.0
+  },
+  "0x73114aBD7dCF37000d90d8DE9fd1dE3957B17c04": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 748,
+    "sell_count": 0,
+    "volume_usd": 114925.0
+  },
+  "0x3AbcC13eB62a86cA7195f2Ef77C1f74491ed1834": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 344,
+    "sell_count": 0,
+    "volume_usd": 104818.0
+  },
+  "0xf9dD68611c409799AE2BD002Ba523E7e069ba4bE": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 998,
+    "sell_count": 0,
+    "volume_usd": 75426.0
+  },
+  "0xCbE0a9c554aF4CDfe9733736c06730363D481e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 219,
+    "sell_count": 0,
+    "volume_usd": 20685.0
+  },
+  "0x52c8c5554CA5f5313FeF7C2b35e8Cc24f9081e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 201,
+    "sell_count": 0,
+    "volume_usd": 16606.0
+  },
+  "0x4803B6d2ae134EACe6d620571432706852801e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 33,
+    "sell_count": 0,
+    "volume_usd": 3087.0
+  },
+  "0xfe752CCE9eD88d7b7B95DAc31a35E775A5381E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 21,
+    "sell_count": 0,
+    "volume_usd": 1405.0
+  },
+  "0x2AE556445b22a066A488c40e6575289B6A901e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9,
+    "sell_count": 0,
+    "volume_usd": 218.0
+  },
+  "0x812486EAea648819853F8E372dc9f1516C7868Bd": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2331,
+    "sell_count": 0,
+    "volume_usd": 1060747.0
+  },
+  "0xcaCB0e9caCcee63ec4d82952E561a291c68Bcb68": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2611,
+    "sell_count": 0,
+    "volume_usd": 1046822.0
+  },
+  "0x42aFA2124ca5a2B83898E46B2dA9a190995b1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4131,
+    "sell_count": 0,
+    "volume_usd": 665716.0
+  },
+  "0x92e4B008161aC64a7D0C5e540F453F8e6B8Bd8D7": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1731,
+    "sell_count": 0,
+    "volume_usd": 288204.0
+  },
+  "0x38C8f642A04FEaC9899990276b4207fE4F621e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1914,
+    "sell_count": 0,
+    "volume_usd": 158249.0
+  },
+  "0xB6b5D146d89cDceD2E304389D08448E327c71E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 729,
+    "sell_count": 0,
+    "volume_usd": 54865.0
+  },
+  "0x4217d5CadfD3A8EC1bA914914a05148BBA861e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1005,
+    "sell_count": 0,
+    "volume_usd": 42683.0
+  },
+  "0x46Bd9f1276234651D9Be3Ade250203C2094E1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 399,
+    "sell_count": 0,
+    "volume_usd": 28467.0
+  },
+  "0x544092A0De16225e12B3e7F8aFa4a713751C1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 84,
+    "sell_count": 0,
+    "volume_usd": 6883.0
+  },
+  "0x9e83C5C365382A95A82EFdfC7b18f1F1364B1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 69,
+    "sell_count": 0,
+    "volume_usd": 5007.0
+  },
+  "0x4306Bacd4a3F462dE82502F1a748c02DaEBA1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 66,
+    "sell_count": 0,
+    "volume_usd": 3313.0
+  },
+  "0x6E1589cd14f79Dc8DfCc186520F4B34848781e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 60,
+    "sell_count": 0,
+    "volume_usd": 635.0
+  },
+  "0x7b799F6274E672Fc324f714880c489BC09591e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9,
+    "sell_count": 0,
+    "volume_usd": 566.0
+  },
+  "0x2B6B845B3B7BDaA928714B12FC427b07a3Bd1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9,
+    "sell_count": 0,
+    "volume_usd": 395.0
+  },
+  "0x98096d17e191B3dA1d5f99a6D7b3584351b11E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 7275,
+    "sell_count": 0,
+    "volume_usd": 2835642.0
+  },
+  "0x997e29E62e16140fbb10077668BB1998831B1Da0": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12198,
+    "sell_count": 0,
+    "volume_usd": 1411071.0
+  },
+  "0xBE58054707De04F849B16db6020Ddb5EC0521E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1011,
+    "sell_count": 0,
+    "volume_usd": 58272.0
+  },
+  "0xE2DfbBAe2d2D329968E986D29c5d83f8d4501e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 429,
+    "sell_count": 0,
+    "volume_usd": 25824.0
+  },
+  "0x422FA6121BeeB19dc322dBb52AB2b9f7e8d71E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 348,
+    "sell_count": 0,
+    "volume_usd": 22370.0
+  },
+  "0x3E2ae441dcbDaaEDDe4B552ad613b340d9ac1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 303,
+    "sell_count": 0,
+    "volume_usd": 18781.0
+  },
+  "0x3fAc90D5d8Ff1702fD304805Badad4e7C9b71e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 63,
+    "sell_count": 0,
+    "volume_usd": 3986.0
+  },
+  "0xBc43Dd310B6fEA638245F2ef6522EC812B121e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 33,
+    "sell_count": 0,
+    "volume_usd": 3604.0
+  },
+  "0xC480784416FcE91C4ac64A35cE067e11F9F01E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 63,
+    "sell_count": 0,
+    "volume_usd": 2317.0
+  },
+  "0x5fda38f45e5915A3f8546cbB7C8faf68B18f1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 33,
+    "sell_count": 0,
+    "volume_usd": 2133.0
+  },
+  "0x83bC791AB2f20Df50F94c2d0CA670EaDa9841E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 15,
+    "sell_count": 0,
+    "volume_usd": 778.0
+  },
+  "0x2F1daDAfec9df4dBAb4bf2cC8974cEe21a3e1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 21,
+    "sell_count": 0,
+    "volume_usd": 246.0
+  },
+  "0x1DD1baf5C98cb734EaFCB1afe62c19d939e11E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 4.0
+  },
+  "0x12D5ee7917cA430073C3A638ee1e6f0648A98a01": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 15304,
+    "sell_count": 0,
+    "volume_usd": 13413722.0
+  },
+  "0x52F380A513112428723abF8AFED125824E4A1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 26403,
+    "sell_count": 0,
+    "volume_usd": 3317419.0
+  },
+  "0x7981992155389b44c17e08422749d77023Be2ba3": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 16596,
+    "sell_count": 0,
+    "volume_usd": 1556485.0
+  },
+  "0x4cf6b98699821AD707B31addFc04F39D86F01e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6036,
+    "sell_count": 0,
+    "volume_usd": 521293.0
+  },
+  "0x9e4B53dF3367282302De7A37a037bD0D335641Ab": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 968,
+    "sell_count": 0,
+    "volume_usd": 138751.0
+  },
+  "0x4043742F30c673F0e55585c9f056Add365e61E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 249,
+    "sell_count": 0,
+    "volume_usd": 28683.0
+  },
+  "0x59C0ed458914FDF814157961DD6Cf30eaf5f1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 372,
+    "sell_count": 0,
+    "volume_usd": 15792.0
+  },
+  "0x450f5D6a0a9A715A2BD6452901932636EEF31e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 231,
+    "sell_count": 0,
+    "volume_usd": 13350.0
+  },
+  "0x67C61Bfb169ce68A61EF28E4CE9D7f53EFBd1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 279,
+    "sell_count": 0,
+    "volume_usd": 8270.0
+  },
+  "0x2571f6697c247E547bf22FBC86EcF787952E1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 84,
+    "sell_count": 0,
+    "volume_usd": 4534.0
+  },
+  "0x70458E50C7520C9494D2E20b9Be632aF667F1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12,
+    "sell_count": 0,
+    "volume_usd": 176.0
+  },
+  "0x526Ca23c1e5cb112389e1F021736f5d01d3e1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 23.0
+  },
+  "0xE7b18733B39C56ca9B23ECEa70b7fc0858243850": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 4.0
+  },
+  "0xadA85E113fc5c33046cAE2Fc66006Fd84F093C9b": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 15109,
+    "sell_count": 0,
+    "volume_usd": 2715115.0
+  },
+  "0xc32B91Fe216aF1B834dB02f33326E983Ad8Cf201": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3625,
+    "sell_count": 0,
+    "volume_usd": 1037717.0
+  },
+  "0x9f029188a2dCD44c54dEdA575Bc8ED490B9f1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 8667,
+    "sell_count": 0,
+    "volume_usd": 558169.0
+  },
+  "0xC1300316A66D60B83Af5188851Fa8cB9F9E51e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 423,
+    "sell_count": 0,
+    "volume_usd": 31578.0
+  },
+  "0xC1930463Cdfd9FcAC37941d2AE0Edc141A831E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 171,
+    "sell_count": 0,
+    "volume_usd": 10766.0
+  },
+  "0xF55B8fCf961671338051e3A1A42f1A1716d21E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 69,
+    "sell_count": 0,
+    "volume_usd": 7983.0
+  },
+  "0x9EfB7bd3718Ba8584558BFeED60C1e71a07e1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 315,
+    "sell_count": 0,
+    "volume_usd": 3703.0
+  },
+  "0xc77A369f4097a0Cf6c030df65B175Cac57ab1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 18,
+    "sell_count": 0,
+    "volume_usd": 2971.0
+  },
+  "0x75681877Ec68B6313FAb36Ae441E508543131E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 30,
+    "sell_count": 0,
+    "volume_usd": 2822.0
+  },
+  "0x91fC10167fE94b8E49E071053f627c9CF22d1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 36,
+    "sell_count": 0,
+    "volume_usd": 2338.0
+  },
+  "0xEdb05aD4126662CBE2C555a8cEB2F4E92B0E1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 36,
+    "sell_count": 0,
+    "volume_usd": 2006.0
+  },
+  "0xC08D8a526db48Cc46d78D7097F5f22384E7f1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 60,
+    "sell_count": 0,
+    "volume_usd": 1640.0
+  },
+  "0xeAfe9a76F9d0963C15fa4B0f7425dDF5dBB31e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6,
+    "sell_count": 0,
+    "volume_usd": 597.0
+  },
+  "0xdAd36623C482d049b6d7BB3046e21292a1A11e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6,
+    "sell_count": 0,
+    "volume_usd": 12.0
+  },
+  "0x16A49c0896b889B31d00ac1EdF51AD1fFcDF7BC6": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 5836,
+    "sell_count": 0,
+    "volume_usd": 1315290.0
+  },
+  "0x85856F025BF13b8Fd2aaE2F6DA458318744F1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1328,
+    "sell_count": 0,
+    "volume_usd": 648084.0
+  },
+  "0x8d3b5246Be12824DD61CcDe7aF974C3c1E867A34": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 666,
+    "sell_count": 0,
+    "volume_usd": 211600.0
+  },
+  "0x11Feed2daAd06BF44274B1d9a450282263c21e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 164,
+    "sell_count": 0,
+    "volume_usd": 25941.0
+  },
+  "0x3452E3fAC0378698Aa1A929dD03676804d0A1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 276,
+    "sell_count": 0,
+    "volume_usd": 15754.0
+  },
+  "0x448AfcdD449ec7Df3754133D00475589e3581e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 160,
+    "sell_count": 0,
+    "volume_usd": 14697.0
+  },
+  "0x2895ee0AbF6B3DdbBC8D1C6fA52e42d226421E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 180,
+    "sell_count": 0,
+    "volume_usd": 6224.0
+  },
+  "0x8d02c2a969F8b54332D5ed453B150082BCB51E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 45,
+    "sell_count": 0,
+    "volume_usd": 2433.0
+  },
+  "0xD140F8FF4e3946d7E2EE53Bd3D07cBc20A241E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 10,
+    "sell_count": 0,
+    "volume_usd": 1597.0
+  },
+  "0x60FC24F10819D09649dA013cb45ea6aA13181e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4,
+    "sell_count": 0,
+    "volume_usd": 1355.0
+  },
+  "0x506d6e6F49B533B0a453CfFFc3aeC1a40fa11e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9,
+    "sell_count": 0,
+    "volume_usd": 508.0
+  },
+  "0x32C144f9C9F11bE7c1a07B1B01c8128ab5ec1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6,
+    "sell_count": 0,
+    "volume_usd": 393.0
+  },
+  "0x80Db362eAB104Ec378E19D0a3dCD5E84Bafd4bA3": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 16,
+    "sell_count": 0,
+    "volume_usd": 184.0
+  },
+  "0x2BB977eeFCa788aD692a532c952ABA9d8B311e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 1.0
+  },
+  "0x99452D7519e103daF9bC9f02311DD164a073A7A2": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 24187,
+    "sell_count": 0,
+    "volume_usd": 4114873.0
+  },
+  "0xD18528b39dA6464B3662c331a52181ecB15b1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 11046,
+    "sell_count": 0,
+    "volume_usd": 1846659.0
+  },
+  "0x168661C52E5922288dFb2b3f323b6Cf90eb21e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 23662,
+    "sell_count": 0,
+    "volume_usd": 1811811.0
+  },
+  "0x5cDA982F3D5f34459EEF8fdeB66CE5C5F70d1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4542,
+    "sell_count": 0,
+    "volume_usd": 222557.0
+  },
+  "0x6137347f6F3eD5FEb26656E87962566E47381E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2343,
+    "sell_count": 0,
+    "volume_usd": 135409.0
+  },
+  "0x0F6eB7e87fF40506491260F28ecFd100aAB4CBa3": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 193,
+    "sell_count": 0,
+    "volume_usd": 18329.0
+  },
+  "0x369c66849a0E5108aF3f7F040e2d519B6a181e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 114,
+    "sell_count": 0,
+    "volume_usd": 12232.0
+  },
+  "0xb560680d862d6a898c77084080183E3291581e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 144,
+    "sell_count": 0,
+    "volume_usd": 7312.0
+  },
+  "0xEbDb8acA558bF8225747770474f3FC2CCe5B1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 210,
+    "sell_count": 0,
+    "volume_usd": 7226.0
+  },
+  "0xbbb3D4bAF906E95218147B33fBC686417E2e1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 72,
+    "sell_count": 0,
+    "volume_usd": 2665.0
+  },
+  "0xE5aD3aF8d46beB6A03226370479C8A11A64E1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 18,
+    "sell_count": 0,
+    "volume_usd": 2114.0
+  },
+  "0x431a2327Ad44f2284c2a7fCB7b33494a47F81E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 45,
+    "sell_count": 0,
+    "volume_usd": 1851.0
+  },
+  "0x9E67936Df3b96BD6B59cfb8Cc7c9dF5f3c0E1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 293.0
+  },
+  "0xEb5e79262B9d96Dcdb2Ceb1A2b5b0eD26bFF2bA3": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 9.0
+  },
+  "0xD9dB30BB0D2b8d2eae3826A1372117E058791e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4632,
+    "sell_count": 0,
+    "volume_usd": 4396307.0
+  },
+  "0x5F038759F6DE38fD3A85C0440daff1240238BaC8": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1215,
+    "sell_count": 0,
+    "volume_usd": 837866.0
+  },
+  "0xbcd09284dFfe06f868a4650546233e3E9AbE4d97": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 987,
+    "sell_count": 0,
+    "volume_usd": 201526.0
+  },
+  "0x54e595a3544E8e08f39835F744E356bdA6308184": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 614,
+    "sell_count": 0,
+    "volume_usd": 81933.0
+  },
+  "0x0cb61dC5b8F468Ca5F2A568491317a71C51b1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1497,
+    "sell_count": 0,
+    "volume_usd": 61172.0
+  },
+  "0x5107D5d45052509b2923a4AA129714330931b321": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 295,
+    "sell_count": 0,
+    "volume_usd": 44251.0
+  },
+  "0x15D7E95a6B2Bd43419d8d24D052bfeAd1C5F1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 231,
+    "sell_count": 0,
+    "volume_usd": 9666.0
+  },
+  "0xC0Cc17ccC81830A3C22A3d06B013914762E5C812": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 55,
+    "sell_count": 0,
+    "volume_usd": 3911.0
+  },
+  "0x0145AcbcceFbEd6F303C420bEeaaAc72E905430b": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 66,
+    "sell_count": 0,
+    "volume_usd": 3656.0
+  },
+  "0x83177880230459e854F5fB5e84aDe27974871e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 27,
+    "sell_count": 0,
+    "volume_usd": 1413.0
+  },
+  "0x8dCb5663BC2149e001a0776585ad59A144dA1B2F": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 11,
+    "sell_count": 0,
+    "volume_usd": 340.0
+  },
+  "0x21F62792e1260edc9bA0a642a5030dA857d33b4d": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12,
+    "sell_count": 0,
+    "volume_usd": 308.0
+  },
+  "0x338D69E82Cab5Ffb341AF6931e7963d8A4f31e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2,
+    "sell_count": 0,
+    "volume_usd": 52.0
+  },
+  "0x5c3a0e5f0A29a76FEAb447e8eb3219B4Ad03d26a": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4162,
+    "sell_count": 0,
+    "volume_usd": 538476.0
+  },
+  "0x5B6Ef408c4eBb166788C0cA4cB644f12AC757777": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 840,
+    "sell_count": 0,
+    "volume_usd": 178502.0
+  },
+  "0x57ffde6EAFB5dC2D5d596b6502eDEBE982FF1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1014,
+    "sell_count": 0,
+    "volume_usd": 87114.0
+  },
+  "0x241160709f38683Df6CB11Ce83B85093E5031E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 543,
+    "sell_count": 0,
+    "volume_usd": 35723.0
+  },
+  "0x7c92CFfB9862723cDba55a4E34Dcbeb164211E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 510,
+    "sell_count": 0,
+    "volume_usd": 34207.0
+  },
+  "0xce5873DDd1e68E715ED3523B25E144ba3781257F": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 216,
+    "sell_count": 0,
+    "volume_usd": 18119.0
+  },
+  "0x56e6e2Eee74C0aC272a0A788be18234dE19E1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 150,
+    "sell_count": 0,
+    "volume_usd": 10383.0
+  },
+  "0x5De18FE337D48C85EFAbf34462d33eACc2751E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 72,
+    "sell_count": 0,
+    "volume_usd": 7339.0
+  },
+  "0xaC292FDa653018e459d69Db1c88f11565e551E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 267,
+    "sell_count": 0,
+    "volume_usd": 7253.0
+  },
+  "0x12966F9c6046484e52F3EaeF28C109C83Bc81e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 108,
+    "sell_count": 0,
+    "volume_usd": 4966.0
+  },
+  "0x66cEa691bD555ce8b674bDFb45C9e927cd571e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 33,
+    "sell_count": 0,
+    "volume_usd": 1472.0
+  },
+  "0xc75f39e96992afe01240858A301cD414a5D51e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9,
+    "sell_count": 0,
+    "volume_usd": 395.0
+  },
+  "0x1D1CD70a2855c483eE74837ca116D7b06F7e3797": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2,
+    "sell_count": 0,
+    "volume_usd": 191.0
+  },
+  "0xc9CB7CCE6C24aebCD23AAd6e7A28E5D606Ce1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 1.0
+  },
+  "0xaD066e27A97B23c6F2Ada0CfAF5edaE4B3AC2CE2": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 8260,
+    "sell_count": 0,
+    "volume_usd": 1635184.0
+  },
+  "0xAa07A0e9209e16aC99708C3EC70159c6eF3128A3": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1302,
+    "sell_count": 0,
+    "volume_usd": 710080.0
+  },
+  "0xB05618FE540d0bE2bd193153dE86A9f84dE0D76A": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3090,
+    "sell_count": 0,
+    "volume_usd": 449881.0
+  },
+  "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1354,
+    "sell_count": 0,
+    "volume_usd": 424069.0
+  },
+  "0xa9Fcd15f315f5ffa918D3A767A980EE3dC019667": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2574,
+    "sell_count": 0,
+    "volume_usd": 286603.0
+  },
+  "0x587Be69569AE1f1647264D06717A85B106CC1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2772,
+    "sell_count": 0,
+    "volume_usd": 162230.0
+  },
+  "0xF6E4F7945Bba125c36f4f42Ae904DD6Cc129Cf2A": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 172,
+    "sell_count": 0,
+    "volume_usd": 17594.0
+  },
+  "0xa7F6F1C5434F5A8ac4aC3D2588515E44E05Fcb66": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 88,
+    "sell_count": 0,
+    "volume_usd": 11703.0
+  },
+  "0xb8D9F969dB56bb57353e36Fd0015D98e3A761E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 231,
+    "sell_count": 0,
+    "volume_usd": 3605.0
+  },
+  "0x3F947613aC089F4AA47c5bbe51CfB90034651E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 34,
+    "sell_count": 0,
+    "volume_usd": 2478.0
+  },
+  "0x6EF9114f9E04D3e90dc9F566e72b245145aE1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 60,
+    "sell_count": 0,
+    "volume_usd": 263.0
+  },
+  "0xaf2fEfAb10c203FB3e7c3A709bC7C6C5B6c51E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 33,
+    "sell_count": 0,
+    "volume_usd": 224.0
+  },
+  "0xC8a1E3Bd7311b491f0dE57c31021b213F3e11e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 18,
+    "sell_count": 0,
+    "volume_usd": 150.0
+  },
+  "0x1e8D97A216EE09b9B4a2Feaf4c9602876eA88885": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1,
+    "sell_count": 0,
+    "volume_usd": 0.0
+  },
+  "0x1a911bb954dAA9CB38513423075bE74450351e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 8022,
+    "sell_count": 0,
+    "volume_usd": 1074088.0
+  },
+  "0x0a2329aA1b3eEFE403aB3be5f5683d31Ebf81e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4305,
+    "sell_count": 0,
+    "volume_usd": 340004.0
+  },
+  "0x1Fe2Abf68aad1d5b7A0339fBbFdbAd8E2b1d1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1223,
+    "sell_count": 0,
+    "volume_usd": 337587.0
+  },
+  "0x08b19F6aB82DD358871753b76B8225C63Ab91e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1806,
+    "sell_count": 0,
+    "volume_usd": 114513.0
+  },
+  "0x6beA6aFf87953F24c228800a191986eCa20F1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1101,
+    "sell_count": 0,
+    "volume_usd": 55531.0
+  },
+  "0x525F24BF41F178174788C3297Af9c0Af1bA01E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 447,
+    "sell_count": 0,
+    "volume_usd": 17888.0
+  },
+  "0x5c9F9a42310541A24Dc5cEE4CC96345FeaeA1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 123,
+    "sell_count": 0,
+    "volume_usd": 3648.0
+  },
+  "0x5c29D1B946BDb147b68fA9C777F6EF0536411e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 36,
+    "sell_count": 0,
+    "volume_usd": 2634.0
+  },
+  "0x06E0284edfd5CEdC77e2589FdCDEEd3e57f21E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 114,
+    "sell_count": 0,
+    "volume_usd": 1995.0
+  },
+  "0xF9f981909861014EA0fa956885cF4C1BCCb91E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 24,
+    "sell_count": 0,
+    "volume_usd": 690.0
+  },
+  "0x3Df502a7De87aC7C5fc32899E0A21C82FC781E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12,
+    "sell_count": 0,
+    "volume_usd": 48.0
+  },
+  "0x6f0D450820F3b5163F33697C78B97083137a1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 6.0
+  },
+  "0x2EbaA251F6419a3BE186B3866361920740e81e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 5.0
+  },
+  "0x014647c827D460551c34A419AE151CBE3B971e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 2.0
+  },
+  "0x939CA34ce2Dc5845f4BFf8079Fc6cCD6aB641E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4743,
+    "sell_count": 0,
+    "volume_usd": 444942.0
+  },
+  "0x7bD35820E7D2F98eD7CEd612C4984F36450B1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3270,
+    "sell_count": 0,
+    "volume_usd": 199943.0
+  },
+  "0x80997Fc9014531C6B8d2E4c2Ba54af0bB11A73BF": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 707,
+    "sell_count": 0,
+    "volume_usd": 116477.0
+  },
+  "0xF0d8832157bc028381B471Dc7611f33259111e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 411,
+    "sell_count": 0,
+    "volume_usd": 19005.0
+  },
+  "0x86d916F551b8E05240c1Eb14E65F733B6d181e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 387,
+    "sell_count": 0,
+    "volume_usd": 17271.0
+  },
+  "0x52E0502a786D4bf759Ddc2AD4F0b4608EfC61e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 216,
+    "sell_count": 0,
+    "volume_usd": 15952.0
+  },
+  "0x92fdfCDaF564921f4BC5fc0685738c8e50641e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 261,
+    "sell_count": 0,
+    "volume_usd": 13514.0
+  },
+  "0x88dD489A32fD62cD4621f526644d554E167F1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 66,
+    "sell_count": 0,
+    "volume_usd": 4177.0
+  },
+  "0xe6Bf884240DAE13c16FE936264f5AbEBC1671E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 60,
+    "sell_count": 0,
+    "volume_usd": 2896.0
+  },
+  "0xe6e9c22f827fc3E50d29006dD51Bdc0A61DC1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 18,
+    "sell_count": 0,
+    "volume_usd": 493.0
+  },
+  "0xC0102eA65205e2a831D508b244173f8123c61e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 36,
+    "sell_count": 0,
+    "volume_usd": 402.0
+  },
+  "0x55f9ec832384F737d5ad57FC0c314ddc8Bf41e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 33,
+    "sell_count": 0,
+    "volume_usd": 209.0
+  },
+  "0xef5355380Bd8F14cb5d81Aab2Bc9d050A1da1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 1.0
+  },
+  "0xD10CeBfb542A47695711aDA9f9518EA16CB61E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 0.0
+  },
+  "0x5b32971ee68B1Ed6D11476760106F29D81f77f6e": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 13307,
+    "sell_count": 0,
+    "volume_usd": 2942704.0
+  },
+  "0x5afd97fdC289a31b5Dfb167ca6576564513a1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 13503,
+    "sell_count": 0,
+    "volume_usd": 833052.0
+  },
+  "0x3fC0509C27E5228FebEde0f9DDf9F90bf3AF1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 10995,
+    "sell_count": 0,
+    "volume_usd": 738765.0
+  },
+  "0x55D9bC094C032cE0F4c57Cb09e6AB8F225531E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3597,
+    "sell_count": 0,
+    "volume_usd": 313477.0
+  },
+  "0x64bcF4aA85559526cFf0528BCDc0Cb9d3ea41e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2691,
+    "sell_count": 0,
+    "volume_usd": 260168.0
+  },
+  "0x4304519809cb846a98C99ce501655E12288b1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2790,
+    "sell_count": 0,
+    "volume_usd": 194787.0
+  },
+  "0x0060378498C166763732e72bFf27B540e71d1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1298,
+    "sell_count": 0,
+    "volume_usd": 178297.0
+  },
+  "0xdB1942c99350920cA148621b34CB50B6d9B0673a": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1578,
+    "sell_count": 0,
+    "volume_usd": 150854.0
+  },
+  "0x20D60eB7D0dCe12D602A7a72698E458357e51e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 513,
+    "sell_count": 0,
+    "volume_usd": 19553.0
+  },
+  "0x8E61dcDd1DE3d6BcF909c6573fEb978b5E611E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 90,
+    "sell_count": 0,
+    "volume_usd": 4460.0
+  },
+  "0x021C03486fe81bC7BaC16EF339e21BB341A31E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 123,
+    "sell_count": 0,
+    "volume_usd": 2623.0
+  },
+  "0x87A4888CeFCbC6266606cEE3C6049b79d64E510E": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 48,
+    "sell_count": 0,
+    "volume_usd": 2508.0
+  },
+  "0x4683E058244248821295dcB80364799E5A011E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 15,
+    "sell_count": 0,
+    "volume_usd": 612.0
+  },
+  "0x4776e0C4E1E11372647076acC93eDc9253b61e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 2.0
+  },
+  "0x5759A852243A56A48853Af1d28fd4e0f33747C9B": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 35286,
+    "sell_count": 0,
+    "volume_usd": 9174090.0
+  },
+  "0x8aaA802C942193E1C8ab38B52814ba211d643f9f": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 18231,
+    "sell_count": 0,
+    "volume_usd": 4832736.0
+  },
+  "0xFe7E19CbCe2f896C6C528BC355bAF5a768291E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4651,
+    "sell_count": 0,
+    "volume_usd": 2283915.0
+  },
+  "0xE0883aA4298D424e13Ab6c98555B95af25F41e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 26631,
+    "sell_count": 0,
+    "volume_usd": 1843973.0
+  },
+  "0xFd82D8DB539b6AcE0D50815845133767e24F1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 5444,
+    "sell_count": 0,
+    "volume_usd": 1826918.0
+  },
+  "0x4874845b0d4aCffd896DdE1E42828A543717AF7f": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3716,
+    "sell_count": 0,
+    "volume_usd": 1152623.0
+  },
+  "0x3eC8A8174129D5cBeCef67eE2AF8621319c34c03": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3498,
+    "sell_count": 0,
+    "volume_usd": 640538.0
+  },
+  "0x6B12ec435f15F823ee3C550e9013123e4187429B": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 506,
+    "sell_count": 0,
+    "volume_usd": 192670.0
+  },
+  "0xAc77646bcff9d52e99800534192E0290933F4094": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 910,
+    "sell_count": 0,
+    "volume_usd": 171322.0
+  },
+  "0x20f24b8D2BCaD7cd252fC60EE5f2Db27C2f2f261": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 809,
+    "sell_count": 0,
+    "volume_usd": 162450.0
+  },
+  "0x5A02ff1Fa21055E40753Fb039B3589781a361e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 512,
+    "sell_count": 0,
+    "volume_usd": 73397.0
+  },
+  "0x320D9B0F1B438567D28452B715f8766a7617043E": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1911,
+    "sell_count": 0,
+    "volume_usd": 32301.0
+  },
+  "0x2bF8b4b83abD88621E557AFba047AEa22FAe1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 354,
+    "sell_count": 0,
+    "volume_usd": 23087.0
+  },
+  "0xA5839ec14251c6D18330340a4E62e062e4A51E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 149,
+    "sell_count": 0,
+    "volume_usd": 22325.0
+  },
+  "0x6b1d42927B1a84eC28Fa88d4fC6FA7AF404966be": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 8203,
+    "sell_count": 0,
+    "volume_usd": 4510729.0
+  },
+  "0x451b42A15100C340CA12F7c66DE06fac5EA2D751": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 5056,
+    "sell_count": 0,
+    "volume_usd": 2623992.0
+  },
+  "0x51C7a88230f9e11945c25d058A583e6703E61e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 28170,
+    "sell_count": 0,
+    "volume_usd": 2181696.0
+  },
+  "0x39802268185C5116085B330F1013c7aB35627460": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 8849,
+    "sell_count": 0,
+    "volume_usd": 1795163.0
+  },
+  "0xb7eaeCc89d3e2f9Fd597D61726aE824900dB8360": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2381,
+    "sell_count": 0,
+    "volume_usd": 1349876.0
+  },
+  "0x48E39E56aCdbA37b09020C0b734A613C9a2f100A": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3029,
+    "sell_count": 0,
+    "volume_usd": 912634.0
+  },
+  "0x73c2dE14C7FA0a57cc2d9722b959eA70B881fFe4": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1708,
+    "sell_count": 0,
+    "volume_usd": 741457.0
+  },
+  "0xA3b6AEe90017b72c0812dC1e013De70eB2917ba3": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3822,
+    "sell_count": 0,
+    "volume_usd": 656883.0
+  },
+  "0x238239d8Fbec75ebC08acA988447bC1926F615e0": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1317,
+    "sell_count": 0,
+    "volume_usd": 413499.0
+  },
+  "0xB9cBD9AD66709B7a6a1737EE27831bBED3b01E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 654,
+    "sell_count": 0,
+    "volume_usd": 45975.0
+  },
+  "0xF31111e098edc4260Df41bB97CDb675Ec91E1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 372,
+    "sell_count": 0,
+    "volume_usd": 40180.0
+  },
+  "0x29fFC36bcC7D857f325B435533041C3DD9Fa26e5": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 126,
+    "sell_count": 0,
+    "volume_usd": 10975.0
+  },
+  "0x980923722A6f0D7854e9b2475Cc8228024de1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 90,
+    "sell_count": 0,
+    "volume_usd": 4035.0
+  },
+  "0xEd0f8dE71b33D0644c0515A2ADCF7086797f1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2,
+    "sell_count": 0,
+    "volume_usd": 366.0
+  },
+  "0x0fF9072a1EAD154d92C2d2Fef16AFba6028Ce2B2": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2331,
+    "sell_count": 0,
+    "volume_usd": 1544491.0
+  },
+  "0xa9eFe2Fc94dE79734C03051515F48f254Ce61e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6048,
+    "sell_count": 0,
+    "volume_usd": 806506.0
+  },
+  "0xfe7E4b4850979BA7920ce786493B7371761F1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4329,
+    "sell_count": 0,
+    "volume_usd": 427344.0
+  },
+  "0xBebACCA31e990e36c3293B100D48E41773C61E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 7521,
+    "sell_count": 0,
+    "volume_usd": 395957.0
+  },
+  "0xB5D553Cc06F9b3569731b7a74fc269B939841E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 581,
+    "sell_count": 0,
+    "volume_usd": 125102.0
+  },
+  "0x80B600eaE89DDa383B78C7bEc2d4105011Bc1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 123,
+    "sell_count": 0,
+    "volume_usd": 27805.0
+  },
+  "0x51d3bBe1ab7467F71E06029e46Ef9044BF551E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 372,
+    "sell_count": 0,
+    "volume_usd": 16607.0
+  },
+  "0x3264084B14b5C23f3569eB80ee103f64d83E1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 97,
+    "sell_count": 0,
+    "volume_usd": 11875.0
+  },
+  "0xBc799896383558A9b685c9a3353C1060E6431e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 150,
+    "sell_count": 0,
+    "volume_usd": 6513.0
+  },
+  "0x35a2D19eD9c90A4F1C13Ab370D07e8BBb8F41e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 84,
+    "sell_count": 0,
+    "volume_usd": 5702.0
+  },
+  "0x07212b25897230CA97bf67e1def86bb7C7461E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 27,
+    "sell_count": 0,
+    "volume_usd": 2403.0
+  },
+  "0x24117e8e9312223e8fE02078c1EF8077e9b66Ba3": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 34,
+    "sell_count": 0,
+    "volume_usd": 1463.0
+  },
+  "0x982732A974738b771B07a2588f1b38A968A11e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 12,
+    "sell_count": 0,
+    "volume_usd": 40.0
+  },
+  "0xb91C11fF03b99fb4E4dEbE09B8280e76aA299118": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 3,
+    "sell_count": 0,
+    "volume_usd": 23.0
+  },
+  "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 4804,
+    "sell_count": 0,
+    "volume_usd": 2330707.0
+  },
+  "0xd4aAe326dDd1a2537A92C00E6576E4605e5D1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 8055,
+    "sell_count": 0,
+    "volume_usd": 1948179.0
+  },
+  "0xaA0b48DEFDE440B8445bA45DB88cb076Cf261E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2664,
+    "sell_count": 0,
+    "volume_usd": 423385.0
+  },
+  "0xcfdAbd5618A4606CaE27A8D27b051553D7191E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1395,
+    "sell_count": 0,
+    "volume_usd": 66907.0
+  },
+  "0x92430d275A22313D6F8Ff76b12AAF2524fF01E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 1122,
+    "sell_count": 0,
+    "volume_usd": 53343.0
+  },
+  "0x5ec338C96e67252E2e8419A79Aae8988CC4cEe36": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 504,
+    "sell_count": 0,
+    "volume_usd": 39122.0
+  },
+  "0xe5e97e36CFdD014f73d7A4281cF8099A387b1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 42,
+    "sell_count": 0,
+    "volume_usd": 3517.0
+  },
+  "0x5F2E3c78b6314CAB2fb958864d61772Dfd5D1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 57,
+    "sell_count": 0,
+    "volume_usd": 2574.0
+  },
+  "0xB9818Da3ca135b19A01b8724C3568aeE2a6C1E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 24,
+    "sell_count": 0,
+    "volume_usd": 1557.0
+  },
+  "0xf917931F92135fBEe3a26628a1Bd99E33cF71e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 21,
+    "sell_count": 0,
+    "volume_usd": 1234.0
+  },
+  "0x67F12480f1FEb2e096E46A497C751caceebB1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9,
+    "sell_count": 0,
+    "volume_usd": 371.0
+  },
+  "0x9038057c68B2703A43D1c7AF29f926cCdcdB1e18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 6,
+    "sell_count": 0,
+    "volume_usd": 333.0
+  },
+  "0xA0f33c463D05e1952B950504122BC18206391E18": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 9,
+    "sell_count": 0,
+    "volume_usd": 103.0
+  },
+  "0x875Cd489d1C149460Bb7fe0889F79e5ec5da9C29": {
+    "discovered_ts": 1788584574,
+    "last_active_ts": 1788584574,
+    "still_holding": true,
+    "source": "stockyard",
+    "sources_seen": [
+      "stockyard"
+    ],
+    "confidence": "single_source",
+    "buy_count": 2,
+    "sell_count": 0,
+    "volume_usd": 63.0
   }
 }
