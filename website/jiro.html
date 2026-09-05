@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jiro — Gap-Finder & Auto-Trade Bot untuk Solana</title>
+<meta name="description" content="Jiro memindai narasi viral di X sebelum crypto twitter sadar, menyekornya dengan sinyal on-chain, lalu mengelola exit dengan trailing stop dan partial take-profit. DRY_RUN aktif secara default.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0F1417;
+    --bg-alt: #10171A;
+    --panel: #161D21;
+    --panel-2: #1C2429;
+    --border: #2A3238;
+    --border-soft: #212a2f;
+    --text: #E7EAEA;
+    --muted: #8B969C;
+    --muted-2: #647177;
+    --accent: #E3A63E;
+    --accent-soft: rgba(227,166,62,0.12);
+    --green: #3FC88A;
+    --green-soft: rgba(63,200,138,0.12);
+    --red: #E1544B;
+    --red-soft: rgba(225,84,75,0.12);
+    --radius: 10px;
+    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+
+  a{ color: inherit; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(15,20,23,0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 16px 0;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-weight:700; font-size:1.05rem; letter-spacing: -0.01em;
+    text-decoration:none;
+  }
+  .brand .dot{
+    width:9px; height:9px; border-radius:2px;
+    background: var(--accent);
+    transform: rotate(45deg);
+    flex-shrink:0;
+  }
+  .nav-links{
+    display:flex; gap:28px; align-items:center;
+    font-size: 0.92rem; color: var(--muted);
+  }
+  .nav-links a{ text-decoration:none; }
+  .nav-links a:hover{ color: var(--text); }
+  .btn-gh{
+    font-family: var(--mono); font-size:0.82rem; font-weight:500;
+    color: var(--text); text-decoration:none;
+    border:1px solid var(--border); border-radius:7px;
+    padding: 8px 14px;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .btn-gh:hover{ border-color: var(--muted-2); background: var(--panel-2); }
+  @media (max-width: 720px){ .nav-links a:not(.btn-gh){ display:none; } }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: 76px 0 88px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items:center;
+  }
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; gap: 40px; }
+    .hero{ padding: 48px 0 56px; }
+  }
+  .tag{
+    display:inline-block;
+    font-family: var(--mono); font-size: 0.78rem; color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid rgba(227,166,62,0.28);
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-bottom: 22px;
+  }
+  h1{
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: clamp(2.1rem, 4.1vw, 3.15rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+    max-width: 15ch;
+  }
+  .hero p.lede{
+    color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 46ch;
+    margin: 0 0 30px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    font-family: var(--sans); font-weight:600; font-size: 0.95rem;
+    padding: 12px 22px; border-radius: 8px;
+    text-decoration:none; cursor:pointer;
+    border: 1px solid transparent;
+    transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-primary{ background: var(--accent); color: #1A1304; }
+  .btn-primary:hover{ background:#eeb455; }
+  .btn-secondary{ background: transparent; color: var(--text); border-color: var(--border); }
+  .btn-secondary:hover{ border-color: var(--muted-2); background: var(--panel); }
+
+  /* ---------- Terminal mock ---------- */
+  .term{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow:hidden;
+    box-shadow: 0 20px 50px -20px rgba(0,0,0,0.55);
+  }
+  .term-bar{
+    display:flex; align-items:center; gap:8px;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border-soft);
+    background: var(--panel-2);
+  }
+  .term-bar span{ width:9px; height:9px; border-radius:50%; background: var(--border); }
+  .term-bar .label{
+    font-family: var(--mono); font-size: 0.74rem; color: var(--muted-2);
+    margin-left: 6px;
+  }
+  .term-body{
+    font-family: var(--mono); font-size: 0.79rem;
+    padding: 18px 16px 20px;
+    color: #C7D0D3;
+    min-height: 300px;
+  }
+  .term-body .ln{
+    display:flex; gap:10px;
+    padding: 3px 0;
+    opacity:0;
+    animation: appear 0.35s ease forwards;
+  }
+  .term-body .ts{ color: var(--muted-2); flex-shrink:0; }
+  .term-body .ok{ color: var(--green); }
+  .term-body .warn{ color: var(--accent); }
+  .term-body .danger{ color: var(--red); }
+  .term-body .cmd{ color: var(--text); }
+  @keyframes appear{ to{ opacity:1; } }
+  .l1{animation-delay:.1s}.l2{animation-delay:.5s}.l3{animation-delay:.95s}
+  .l4{animation-delay:1.4s}.l5{animation-delay:1.9s}.l6{animation-delay:2.5s}
+  .l7{animation-delay:3.05s}.l8{animation-delay:3.6s}
+
+  /* ---------- Section shell ---------- */
+  section{ padding: 76px 0; border-bottom: 1px solid var(--border-soft); }
+  .section-head{ max-width: 62ch; margin-bottom: 44px; }
+  .kicker{
+    font-family: var(--mono); font-size: 0.8rem; color: var(--muted-2);
+    margin: 0 0 10px;
+  }
+  h2{
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-weight: 700; letter-spacing: -0.015em;
+    margin: 0 0 12px;
+  }
+  .section-head p{ color: var(--muted); font-size: 1.02rem; max-width: 58ch; margin:0; }
+
+  /* ---------- Pipeline (real sequence) ---------- */
+  .pipeline{
+    display:grid; grid-template-columns: repeat(5, 1fr); gap:0;
+    border: 1px solid var(--border); border-radius: 12px; overflow:hidden;
+  }
+  @media (max-width: 900px){ .pipeline{ grid-template-columns: 1fr; } }
+  .pstep{
+    padding: 26px 22px;
+    border-right: 1px solid var(--border-soft);
+    background: var(--panel);
+  }
+  .pipeline .pstep:last-child{ border-right:none; }
+  @media (max-width: 900px){ .pstep{ border-right:none; border-bottom: 1px solid var(--border-soft); } .pstep:last-child{ border-bottom:none; } }
+  .pstep .num{ font-family: var(--mono); color: var(--accent); font-size: 0.85rem; margin-bottom: 12px; display:block; }
+  .pstep h3{ font-size: 1rem; margin: 0 0 8px; font-weight: 700; }
+  .pstep p{ color: var(--muted); font-size: 0.9rem; margin:0; }
+
+  /* ---------- Feature list (not identical cards) ---------- */
+  .flist{ display:flex; flex-direction:column; }
+  .frow{
+    display:grid; grid-template-columns: 240px 1fr; gap: 32px;
+    padding: 26px 0;
+    border-top: 1px solid var(--border-soft);
+  }
+  .frow:last-child{ border-bottom: 1px solid var(--border-soft); }
+  @media (max-width: 720px){ .frow{ grid-template-columns: 1fr; gap:8px; } }
+  .frow h3{
+    font-family: var(--mono); font-size: 0.95rem; font-weight: 600; color: var(--text);
+    margin:0; display:flex; align-items:baseline; gap:10px;
+  }
+  .frow h3 .file{ color: var(--muted-2); font-size:0.82rem; }
+  .frow p{ color: var(--muted); margin:0; font-size: 0.98rem; max-width: 62ch; }
+
+  /* ---------- Exit priority (real ordered list) ---------- */
+  .exitlist{ counter-reset: exit; border-radius:12px; overflow:hidden; border:1px solid var(--border); }
+  .exititem{
+    counter-increment: exit;
+    display:grid; grid-template-columns: 52px 1fr auto; gap: 18px; align-items:start;
+    padding: 20px 22px;
+    background: var(--panel);
+    border-top: 1px solid var(--border-soft);
+  }
+  .exititem:first-child{ border-top:none; }
+  .exititem::before{
+    content: counter(exit);
+    font-family: var(--mono); font-weight:600; font-size:0.85rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius:6px;
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+  }
+  .exititem h4{ margin:0 0 4px; font-size:0.98rem; font-weight:700; }
+  .exititem p{ margin:0; color:var(--muted); font-size:0.92rem; max-width: 56ch; }
+  .exitbadge{
+    font-family: var(--mono); font-size:0.72rem;
+    padding: 4px 9px; border-radius: 5px; white-space:nowrap; height:fit-content;
+  }
+  .exitbadge.priority{ background: var(--red-soft); color: var(--red); }
+  .exitbadge.floor{ background: var(--green-soft); color: var(--green); }
+  @media (max-width: 620px){ .exititem{ grid-template-columns: 40px 1fr; } .exitbadge{ grid-column: 2; } }
+
+  /* ---------- Config code block ---------- */
+  .code-wrap{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow:auto;
+  }
+  .code-wrap .term-bar{ border-radius: 12px 12px 0 0; }
+  pre{
+    margin:0; padding: 20px 22px;
+    font-family: var(--mono); font-size: 0.82rem; line-height:1.65;
+    color: #C7D0D3; overflow-x:auto;
+  }
+  pre .k{ color: #8FB3E8; }
+  pre .v{ color: var(--accent); }
+  pre .c{ color: var(--muted-2); }
+  .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 860px){ .two-col{ grid-template-columns: 1fr; } }
+
+  /* ---------- Safety / limits ---------- */
+  .checklist{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+  .checklist li{
+    display:flex; gap:12px; align-items:flex-start;
+    font-size: 0.98rem; color: var(--text);
+  }
+  .checklist li .mark{
+    flex-shrink:0; width:20px; height:20px; margin-top:2px;
+    border-radius:5px; display:flex; align-items:center; justify-content:center;
+    font-size:0.7rem; font-family:var(--mono); font-weight:700;
+  }
+  .checklist.good li .mark{ background: var(--green-soft); color: var(--green); }
+  .checklist.limit li .mark{ background: var(--red-soft); color: var(--red); }
+  .checklist span.desc{ color: var(--muted); }
+
+  /* ---------- Install steps ---------- */
+  .steps{ display:flex; flex-direction:column; gap: 34px; }
+  .step{ display:grid; grid-template-columns: 28px 1fr; gap:16px; }
+  .step .marker{
+    width:28px; height:28px; border-radius:50%;
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--mono); font-size:0.8rem; color: var(--muted);
+    flex-shrink:0;
+  }
+  .step h4{ margin:0 0 8px; font-size:1rem; font-weight:700; }
+  .step p{ margin: 0 0 10px; color:var(--muted); font-size:0.95rem; }
+
+  /* ---------- Risk banner ---------- */
+  .risk{
+    background: var(--red-soft);
+    border: 1px solid rgba(225,84,75,0.35);
+    border-radius: 12px;
+    padding: 30px 32px;
+  }
+  .risk h2{ color: var(--red); }
+  .risk p{ color: var(--text); opacity:0.9; max-width:70ch; margin: 0 0 14px; }
+  .risk p:last-child{ margin-bottom:0; }
+
+  footer{ padding: 44px 0; }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    font-size: 0.88rem; color: var(--muted-2);
+  }
+  .foot-row a{ text-decoration:none; }
+  .foot-row a:hover{ color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="dot"></span>
+      Jiro
+    </a>
+    <nav class="nav-links">
+      <a href="#cara-kerja">Cara kerja</a>
+      <a href="#exit">Sinyal keluar</a>
+      <a href="#konfigurasi">Konfigurasi</a>
+      <a href="#mulai">Mulai pakai</a>
+      <a href="jiro-dashboard.html">Dashboard</a>
+      <a class="btn-gh" href="https://github.com/fataakromulmuttaqin/jiro" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:1px solid var(--border-soft); padding-top:76px;">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">Solana · scaffold open-source</span>
+        <h1>Temukan momentum sebelum crypto twitter sadar.</h1>
+        <p class="lede">Jiro memantau apa yang mulai viral di kalangan normies di X, mencari celah sebelum ditokenkan CT, lalu menyekor entry dengan sinyal narasi dan on-chain. Exit dijaga oleh trailing stop, partial take-profit, dan deteksi dump on-chain. <strong style="color:var(--text)">DRY_RUN aktif secara default.</strong></p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://github.com/fataakromulmuttaqin/jiro" target="_blank" rel="noopener">Lihat kode di GitHub</a>
+          <a class="btn btn-secondary" href="#mulai">Cara menjalankannya</a>
+        </div>
+      </div>
+
+      <div class="term" role="img" aria-label="Contoh log berjalannya bot Jiro">
+        <div class="term-bar">
+          <span></span><span></span><span></span>
+          <span class="label">gap_finder_bot.py --loop</span>
+        </div>
+        <div class="term-body">
+          <div class="ln l1"><span class="ts">12:04:01</span><span>scan: 214 post terdeteksi, 3 narasi baru</span></div>
+          <div class="ln l2"><span class="ts">12:04:03</span><span class="cmd">narrative: "AI catgirl" momentum naik cepat, belum ada token</span></div>
+          <div class="ln l3"><span class="ts">12:04:07</span><span>onchain: token baru terdeteksi, liquidity $8,400</span></div>
+          <div class="ln l4"><span class="ts">12:04:07</span><span class="warn">score: narrative 8.1 / onchain 7.4 → entry_score 7.8 (min 6.0)</span></div>
+          <div class="ln l5"><span class="ts">12:04:08</span><span class="ok">entry: BUY $50 @ 0.0000041 · SL -25% · trailing aktif di +30%</span></div>
+          <div class="ln l6"><span class="ts">12:11:52</span><span>monitor: harga +42%, trailing stop naik, peak dicatat</span></div>
+          <div class="ln l7"><span class="ts">12:19:30</span><span class="danger">exit: whale dump 18% terdeteksi → keluar prioritas</span></div>
+          <div class="ln l8"><span class="ts">12:19:30</span><span class="ok">closed: +38% realized, ledger diperbarui</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARA KERJA -->
+  <section id="cara-kerja">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Alur kerja</p>
+        <h2>Dari scan sampai posisi ditutup, lima langkah.</h2>
+        <p>Setiap loop, Jiro menjalankan urutan yang sama: cari narasi, cek apakah ada gap, beri skor, buka posisi bila lolos filter, lalu pantau terus sampai salah satu sinyal keluar terpicu.</p>
+      </div>
+      <div class="pipeline">
+        <div class="pstep">
+          <span class="num">01</span>
+          <h3>Scan narasi</h3>
+          <p>Grok memindai X untuk narasi viral baru yang masih di luar radar crypto twitter.</p>
+        </div>
+        <div class="pstep">
+          <span class="num">02</span>
+          <h3>Cek gap on-chain</h3>
+          <p>rpc_client &amp; onchain_analyzer mengecek apakah narasi itu sudah ditokenkan, dan seberapa sehat likuiditasnya.</p>
+        </div>
+        <div class="pstep">
+          <span class="num">03</span>
+          <h3>Skor entry</h3>
+          <p>Kekuatan narasi digabung dengan momentum on-chain jadi satu entry_score, dengan filter keras untuk likuiditas dan price impact.</p>
+        </div>
+        <div class="pstep">
+          <span class="num">04</span>
+          <h3>Buka posisi</h3>
+          <p>Bila skor lolos ambang minimum, trading.py mengeksekusi swap lewat Jupiter dengan ukuran posisi tetap.</p>
+        </div>
+        <div class="pstep">
+          <span class="num">05</span>
+          <h3>Pantau &amp; keluar</h3>
+          <p>Posisi dicek tiap monitor_interval_seconds terhadap enam sinyal exit, sampai salah satunya terpicu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FITUR -->
+  <section id="fitur">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Yang dikerjakan tiap modul</p>
+        <h2>Lima file, satu tanggung jawab masing-masing.</h2>
+      </div>
+      <div class="flist">
+        <div class="frow">
+          <h3>narrative.py <span class="file">Grok</span></h3>
+          <p>Memindai X untuk narasi off-crypto yang baru viral, dan mengecek ulang kesehatan narasi (accelerating / peaking / declining / dead) untuk posisi yang sedang terbuka.</p>
+        </div>
+        <div class="frow">
+          <h3>onchain_analyzer.py <span class="file">Solana RPC + Dexscreener</span></h3>
+          <p>Mendeteksi whale dump, penarikan likuiditas, perubahan rasio buy/sell, dan penurunan harga cepat berbasis kecepatan (velocity).</p>
+        </div>
+        <div class="frow">
+          <h3>trading.py <span class="file">Jupiter</span></h3>
+          <p>Eksekusi swap, penghitungan entry score, pelacakan posisi, trailing stop, partial take-profit, dan kill switch kerugian harian.</p>
+        </div>
+        <div class="frow">
+          <h3>safety.py <span class="file">pre-check</span></h3>
+          <p>Sellability pre-check lewat quote round-trip SOL → token → SOL sebelum membeli, untuk menyaring pola honeypot yang paling umum.</p>
+        </div>
+        <div class="frow">
+          <h3>gap_finder_bot.py <span class="file">orkestrator</span></h3>
+          <p>Menjalankan seluruh alur di atas dalam satu loop: scan → cek gap → skor entry → buka posisi (opsional) → recheck narasi berkala → monitor (opsional).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXIT PRIORITY -->
+  <section id="exit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Manajemen exit</p>
+        <h2>Enam sinyal keluar, dicek dalam urutan prioritas tetap.</h2>
+        <p>Sinyal dengan prioritas lebih tinggi bisa membatalkan sinyal di bawahnya. Stop-loss selalu aktif sebagai lantai keamanan, apa pun yang terjadi di atasnya.</p>
+      </div>
+      <div class="exitlist">
+        <div class="exititem">
+          <div><h4>Sinyal dump on-chain</h4><p>Penurunan saldo whale, penarikan likuiditas, perubahan tekanan jual, atau dump kecepatan harga. Satu saja terpicu, posisi langsung ditutup — mengesampingkan TP/SL.</p></div>
+          <span class="exitbadge priority">Prioritas tertinggi</span>
+        </div>
+        <div class="exititem">
+          <div><h4>Narasi melemah</h4><p>Bila recheck Grok menandai narasi declining/dead saat posisi masih untung, ditutup untuk mengunci gain, tanpa menunggu harga menyusul turun.</p></div>
+        </div>
+        <div class="exititem">
+          <div><h4>Trailing stop</h4><p>Naik mengikuti puncak harga, keluar saat harga mundur melewati jarak trail. Sengaja mengesampingkan take-profit tetap agar posisi menang tidak terpotong terlalu awal.</p></div>
+        </div>
+        <div class="exititem">
+          <div><h4>Partial take-profit ladder</h4><p>Menjual sebagian posisi (dihitung dari ukuran awal) di tiap level profit yang ditentukan; sisanya tetap berjalan di bawah trailing stop.</p></div>
+        </div>
+        <div class="exititem">
+          <div><h4>Stop-loss</h4><p>Lantai keras, selalu aktif terlepas dari sinyal lain di atas.</p></div>
+          <span class="exitbadge floor">Selalu aktif</span>
+        </div>
+        <div class="exititem">
+          <div><h4>Take-profit tetap</h4><p>Hanya dipakai sebagai mekanisme exit bila trailing_stop_enabled diset false.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONFIGURASI -->
+  <section id="konfigurasi">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">config.json</p>
+        <h2>Semua angka trading diatur di satu file.</h2>
+        <p>Tidak perlu ubah kode — bot membaca ulang config.json di setiap loop, jadi perubahan langsung berlaku pada siklus berikutnya.</p>
+      </div>
+      <div class="code-wrap">
+        <div class="term-bar"><span></span><span></span><span></span><span class="label">config.json</span></div>
+        <pre>{
+  <span class="k">"trading"</span>: {
+    <span class="k">"position_size_usd"</span>: <span class="v">50</span>,
+    <span class="k">"max_open_positions"</span>: <span class="v">3</span>,
+    <span class="k">"trailing_stop_enabled"</span>: <span class="v">true</span>,
+    <span class="k">"trailing_stop_activate_pct"</span>: <span class="v">30</span>,   <span class="c">// aktif setelah +30%</span>
+    <span class="k">"trailing_stop_distance_pct"</span>: <span class="v">15</span>,   <span class="c">// jarak 15% dari puncak</span>
+    <span class="k">"partial_take_profit"</span>: [
+      { <span class="k">"at_pct"</span>: <span class="v">40</span>,  <span class="k">"sell_pct"</span>: <span class="v">50</span> },
+      { <span class="k">"at_pct"</span>: <span class="v">100</span>, <span class="k">"sell_pct"</span>: <span class="v">50</span> }
+    ],
+    <span class="k">"take_profit_pct"</span>: <span class="v">60</span>,
+    <span class="k">"stop_loss_pct"</span>: <span class="v">25</span>,               <span class="c">// lantai keras</span>
+    <span class="k">"max_daily_loss_usd"</span>: <span class="v">50</span>            <span class="c">// kill switch harian</span>
+  },
+  <span class="k">"entry_filters"</span>: {
+    <span class="k">"min_entry_score"</span>: <span class="v">4.0</span>,
+    <span class="k">"min_liquidity_usd"</span>: <span class="v">2000</span>,
+    <span class="k">"max_liquidity_usd"</span>: <span class="v">80000</span>          <span class="c">// di atas ini, gap dianggap sudah lewat</span>
+  }
+}</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEAMANAN & BATASAN -->
+  <section id="keamanan">
+    <div class="wrap two-col">
+      <div>
+        <p class="kicker">Mekanisme keamanan</p>
+        <h2 style="margin-bottom:22px;">Yang sudah dijaga bot ini.</h2>
+        <ul class="checklist good">
+          <li><span class="mark">✓</span><span class="desc"><strong style="color:var(--text)">Dry-run secara default</strong> — tidak ada transaksi nyata sampai AUTO_TRADE_ENABLED dan DRY_RUN sengaja diaktifkan.</span></li>
+          <li><span class="mark">✓</span><span class="desc"><strong style="color:var(--text)">Pre-check sellability</strong> — quote round-trip sebelum beli untuk menyaring pool yang tidak bisa dijual balik.</span></li>
+          <li><span class="mark">✓</span><span class="desc"><strong style="color:var(--text)">Ukuran posisi tetap</strong> — tidak ada martingale, tidak ada scale-in ke posisi rugi.</span></li>
+          <li><span class="mark">✓</span><span class="desc"><strong style="color:var(--text)">Kill switch harian</strong> — berhenti membuka posisi baru begitu kerugian terealisasi menyentuh batas harian.</span></li>
+          <li><span class="mark">✓</span><span class="desc"><strong style="color:var(--text)">TP &amp; SL di setiap posisi</strong> — dihitung saat entry, dicek tiap siklus.</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="kicker">Yang tidak bisa dilindungi bot ini</p>
+        <h2 style="margin-bottom:22px;">Batasan yang jujur diakui.</h2>
+        <ul class="checklist limit">
+          <li><span class="mark">!</span><span class="desc">Rug yang selesai lebih cepat dari konfirmasi transaksi exit.</span></li>
+          <li><span class="mark">!</span><span class="desc">Slippage ekstrem di pool yang sangat tidak likuid, walau limit sudah diset.</span></li>
+          <li><span class="mark">!</span><span class="desc">Kongesti RPC yang menunda sell melewati waktu exit yang diinginkan.</span></li>
+          <li><span class="mark">!</span><span class="desc">Honeypot di level kontrak yang memblokir jual tanpa terlihat di quote.</span></li>
+          <li><span class="mark">!</span><span class="desc">Bacaan Grok soal "apa yang viral" bisa salah atau usang — ini sinyal, bukan kepastian.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MULAI PAKAI -->
+  <section id="mulai">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Menjalankan Jiro</p>
+        <h2>Mulai dari mode riset dulu, baru pertimbangkan auto-trade.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="marker">1</span>
+          <div>
+            <h4>Install dependency</h4>
+            <p>Butuh Python 3. Tidak ada instalasi tambahan di luar tiga package ini.</p>
+            <div class="code-wrap"><pre>pip install requests solders base58 --break-system-packages</pre></div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="marker">2</span>
+          <div>
+            <h4>Mode riset / alert saja — aman, tanpa wallet</h4>
+            <p>Cara paling aman untuk mulai: hanya scan dan kirim notifikasi, tanpa transaksi sama sekali.</p>
+            <div class="code-wrap"><pre>export XAI_API_KEY=your_xai_key
+export TELEGRAM_BOT_TOKEN=xxx        <span class="c">// opsional</span>
+export TELEGRAM_CHAT_ID=xxx          <span class="c">// opsional</span>
+
+python3 gap_finder_bot.py --loop</pre></div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="marker">3</span>
+          <div>
+            <h4>Mode auto-trade — uang sungguhan, risiko sungguhan</h4>
+            <p>Gunakan burner wallet. Biarkan DRY_RUN=true sampai kamu benar-benar memahami perilaku bot dari log.</p>
+            <div class="code-wrap"><pre>export SOLANA_PRIVATE_KEY=your_base58_secret_key   <span class="c">// burner wallet</span>
+export RPC_URL=https://your-rpc-provider-url
+export AUTO_TRADE_ENABLED=true
+export DRY_RUN=true
+
+python3 gap_finder_bot.py --loop --with-monitor</pre></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISIKO -->
+  <section id="risiko" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="risk">
+        <h2>Ini bukan produk trading yang sudah diaudit.</h2>
+        <p>Jiro adalah scaffold untuk dikembangkan, diuji, dan diperkuat lagi — bukan produk jadi. Logikanya sudah diuji dengan feed harga tiruan, tapi belum pernah diuji langsung terhadap RPC/Jupiter/Dexscreener sungguhan di kondisi pasar nyata, dan pengujian sebanyak apa pun tidak menggantikan audit sungguhan.</p>
+        <p><strong>Tidak ada apa pun di halaman ini yang merupakan nasihat keuangan.</strong> Gunakan burner wallet, mulai dengan position_size_usd kecil, dan hanya danai dengan jumlah yang kamu siap kehilangan sepenuhnya.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>Jiro — memecoin gap-finder &amp; auto-trade scaffold. Open source di GitHub.</span>
+    <a href="https://github.com/fataakromulmuttaqin/jiro" target="_blank" rel="noopener">github.com/fataakromulmuttaqin/jiro ↗</a>
+  </div>
+</footer>
+
+</body>
+</html>
