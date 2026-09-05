@@ -30,9 +30,22 @@ _CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 _TIMEOUT_S = 8.0
 
 
+def _bot_token() -> str:
+    """Read TELEGRAM_BOT_TOKEN from env at call-time. The module-level
+    cache (_BOT_TOKEN) below exists for performance, but it can become
+    stale if the env changes after import (e.g. load_dotenv runs after
+    notifier.py was already imported). Re-read on every send to be safe.
+    """
+    return os.environ.get("TELEGRAM_BOT_TOKEN", "").strip() or _BOT_TOKEN
+
+
+def _chat_id() -> str:
+    return os.environ.get("TELEGRAM_CHAT_ID", "").strip() or _CHAT_ID
+
+
 def is_configured() -> bool:
     """True iff both bot token and chat id are present and non-empty."""
-    return bool(_BOT_TOKEN) and bool(_CHAT_ID)
+    return bool(_bot_token()) and bool(_chat_id())
 
 
 def send(text: str, parse_mode: str = "HTML", disable_preview: bool = True) -> bool:
@@ -44,10 +57,10 @@ def send(text: str, parse_mode: str = "HTML", disable_preview: bool = True) -> b
     on unpaired delimiters like a lone `$` in a price string)."""
     if not is_configured():
         return False
-    url = f"https://api.telegram.org/bot{_BOT_TOKEN}/sendMessage"
+    url = f"https://api.telegram.org/bot{_bot_token()}/sendMessage"
     try:
         r = requests.post(url, json={
-            "chat_id": _CHAT_ID,
+            "chat_id": _chat_id(),
             "text": text,
             "parse_mode": parse_mode,
             "disable_web_page_preview": disable_preview,
@@ -67,9 +80,9 @@ def get_recent_updates(limit: int = 5, timeout_s: int = 0) -> Optional[List[Dict
     `timeout_s` is the Telegram long-poll timeout — set >0 for true
     long-polling, 0 for immediate response (default).
     """
-    if not _BOT_TOKEN:
+    if not _bot_token():
         return None
-    url = f"https://api.telegram.org/bot{_BOT_TOKEN}/getUpdates"
+    url = f"https://api.telegram.org/bot{_bot_token()}/getUpdates"
     try:
         r = requests.get(url, params={"limit": limit, "timeout": timeout_s},
                          timeout=max(_TIMEOUT_S, timeout_s + 2))
