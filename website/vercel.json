@@ -1,4 +1,5 @@
 {
+  "name": "jiro",
   "buildCommand": "echo 'No build — using static index.html'",
   "outputDirectory": ".",
   "framework": null,

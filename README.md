@@ -177,7 +177,7 @@ A free-RPC memecoin cabal detector + behavior tracker + public dashboard
 that lives next to the trading bot. All on-chain reconstruction from
 public Solana RPC — no Birdeye/Nansen paid APIs.
 
-**Live dashboard: https://website-swart-phi-56.vercel.app/**
+**Live dashboard: https://jiro-eight.vercel.app/**
 
 ### What it does
 
@@ -211,7 +211,7 @@ public Solana RPC — no Birdeye/Nansen paid APIs.
                               ↓
                 Vercel SPA (Vite + React 19 + Tailwind v4)
                               ↓
-       https://website-swart-phi-56.vercel.app/
+       https://jiro-eight.vercel.app/
 ```
 
 ### Pipeline run
